@@ -125,17 +125,16 @@
 .social-links-section a:hover {
   color: var(--primary);
 }
-.d-j-flex {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
 .d-j-flex h3 {
   position: relative;
   padding: 10px 0;
 }
 
+.d-j-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 .d-j-flex h3:after {
   content: "";
   background: var(--primary);
@@ -145,7 +144,6 @@
   bottom: -2px;
   left: 0;
 }
-
 .d-j-flex h3:before {
   content: "";
   width: 0;
@@ -157,17 +155,24 @@
   border-right: 5px solid transparent;
   border-top: 5px solid var(--primary);
 }
-
 .news-slides {
   padding-right: 20px;
 }
-
 .news-slides img {
   border-radius: 10px;
 }
-
 .form {
-  padding: 5rem;
+  padding: 3rem;
+}
+.form .head-section{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.form .head-section img{
+  width: 210px;
+}
+.form .head-section h2{
+  margin-top: 1rem;
 }
 .form-icon {
   position: absolute;
@@ -180,7 +185,7 @@
 }
 .form-section {
   border: 1px solid rgb(215 208 208);
-  border-radius: 47px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 0px 18px 2px rgb(68 68 68 / 41%);
 }
@@ -193,6 +198,13 @@
   right: 0;
   background: var(--text-white);
 }
+.form-ul .active{
+  background: var(--primary);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: white !important;
+  border-radius: 6px;
+}
 .form-ul a {
   padding: 0.5rem;
   text-decoration: none;
@@ -204,7 +216,7 @@
 .btn-custom {
   background: var(--primary) !important;
   color: var(--text-white) !important;
-  border-radius: 28px !important;
+  border-radius: 5px !important;
 }
 .log-form-bg-image {
   background: url(../images/register.png);
@@ -225,6 +237,18 @@
 .form-image {
   height: 100%;
   border-radius: 5px;
+}
+.form-section .form-ul a{
+  font-weight: bold;
+  color: #000;
+}
+.anchor{
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 17px !important;
+}
+.anchor:hover{
+  color: var(--primary);
 }
 .section-margin {
   margin: 10rem 0;
@@ -274,12 +298,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: var(--text-white);
   -webkit-appearance: none;
 }
-.form-control {
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: 1px solid var(--primary) !important;
-}
+
 .AuthFormCheckbox_checkmark_A7HnL {
   position: absolute;
   top: 0;
@@ -322,12 +341,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   content: "";
   position: absolute;
 }
-.form-control:focus {
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  box-shadow: none !important;
-}
+
 .footer-icon a {
   margin-left: 0.75em;
   align-items: center;
@@ -446,10 +460,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .carousel-section {
   margin-top: 5rem;
+  border: 3px solid var(--primary);
   padding: 2rem;
-  position: relative;
+  border-radius: 10px;
 }
-
+.carousel-section .heading {
+}
 .slick-prev,
 .slick-next {
   bottom: -120px !important;
@@ -734,6 +750,13 @@ footer {
 .swapping .swap {
   border-radius: 50%;
   margin-top: 1rem;
+}
+.form-control{
+  height: 50px;
+}
+.form-control:focus{
+  border: 1px solid var(--primary) !important;
+  box-shadow: none !important;
 }
 .swapping .label {
   font-size: 20px;
