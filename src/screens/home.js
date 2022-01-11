@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { Accordion, Col, Container, Form, Nav, Row, Table } from "react-bootstrap"
-import Marquee from "react-fast-marquee";
+import { Accordion, Col, Container, Form, Nav, Row, Table, Tabs, Tab } from "react-bootstrap"
 import Slider from "react-slick";
 
+
 function Home(props){
+
     var carouselsettings = {
         infinite: true,
         speed: 500,
@@ -64,21 +65,56 @@ function Home(props){
 
             ]
       };
+
+      var news_slider = {
+
+        infinite: true,
+        speed: 200,
+        autoplay:true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows:true,
+        dots:true,
+        responsive: [
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            
+                    }
+                },
+
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                   
+                }
+
+            }
+
+            ]
+
+      };
+
     return (
         <>
         {props.header}
+
         <section className="banner-section">
         <Container className="h-100">
             <Row className="banner-row h-100">
                 <Col lg="6" sm={12}>
                 <div className=" banner-text">
 
-                <img  width={100} src={require('../assets/images/potrait_white-text.png').default}/>
-                <h1>Swap, Invest, and <span style={{color: "#4f2fcc"}}>Earn</span> <br/> Interest on your Crypto </h1>
+                <img  width={100} src={require('../assets/images/logo.png').default}/>
+                <h1 className="dual-heading">Swap, Invest, and <span>Earn</span> <br/> Interest on your Crypto </h1>
                 <div>
                 <div className="btn-box">
-                <a href="#" className="custom-btn primary-btn"><i class="fa fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></a>
-                <a href="#" className="custom-btn secondary-btn"><i class="fa fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></a>
+                <a href="#" className="custom-icon-btn primary-btn"><i class="fa-brands fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></a>
+                <a href="#" className="custom-icon-btn secondary-btn"><i class="fa-brands fa-google-play"></i><span className="d-column">Download From <b>App Store</b></span></a>
                 </div>
                 </div>
                 </div>
@@ -343,7 +379,7 @@ function Home(props){
 
         <Container>
         
-
+            
             <section className="carousel-section">
                 <div className="d-j-flex heading">
                     <h3>News & Ads</h3>
@@ -352,62 +388,56 @@ function Home(props){
                 </div>
                     <hr class="hr"/>
                 <div className="main-carousel">
-                    <Row >
-                    <Slider {...carouselsettings}>
-                        <Col lg={3} sm={12} className="p-1">
+                    
+                    <Slider {...news_slider}>
+
+                        <div className="news-slides">
+
                             <img className="w-100" src={require("../assets/images/news.jpg").default}/>
-                            <br/>
-                            <span className="time">December 2 2021</span>
-                            <h5 className="heading">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste delectus nemo unde</h5>
-                        </Col>
-                        <Col lg={3} sm={12} className="p-1">
+                            
+                        </div>
+
+                        <div className="news-slides">
+
                             <img className="w-100" src={require("../assets/images/news.jpg").default}/>
-                            <br/>
-                            <span className="time">December 2 2021</span>
-                            <h5 className="heading">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste delectus nemo unde</h5>
-                        </Col>
-                        <Col lg={3} sm={12} className="p-1">
+
+                        </div>
+
+                        <div className="news-slides">
+
                             <img className="w-100" src={require("../assets/images/news.jpg").default}/>
-                            <br/>
-                            <span className="time">December 2 2021</span>
-                            <h5 className="heading">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste delectus nemo unde</h5>
-                        </Col>
-                        <Col lg={3} sm={12} className="p-1">
+
+                        </div>
+
+                        <div className="news-slides">
+
                             <img className="w-100" src={require("../assets/images/news.jpg").default}/>
-                            <br/>
-                            <span className="time">December 2 2021</span>
-                            <h5 className="heading">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste delectus nemo unde</h5>
-                        </Col>
-                        <Col lg={3} sm={12} className="p-1">
-                            <img className="w-100" src={require("../assets/images/news.jpg").default}/>
-                            <br/>
-                            <span className="time">December 2 2021</span>
-                            <h5 className="heading">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste delectus nemo unde</h5>
-                        </Col>
+
+                        </div>
+
+                      
+
                     </Slider>
-                    </Row>
+                   
                 </div>
             </section>
+
+
             <section className="section">
-                <h1 className="text-center">Start Buying <span style={{color:"#7e4af5"}}>Crypto</span></h1>
-                <Row className="text-center mt-5">
-                <Col lg={4} md={4}>
-                <button className="btn  btn-lg btn-crypto btn-orange" type="submit" >Buy</button>
-                </Col>
-                <Col lg={4} md={4}>
-                <button className="btn  btn-lg btn-crypto orange-border" type="submit" >Deposit</button>
-                
-                </Col>
-                <Col lg={4} md={4}>
-                <button className="btn  btn-lg btn-crypto btn-orange" type="submit" >Trade</button>
-                </Col>
-                </Row>               
-            </section>
-            <section className="section">
-                <Row>
-                <Col lg={6} sm={12}>
-                    <h1>Top <span className="purple">Gainers</span></h1>
+
+
+            <h2 className="dual-heading text-center">Market Trends</h2>
+
+
+            <Tabs defaultActiveKey="top-gainers" id="uncontrolled-tab-example" className="mb-3 justify-content-center loosers-gainers-tabs">
+
+
+                <Tab eventKey="top-gainers" title="Top Gainers">
+
+                    
+
                     <Table responsive="lg">
+
                     <thead className="t-heading">
                         <tr>
                         <th>#</th>
@@ -417,7 +447,9 @@ function Home(props){
                         <th>Volume(24h)</th>
                         </tr>
                     </thead>
+
                     <tbody className="text-center align-items-center">
+
                         <tr>
                         <td><span className="grey">1</span></td>
                         <td className="d-flex text-center align-items-center">
@@ -432,7 +464,10 @@ function Home(props){
                             </div>
                         </td>
                         <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
+
+
                         <tr>
                         <td><span className="grey">1</span></td>
                         <td className="d-flex text-center align-items-center">
@@ -447,7 +482,10 @@ function Home(props){
                             </div>
                         </td>
                         <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
+
+
                         <tr>
                         <td><span className="grey">1</span></td>
                         <td className="d-flex text-center align-items-center">
@@ -462,13 +500,56 @@ function Home(props){
                             </div>
                         </td>
                         <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
+
+
+                        <tr>
+                        <td><span className="grey">1</span></td>
+                        <td className="d-flex text-center align-items-center">
+                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
+                        <h6 className="mb-0">Block Farm Club</h6>
+                        <span className="text">BFC</span>
+                        </td>
+                        <td>$0.32323</td>
+                        <td >
+                            <div className="green d-flex text-center align-items-center">
+                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            </div>
+                        </td>
+                        <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
+                        </tr>
+
+
+                        <tr>
+                        <td><span className="grey">1</span></td>
+                        <td className="d-flex text-center align-items-center">
+                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
+                        <h6 className="mb-0">Block Farm Club</h6>
+                        <span className="text">BFC</span>
+                        </td>
+                        <td>$0.32323</td>
+                        <td >
+                            <div className="green d-flex text-center align-items-center">
+                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            </div>
+                        </td>
+                        <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
+                        </tr>
+                       
+
                     </tbody>
                     </Table>
-                    </Col>
-                    <Col lg={6} sm={12}>
-                    <h1>Top <span className="purple">Losers</span></h1>
-                    <Table responsive="lg">
+                    
+                    
+                </Tab>
+
+                <Tab eventKey="top-loosers" title="Top Loosers">
+
+                <Table responsive="lg">
+
                     <thead className="t-heading">
                         <tr>
                         <th>#</th>
@@ -478,7 +559,9 @@ function Home(props){
                         <th>Volume(24h)</th>
                         </tr>
                     </thead>
+
                     <tbody className="text-center align-items-center">
+
                         <tr>
                         <td><span className="grey">1</span></td>
                         <td className="d-flex text-center align-items-center">
@@ -488,12 +571,15 @@ function Home(props){
                         </td>
                         <td>$0.32323</td>
                         <td >
-                            <div className="green d-flex text-center align-items-center">
-                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
                             </div>
                         </td>
                         <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
+
+
                         <tr>
                         <td><span className="grey">1</span></td>
                         <td className="d-flex text-center align-items-center">
@@ -503,12 +589,15 @@ function Home(props){
                         </td>
                         <td>$0.32323</td>
                         <td >
-                            <div className="green d-flex text-center align-items-center">
-                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
                             </div>
                         </td>
                         <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
+
+
                         <tr>
                         <td><span className="grey">1</span></td>
                         <td className="d-flex text-center align-items-center">
@@ -518,17 +607,63 @@ function Home(props){
                         </td>
                         <td>$0.32323</td>
                         <td >
-                            <div className="green d-flex text-center align-items-center">
-                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
                             </div>
                         </td>
                         <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
+
+
+                        <tr>
+                        <td><span className="grey">1</span></td>
+                        <td className="d-flex text-center align-items-center">
+                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
+                        <h6 className="mb-0">Block Farm Club</h6>
+                        <span className="text">BFC</span>
+                        </td>
+                        <td>$0.32323</td>
+                        <td >
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
+                            </div>
+                        </td>
+                        <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
+                        </tr>
+
+
+                        <tr>
+                        <td><span className="grey">1</span></td>
+                        <td className="d-flex text-center align-items-center">
+                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
+                        <h6 className="mb-0">Block Farm Club</h6>
+                        <span className="text">BFC</span>
+                        </td>
+                        <td>$0.32323</td>
+                        <td >
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
+                            </div>
+                        </td>
+                        <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
+                        </tr>
+                       
+
                     </tbody>
                     </Table>
-                    </Col>
-                </Row>
+
+                </Tab>
+               
+            </Tabs>
+
+                       
             </section>
+
+
+         
             <section className="section">
                 <Row className="banner-row ">
                     <Col lg={6} className="c-order-2">
@@ -585,68 +720,122 @@ function Home(props){
                     </Col>
                 </Row>
             </section>
+
+
+            </Container>
+
             <section className="section">
-                <h1 className="text-center">Trading With <span className="purple">PayRexa</span> Is Simple</h1>
-                <Row>
-                    <Col lg={12}>
-                <Nav variant="pills" defaultActiveKey="" className="text-center">
-                <Nav.Item className="c-nav-tabs">
-                    <Nav.Link eventKey="link-1" className="active">Trading Guide</Nav.Link>
-                </Nav.Item>
-                <Nav.Item className="c-nav-tabs">
-                    <Nav.Link eventKey="link-2">Deposit Guide</Nav.Link>
-                </Nav.Item>
-                <Nav.Item className="c-nav-tabs">
-                    <Nav.Link eventKey="link-3">Withdrawal Guide</Nav.Link>
-                </Nav.Item>
-                </Nav>
-                    </Col>
-                    <Col lg={12}>
-                    <img className="w-100" src={require("../assets/images/guide.PNG").default}/>
-                    </Col>
-                </Row>
+
+                <h2 className="dual-heading text-center">Trading With <span>PayRexa</span> Is Simple</h2>
+   
+            <Container fluid className="half-color">
+
+                <Container>
+                    <Row>
+
+                        <Col lg={4}>
+
+                        <div className="box-two">
+
+                            <img src={require("../assets/images/Layer-50.png").default} />
+
+                            <h4>Create Your Account</h4>
+                            <p>Lorem ipsum adasd ask afasfkqw fakfa sfaks fapkeqwor afc ajcnais nca nwqniasndiasj ajjc acapsjdwjq ac ap</p>
+
+                        </div>
+                
+                        </Col>
+
+                        
+                        <Col lg={4}>
+
+                        <div className="box-two">
+
+                            <img src={require("../assets/images/Layer-49.png").default} />
+
+                            <h4>Create Your Account</h4>
+                            <p>Lorem ipsum adasd ask afasfkqw fakfa sfaks fapkeqwor afc ajcnais nca nwqniasndiasj ajjc acapsjdwjq ac ap</p>
+
+                        </div>
+                
+                        </Col>
+
+                        
+                        <Col lg={4}>
+
+                        <div className="box-two">
+
+                            <img src={require("../assets/images/Layer-51.png").default} />
+
+                            <h4>Create Your Account</h4>
+                            <p>Lorem ipsum adasd ask afasfkqw fakfa sfaks fapkeqwor afc ajcnais nca nwqniasndiasj ajjc acapsjdwjq ac ap</p>
+
+                        </div>
+                
+                        </Col>
+                    
+                    
+
+                    </Row>
+                </Container>
+
+            </Container>
             </section>
+
+            <Container>
+
             <section className="section">
                 <Row>
                     <Col lg={6} sm={12}>
-                    <img className="w-100" src={require("../assets/images/Img_06.png").default}/>
+                    <img className="w-100" src={require("../assets/images/trade-with.png").default}/>
                     </Col>
                     <Col lg={6} sm={12}>
                     <h4 className="purple">Trade Crypto</h4>
-                    <h1>To Financial Freedom</h1>
+                    <h2 className="dual-heading">To Financial Freedom</h2>
                     <br/>
                     <p className="crypto-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
                     </p>
                     <br/>
-                    <button className="btn  btn-crypto  btn-orange btn-padding" type="button">Get Started For Free</button>
+                    <a className="custom-btn secondary-btn">Get Started For Free</a>
                     </Col>
                 </Row>
             </section>
+            
             <section className="section">
-            <h1 className="text-center">Recieve <span className="purple">Crypto</span> Easily On <span className="purple">PayRexa</span></h1>
-            <p className="crypto-text-large text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-            </p>
-            <Row >
-                <Col lg={12}>
-                    <Row className="banner-row">
-                        <Col lg={8} md={6}>
-                    <img className="w-100" src={require("../assets/images/mobile.png").default}/>
-                        </Col>
-                        <Col lg={4} md={6}>
-                    <div className="d-column">
-                    <button className="btn btn-crypto  btn-orange " type="button"><i class="fa fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></button>
-                    <button className="btn btn-crypto  btn-orange " type="button"><i class="fa fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></button>
-                    </div>
+
+            <Row className="align-items-center">
+
+                <Col lg={6}>
+
+
+                <h2 className="dual-heading">Recieve Crypto Easily On <span>PayRexa</span></h2>
+                <p className="crypto-text-large">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
+                </p>
+                <div className="btn-box">
+                <a href="#" className="custom-icon-btn primary-btn"><i class="fa-brands fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></a>
+                <a href="#" className="custom-icon-btn secondary-btn"><i class="fa-brands fa-google-play"></i><span className="d-column">Download From <b>App Store</b></span></a>
+                </div>
+
+                </Col> 
+
+                <Col lg={6}>
+                <img className="w-100" src={require("../assets/images/download-app.png").default}/>
                 </Col>
-                    </Row>
-                </Col>
+               
+                  
+               
+                   
                 
+                
+
             </Row>
+
             </section>
+
             <section className="section">
-            <h1 className="text-center">F.A.Q.S</h1>
+            <h2 className="dual-heading text-center">F.A.Q.S</h2>
             <p className="crypto-text-large text-center purple">
                 Get answers to the most frequently asked questions.
             </p>
@@ -725,7 +914,9 @@ function Home(props){
             </Accordion>
             
             </section>
-        </Container>
+
+            </Container>
+            
         {props.footer}
         </>
     )

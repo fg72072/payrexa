@@ -5,6 +5,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./assets/fontawesome/css/all.min.css";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
