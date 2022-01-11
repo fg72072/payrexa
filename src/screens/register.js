@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Col, Container, Form, Row } from "react-bootstrap"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Logo from '../assets/images/formlogo.png'
 
 function Register(props){
     const [regstatus,setRegstatus] = useState('email');
@@ -21,7 +22,7 @@ function Register(props){
         {props.header}
         <Container>
         <div className="section-margin">
-        <Row>
+        <Row className="justify-content-center">
            {
                country == "" ? <>
                <div className="center-form col-lg-6 col-12">
@@ -32,14 +33,11 @@ function Register(props){
 				}}>
                <h1 className="h3 mb-5 fw-normal text-center">Where do you live?</h1>
                <p className="text-center">Before we start, please enter your<br/> current location of residence.</p>
-               <div className="form-floating">
                 <select className="form-control" name="country" onChange={(e)=>setSelectcountry(e.target.value)}>
                     <option value="" selected disabled>Select Country</option>
                     <option value="Pakistan">Pakistan</option>
                     <option value="Afghanistan">Afghanistan</option>
                 </select>
-                <i class="fa fa-globe form-icon"></i>
-                </div>
                 <button className="btn w-100 btn-lg btn-custom mt-5" type="submit">Proceed</button>
                 </Form>
                 </div>
@@ -47,56 +45,55 @@ function Register(props){
                </div>
                </>
                : <>
-                <Col lg="12" sm="12">
+                <Col lg="6" sm="12">
             <main className="form-section">
             <Row>
-                <div className="col-lg-6 reg-form-bg-image">
-                </div>
-                <Col lg="6">
+                <Col lg="12">
                 <div className="form">
                 <Form onSubmit={(e) => {
 				SignUp(e);
 				}}>
-                <h1 className="h3 mb-5 fw-normal text-center">Sign Up</h1>
-                <div className="d-j-flex form-ul">
+                <div className="head-section">
+                <img src={Logo}/>
+                <h2>Create PayRexa Account</h2>
+                </div>
+                <div className="d-flex justify-content-center form-ul">
                     <a href="javascript::void()" className={regstatus == "email" ?"active":""} onClick={()=>setRegstatus("email")}>Email</a>
-                    <a>OR</a>
+                    <a></a>
                     <a href="javascript::void()" className={regstatus == "phone" ?"active":""} onClick={()=>setRegstatus("phone")}>Phone</a>
                 </div>
                 <div className="form-floating">
                 
                 {
-                    regstatus == "email"?<> <input type="email" name="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-                    <label for="floatingInput">Email address</label>
-                    <i class="fa fa-envelope form-icon"></i></>
+                    regstatus == "email"?<> 
+                    <Form.Group className="" controlId="email">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email"/>
+                    </Form.Group>
+                    </>
                     :<>
-                    <div className="d-flex">
-                    <select className="form-control country-code" name="country" >
-                    <option value="+ 92" selected>+ 92</option>
-                    <option value="+ 971">+ 971</option>
-                    <option value="+ 91">+ 91</option>
-                    </select>
-                    <input type="phone" className="form-control" id="floatingInput" placeholder="Phone Number"/>
-                    </div>
-                    <i class="fa fa-phone form-icon mobile-icon"></i> 
+                 <Form.Group className="" controlId="phone">
+                        <Form.Label>Phone Number</Form.Label>
+                        <div className="d-flex">
+                        <Form.Control type="password" className="form-control country-code" />
+                        <input type="phone" className="form-control"/>
+                        </div>
+                    </Form.Group>
                     </>
                 }
                 </div>
-                <div className="form-floating">
-                <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-                <label for="floatingPassword">Password</label>
-                <i class="fa fa-eye-slash form-icon"></i>
-                </div>
-                <div className="form-floating">
-                <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-                <label for="floatingPassword">Confirm Password</label>
-                <i class="fa fa-eye-slash form-icon"></i>
-                </div>
-                <div className="form-floating">
-                <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-                <label for="floatingPassword">Referral Code (Optional)</label>
-                <i class="fa fa-tag form-icon"></i>
-                </div>
+                <Form.Group className="mt-3" controlId="password">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password"/>
+                </Form.Group>
+                <Form.Group className="mt-3" controlId="cpassword">
+                        <Form.Label>Confirm Password</Form.Label>
+                        <Form.Control type="password"/>
+                </Form.Group>
+                <Form.Group className="mt-3" controlId="referral">
+                        <Form.Label>Referral or Promo Code</Form.Label>
+                        <Form.Control type="text"/>
+                </Form.Group>
                 {
                     regstatus == "email" ? <>
                     <div class="form-group checkbox mb-3 mt-3 d-flex">
@@ -119,9 +116,7 @@ function Register(props){
                 <button className="btn w-100 btn-lg btn-custom" type="submit">Sign in</button>
                 <div className="text-center">
                 <br/>
-                <div className="form-ul">
-                 <p >Already have an account?<a href="">Login</a></p>
-                </div>
+                 <p >Already Registered?<Link to="/login" className="anchor">Sign In</Link></p>
                 </div>
             </Form>
                 </div>
