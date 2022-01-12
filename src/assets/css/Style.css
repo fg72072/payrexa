@@ -300,8 +300,9 @@ button:disabled:hover {
 .digit-group input {
   width: 38px !important;
   height: 50px;
-  background-color: #cbcbcb;
-  border: none;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #cbc9c9;
   line-height: 50px;
   text-align: center;
   font-size: 24px;
@@ -1183,4 +1184,24 @@ footer {
   color: var(--primary);
   height: 2px !important;
   opacity: 1 !important;
+}
+.react-tel-input .form-control{
+  height: 50px !important;
+    width: 100% !important;
+}
+.search-box {
+  width: auto !important;
+  margin: 0px auto !important;
+}
+.form-top-bar{
+  padding: 1rem 1rem 0rem 1rem;
+}
+.form-secion-margin{
+    margin: 3rem 0;
+}
+.css-1pahdxg-control:hover{
+  border-color: var(--primary) !important;
+}
+.modal-content{
+  border-radius: 10px !important;
 }
