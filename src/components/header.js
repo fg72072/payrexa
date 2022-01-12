@@ -52,16 +52,16 @@ function Header(){
           <div className="d-flex">
             <div className="social-links-section">
               <a target="_blank" href="https://facebook.com/obiexfinance">
-              <i class="fa fa-facebook-f"></i>
+              <i class="fa-brands fa-facebook"></i>
               </a>
               <a target="_blank" href="https://t.me/joinchat/U5jIDQ3cSYYdabGr">
-              <i class="fa fa-telegram"></i>
+              <i class="fa-brands fa-telegram"></i>
                 </a>
                 <a target="_blank" href="https://twitter.com/obiexfinance">
-                  <i class="fa fa-twitter"></i>
+                <i class="fa-brands fa-twitter"></i>
                   </a><a
                 target="_blank" href="https://instagram.com/obiexfinance">
-                  <i class="fa fa-instagram"></i>
+                  <i class="fa-brands fa-instagram"></i>
                   </a>
                   </div>
           </div>

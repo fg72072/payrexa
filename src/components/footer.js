@@ -7,7 +7,7 @@ function Footer(){
     <div className="popup">
                 <div className="d-j-flex">
                 <h1>Don't be shy, message us anytime. We're<br/>looking for ward to speaking with you</h1>
-                <button class="btn  btn-crypto  btn-orange btn-padding" type="button">Get in <b>Touch</b></button>
+                <a className="custom-btn primary-btn" href="#">Get in <b>Touch</b></a>
                 </div>
             </div>
     </Container>

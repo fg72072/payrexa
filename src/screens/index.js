@@ -7,7 +7,6 @@ import Dashboard from "./userpanel/dashboard";
 import Swap from "./userpanel/swap";
 import Wallet from "./userpanel/wallet";
 import History from "./userpanel/history";
-import LevelOne from "./kyc/level1";
-import LevelTwo from "./kyc/level2";
+import Kyc from "./userpanel/kyc";
 
-export {Login,Register,Forgot,Verification,LevelOne,LevelTwo,Home,Dashboard,Swap,Wallet,History};
+export {Login,Register,Forgot,Verification,Kyc,Home,Dashboard,Swap,Wallet,History};

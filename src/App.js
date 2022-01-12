@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './assets/css/Style.css'
 import {Header,Footer,UserPanelHeader} from './components';
-import {Login,Register,Forgot,Verification,LevelOne,LevelTwo,Home,Dashboard,Swap,Wallet,History} from './screens';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc} from './screens';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { useState } from 'react';
 
@@ -15,8 +15,7 @@ function App() {
         <Route path="/register" element={<Register header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/verification" element={<Verification header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/forgot-password" element={<Forgot header={<Header/>} footer={<Footer/>}/>} />
-        <Route path="/level-one" element={<LevelOne />} />
-        <Route path="/level-two" element={<LevelTwo />} />
+        <Route path="/kyc" element={<Kyc header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/" element={<Home header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/dashboard" element={<Dashboard header={<UserPanelHeader/>}/>} />
         <Route path="/dashboard/swap" element={<Swap header={<UserPanelHeader/>}/>} />
