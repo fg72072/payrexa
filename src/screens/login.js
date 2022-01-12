@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 import Logo from '../assets/images/formlogo.png'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-
-
+import SliderCaptcha from '@slider-captcha/react';
+function verifiedCallback(token) {
+    console.log('Captcha token: ' + token);
+  }
 function Login(props){
         // Inputs
         const [mynumber, setnumber] = useState("");
@@ -17,11 +19,11 @@ function Login(props){
         // Sent OTP
         const signin = (e) => {
             e.preventDefault()
-      
-            if (mynumber === "" || mynumber.length < 10) return;
+            console.log(mynumber)
+            // if (mynumber === "" || mynumber.length < 10) return;
       
             let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-            auth.signInWithPhoneNumber(mynumber, verify).then((result) => {
+            auth.signInWithPhoneNumber("+"+mynumber, verify).then((result) => {
                 setfinal(result);
                 alert("code sent")
                 setshow(true);
@@ -66,7 +68,7 @@ function Login(props){
                 <Col lg="12">
                 <div className="form">
                 <Form onSubmit={(e) => {
-				SignIn(e);
+				signin(e);
 				}}>
                 <div className="head-section">
                 <img src={Logo}/>
@@ -74,7 +76,7 @@ function Login(props){
                 </div>
                 <div className="d-flex justify-content-center form-ul">
                     <a href="javascript::void()" className={loginstatus == "email" ?"active":""} onClick={()=>setLoginstatus("email")}>Email</a>
-                    <a className="form-slash"></a>
+                    <a className="form-slash"><i class="fa-solid fa-slash"></i></a>
                     <a href="javascript::void()" className={loginstatus == "phone" ?"active":""} onClick={()=>setLoginstatus("phone")}>Phone</a>
                 </div>
                 
@@ -92,21 +94,27 @@ function Login(props){
                         {/* <Form.Control type="password" className="form-control country-code" />
                         <input type="phone" className="form-control" value={mynumber} onChange={(e) => { 
                        setnumber(e.target.value) }}/> */}
-                            <PhoneInput
+                        <PhoneInput
                         country={'us'}
                         enableSearch={true}
+                        value={mynumber} 
+                        onChange={(e) => setnumber(e) }
                         className="form-control"/>
                         </div>
                     </Form.Group>
                     </>
                 }
-                <Form.Group className="mt-3" controlId="password">
+                <Form.Group className="mt-3 " controlId="password">
                         <Form.Label>Password</Form.Label>
+                        <div className='position-relative'>
                         <Form.Control type="password" />
                         <i class="fa fa-eye-slash form-icon"></i>
+                        </div>
                 </Form.Group>
-                <div className="mt-5">
+                <div className='mt-2'>
                 <div id="recaptcha-container"></div>
+                </div>
+                <div className="mt-5">
                 <button className="btn w-100 btn-lg btn-custom" type="submit" >Sign in</button>
                 </div>
                 <div className="d-j-flex">

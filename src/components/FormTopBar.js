@@ -6,6 +6,7 @@ function FormTopBar(){
         <>
          <div className='form-top-bar'>
             <Link to={'/'}><img src={Logo} width="200"/></Link>
+            <i class="fa-solid fa-moon"></i>
         </div>
         </>
     )

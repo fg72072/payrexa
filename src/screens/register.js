@@ -108,7 +108,7 @@ function Register(props){
                 </div>
                 <div className="d-flex justify-content-center form-ul">
                     <a href="javascript::void()" className={regstatus == "email" ?"active":""} onClick={()=>setRegstatus("email")}>Email</a>
-                    <a></a>
+                    <a className="form-slash"><i class="fa-solid fa-slash"></i></a>
                     <a href="javascript::void()" className={regstatus == "phone" ?"active":""} onClick={()=>setRegstatus("phone")}>Phone</a>
                 </div>
                 <div className="form-floating">

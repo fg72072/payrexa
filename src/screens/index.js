@@ -10,5 +10,7 @@ import History from "./userpanel/history";
 import Kyc from "./userpanel/kyc";
 import Welcome_DashB from "./userpanel/welcome";
 import Market from "./market";
-
-export {Login,Register,Forgot,Verification,Kyc,Welcome_DashB,Home,Dashboard,Swap,Wallet,History,Market};
+import Security from "./userpanel/Security";
+import Payment from "./userpanel/Payment";
+import Setting from "./userpanel/Setting";
+export {Login,Register,Forgot,Verification,Kyc,Home,Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market};
