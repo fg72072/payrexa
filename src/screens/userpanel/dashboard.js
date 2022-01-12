@@ -1,71 +1,201 @@
-import { useState } from "react";
-import { Container,Row,Col, Form, Modal, Button, InputGroup, FormControl } from "react-bootstrap"
+import { Row,Col, Tab, Tabs, Table } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import { SwapModal } from "../../components";
-import ReferModal from "../../components/userpanel/refermodal";
+
 function Dashboard(props){
-    const [show, setShow] = useState(false);
-  
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const [modalShow, setModalShow] = useState(false);
     return (
         <>
- {props.header}
-        <section className="dashboard-section">
-        <Container>
-            <Link to={"/"} className="swap-link"><i class="fa fa-angle-left"></i> SWAP</Link>
-        <Row>
-                    <div className="text text-center text-box">
-                    <h4>WELCOME BACK.</h4>
-                    <span>User</span>
+        {props.header}
+        <div className="dashboard-section">
+            {props.sidebar}
+            <div className="dashboard-main">
+                <div className="normal-box">
+                    <h3>Welcome to PayRexa</h3>
+                    <p>Just a few more steps and you're good to go!</p>
+                </div>
+                <div className="dashboard-margin">
+                <Row>
+                    <Col lg={7}>
+                    <div className="normal-box">
+                    <div className="box-top">
+                    <h4>Balance Details</h4>
+                    <div className="d-j-flex">
+                    <a href="#" class="custom-btn-sm">Deposit</a>
+                    <a href="#" class="custom-btn-sm">Withdraw</a>
                     </div>
-                <Col lg={6}>
-                <div className="swap-section bg-section">
-                <div className="custom-overlay"></div>
-                <div className="swapping">
-                    <h3 className="text-right pointer"><i class="fa fa-eye-slash"></i></h3>
-                    <h3 className="purple text-center">Wallet Balance</h3>
-                    <h1 className="text-center total">$0.00</h1>
-                    <Link to={"/dashboard/swap"} class="btn  btn-lg mt-4 btn-orange form-control" type="submit">SWAP</Link>
-                    <button class="btn  btn-lg mt-4 orange-border form-control" type="submit" onClick={handleShow}>WITHDRAW</button>
-                </div>
-                </div>
-            </Col>
-            <Col lg={6}>
-                <div className="swap-section mt-20">
-                <div className="swap-head d-flex pointer" onClick={() => setModalShow(true)}>
-                    <div>
-                    <img width={100} src={require('../../assets/images/refer.png').default}/>
                     </div>
-                    <div className="text">
-                    <h4>Refer a Friend</h4>
-                    <span>You can copy your referral link or share directly with your contacts</span>
+
+                    <div className="box-tabs">
+                    <Tabs defaultActiveKey="Spot" id="uncontrolled-tab-example" className="mb-3">
+                    <Tab eventKey="Spot" title="Spot">
+                        <div className="balance-details">
+                            <div className="text-center position-relative">
+                            <h6>Account Balance</h6>
+                            <i class="fa fa-eye-slash balance-icon"></i>
+                            </div>
+                            <div className="total-balance text-center">
+                                <h2>0.00</h2><span>BTC</span>
+                            </div>
+                            <div className="bar-section">
+                                <div>
+                                    <h6>Estimate Value</h6>
+                                    <h2>$ 0.00</h2>
+                                </div>
+                                <div>
+                                    <h6>Estimate Value</h6>
+                                    <h2>$ 0.00</h2>
+                                </div>
+                                <div>
+                                    <h6>Estimate Value</h6>
+                                    <h2>$ 0.00</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </Tab>
+                    <Tab eventKey="P2P" title="P2P">
+                    </Tab>
+                    </Tabs>
+                    </div>
+                    </div>
+                    </Col>
+                    <Col lg={5}>
+                    <div className="normal-box">
+                    <div className="box-tabs">
+                    <Tabs defaultActiveKey="Activity" id="uncontrolled-tab-example" className="mb-3">
+                    <Tab eventKey="Activity" title="Activity">
+                        <div className="activity-section">
+                            <div className="activity-box">
+                                <div>
+                                <p className="title">Mobile</p>
+                                <span>Mumbai, India</span>
+                                </div>
+                                <div>
+                                <p>24/12/2020</p>
+                                <span>2021-12-20 14:45:34</span>
+                                </div>
+                            </div>
+                            <div className="activity-box">
+                                <div>
+                                <p className="title">Mobile</p>
+                                <span>Mumbai, India</span>
+                                </div>
+                                <div>
+                                <p>24/12/2020</p>
+                                <span>2021-12-20 14:45:34</span>
+                                </div>
+                            </div>
+                            <div className="activity-box">
+                                <div>
+                                <p className="title">Mobile</p>
+                                <span>Mumbai, India</span>
+                                </div>
+                                <div>
+                                <p>24/12/2020</p>
+                                <span>2021-12-20 14:45:34</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Tab>
+                    <Tab eventKey="Device" title="Device">
+                    <div className="activity-section">
+                            <div className="activity-box">
+                                <div>
+                                <p className="title">Device</p>
+                                <span>Mumbai, India</span>
+                                </div>
+                                <div>
+                                <p>Sumsung</p>
+                                <span>2021-12-20 14:45:34</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Tab>
+                    </Tabs>
+                    <a className="red pointer disable-btn">Disable Account</a>
+                    </div>
+                    </div>
+                    </Col>
+                </Row>
+                </div>
+                <div className="dashboard-margin">
+                <div class="normal-box">
+                    <h4>Announcement</h4>
+                    <hr/>
+                    <div className="announcement-section">
+                        <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <span className="flex-end">24/12/2020</span>
+                        <hr/>
+                    </div>
+                    <div className="announcement-section">
+                        <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <span className="flex-end">24/12/2020</span>
+                        <hr/>
+                    </div>
+                    <div className="announcement-section">
+                        <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <span className="flex-end">24/12/2020</span>
+                        <hr/>
                     </div>
                 </div>
-                <h5 className="mt-2">PayRexa Checklist</h5>
-                <div className="swap-head d-flex">
-                    <div className="text">
-                    <h4>Enable Two Factor Authentication</h4>
-                    <span>Secure your account</span>
+                </div>
+                <div className="dashboard-margin">
+                <Row>
+                    <Col lg={5}>
+                    <div class="normal-box">
+                        <h4>Increase your account security</h4>
+                        <hr/>
+                        <div className="security-section">
+                            <ul>
+                                <li><span>Enable 2FA</span> <a>ON</a></li>
+                                <hr/>
+                                <li><span>Identification Verication</span> <a>Verify</a></li>
+                                <hr/>
+                                <li><span>Anti-phishing Code</span> <a>Setup</a></li>
+                                <hr/>
+                                <li><span>Turn-on Withdrawal Whitelist</span> <a>Turn on</a></li>
+                                <hr/>
+
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div className="swap-head d-flex">
-                    <div className="text">
-                    <h4>Verify KYC</h4>
-                    <span>Crypto swap & withdrawal</span>
+                    </Col>
+                    <Col lg={7}>
+                    <div class="normal-box">
+                        <h4>Open Orders</h4>
+                        <hr/>
+                        <Table responsive="sm">
+                        <thead>
+                        <tr>
+                            <th>Pair Date</th>
+                            <th>Type/Side Trigger Conditions</th>
+                            <th>Price Ammount</th>
+                            <th>Total Filled</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>12/12/2020</td>
+                            <td>Lorem</td>
+                            <td>Lorem</td>
+                            <td>Lorem</td>
+                            <td>Lorem</td>
+                      
+                        </tr>
+                        </tbody>
+                    </Table>
                     </div>
+                    </Col>
+                </Row>
+               
                 </div>
-                </div>
-            </Col>
-        </Row>
-        </Container>
-        <SwapModal showModal={show} hideModal={handleClose}/>
-        <ReferModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}/>
-        </section>
-        
+            </div>
+        </div>
         </>
     )
 }
