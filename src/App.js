@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './assets/css/Style.css'
-import {Header,Footer,UserPanelHeader} from './components';
+import './assets/css/flagicon.css'
+import {Header,Footer,UserPanelHeader,FormTopBar} from './components';
 import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc} from './screens';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { useState } from 'react';
@@ -11,9 +12,9 @@ function App() {
     <>
     <Router>
         <Routes>
-        <Route path="/login" element={<Login header={<Header/>} footer={<Footer/>}/>} />
-        <Route path="/register" element={<Register header={<Header/>} footer={<Footer/>}/>} />
-        <Route path="/verification" element={<Verification header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/login" element={<Login header={<FormTopBar/>}/>} />
+        <Route path="/register" element={<Register header={<FormTopBar/>}/>} />
+        <Route path="/verification" element={<Verification header={<FormTopBar/>}/>} />
         <Route path="/forgot-password" element={<Forgot header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/kyc" element={<Kyc header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/" element={<Home header={<Header/>} footer={<Footer/>}/>} />

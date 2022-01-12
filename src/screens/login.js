@@ -1,10 +1,48 @@
-import { useState } from "react";
+import React, { useState } from 'react';
+import { firebase, auth } from '../components/FirebaseOtp';
 import { Col, Container, Form, Row } from "react-bootstrap"
-import GoogleLogin from 'react-google-login';
 import { useNavigate } from "react-router-dom";
 import Logo from '../assets/images/formlogo.png'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
 
 function Login(props){
+        // Inputs
+        const [mynumber, setnumber] = useState("");
+        const [otp, setotp] = useState('');
+        const [show, setshow] = useState(false);
+        const [final, setfinal] = useState('');
+      
+        // Sent OTP
+        const signin = (e) => {
+            e.preventDefault()
+      
+            if (mynumber === "" || mynumber.length < 10) return;
+      
+            let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+            auth.signInWithPhoneNumber(mynumber, verify).then((result) => {
+                setfinal(result);
+                alert("code sent")
+                setshow(true);
+            })
+                .catch((err) => {
+                    alert(err);
+                    window.location.reload()
+                });
+        }
+      
+        // Validate OTP
+        const ValidateOtp = () => {
+            if (otp === null || final === null)
+                return;
+            final.confirm(otp).then((result) => {
+                // success
+            }).catch((err) => {
+                alert("Wrong code");
+            })
+        }
+
     const [loginstatus,setLoginstatus] = useState('email');
     const navigate = useNavigate()
     const responseGoogle = (response) => {
@@ -12,13 +50,15 @@ function Login(props){
       }
     const SignIn = (e)=>{
         e.preventDefault();
-        navigate('/verification')
+        navigate('/dashboard')
     }
     return (
         <>
-        {props.header}
+    {props.header}
+       
         <Container>
-        <div className="section-margin">
+    
+        <div className="form-section-margin">
         <Row className="justify-content-center">
             <Col lg="6" sm="12" >
             <main className="form-section">
@@ -49,8 +89,13 @@ function Login(props){
                     <Form.Group className="" controlId="phone">
                         <Form.Label>Phone Number</Form.Label>
                         <div className="d-flex">
-                        <Form.Control type="password" className="form-control country-code" />
-                        <input type="phone" className="form-control"/>
+                        {/* <Form.Control type="password" className="form-control country-code" />
+                        <input type="phone" className="form-control" value={mynumber} onChange={(e) => { 
+                       setnumber(e.target.value) }}/> */}
+                            <PhoneInput
+                        country={'us'}
+                        enableSearch={true}
+                        className="form-control"/>
                         </div>
                     </Form.Group>
                     </>
@@ -61,7 +106,7 @@ function Login(props){
                         <i class="fa fa-eye-slash form-icon"></i>
                 </Form.Group>
                 <div className="mt-5">
-               
+                <div id="recaptcha-container"></div>
                 <button className="btn w-100 btn-lg btn-custom" type="submit" >Sign in</button>
                 </div>
                 <div className="d-j-flex">
@@ -82,7 +127,6 @@ function Login(props){
         </Row>
         </div>
         </Container>
-        {props.footer}
         </>
     )
 }

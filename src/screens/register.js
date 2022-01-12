@@ -1,50 +1,99 @@
 import { useState } from "react"
-import { Col, Container, Form, Row } from "react-bootstrap"
+import { Col, Container, Form, Modal, Row } from "react-bootstrap"
 import { Link, useNavigate } from "react-router-dom";
 import Logo from '../assets/images/formlogo.png'
+import Select, { components } from "react-select";
+import countryList from "react-select-country-list";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
+function CountryFlag(props) {
+    return (
+      <span
+        className={"fi fi-" + props.code}
+        style={{ fontSize: props.size || "40px",paddingRight:'10px'}}
+      />
+    );
+  }
+  const CountryFlagSelectOption = props => {
+    return (
+      <components.Option {...props}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <CountryFlag size={props.flagSize} code={props.value.toLowerCase()} />
+          {props.label}
+        </div>
+      </components.Option>
+    );
+  };
+  const CountryFlagValueContainer = ({ children, ...props }) => {
+    const code = (props.hasValue && props.getValue()[0].value) || false;
+  
+    return (
+      <div style={{ display: "flex", flexGrow: 1 }}>
+        {(code && <CountryFlag code={code.toLowerCase()} />) || null}
+        <components.ValueContainer {...props}>
+          {children}
+        </components.ValueContainer>
+      </div>
+    );
+  };
 function Register(props){
     const [regstatus,setRegstatus] = useState('email');
     const [selectcountry,setSelectcountry] = useState("")
     const [country,setCountry] = useState("")
+    const [show, setShow] = useState(true);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     const navigate = useNavigate()
     const ChooseCountry = (e)=>{
         e.preventDefault();
-        setCountry(selectcountry)
+        setCountry(value)
         console.log(country)
     }
     const SignUp = (e)=>{
         e.preventDefault();
         navigate('/verification')
     }
+    const changeHandler = value => {
+        setValue(value );
+        
+     };
+    const [option,setOption] = useState(countryList().getData());
+    const [value,setValue] = useState(null);
     return (
         <>
         {props.header}
         <Container>
-        <div className="section-margin">
+        <div className="form-section-margin">
         <Row className="justify-content-center">
-           {
-               country == "" ? <>
-               <div className="center-form col-lg-6 col-12">
-               <main className="form-section">
-               <div className="form">
-               <Form onSubmit={(e) => {
-				ChooseCountry(e);
-				}}>
-               <h1 className="h3 mb-5 fw-normal text-center">Where do you live?</h1>
-               <p className="text-center">Before we start, please enter your<br/> current location of residence.</p>
-                <select className="form-control" name="country" onChange={(e)=>setSelectcountry(e.target.value)}>
-                    <option value="" selected disabled>Select Country</option>
-                    <option value="Pakistan">Pakistan</option>
-                    <option value="Afghanistan">Afghanistan</option>
-                </select>
-                <button className="btn w-100 btn-lg btn-custom mt-5" type="submit">Proceed</button>
-                </Form>
-                </div>
-               </main>
-               </div>
-               </>
-               : <>
+       
+                      <Modal show={show} onHide={handleClose} centered>
+                        <Modal.Body>
+                    <Form onSubmit={(e) => {
+                        ChooseCountry(e);
+                        }}>
+                        <h1 className="h3 mb-3 fw-normal text-center">Select Your Country</h1>
+                        <p className="text-center">Before we start, please enter your current<br/> location of residence.</p>
+                        <h5>Country/State</h5>
+                        <Select
+                                options={option}
+                                value={value}
+                                onChange={(e)=>changeHandler()}
+                                components={{
+                                    Option: CountryFlagSelectOption,
+                                    ValueContainer: CountryFlagValueContainer
+                                }}
+                            />
+                        <button className="btn w-100 btn-lg btn-custom mt-5" type="submit" onClick={handleClose}>Confirm</button>
+                    </Form>
+                        </Modal.Body>
+                        <Modal.Footer>
+           
+                        </Modal.Footer>
+                    </Modal>
+               
+
                 <Col lg="6" sm="12">
             <main className="form-section">
             <Row>
@@ -75,8 +124,10 @@ function Register(props){
                  <Form.Group className="" controlId="phone">
                         <Form.Label>Phone Number</Form.Label>
                         <div className="d-flex">
-                        <Form.Control type="password" className="form-control country-code" />
-                        <input type="phone" className="form-control"/>
+                        <PhoneInput
+                        country={'us'}
+                        enableSearch={true}
+                        className="form-control"/>
                         </div>
                     </Form.Group>
                     </>
@@ -113,7 +164,7 @@ function Register(props){
                  </label>
                  <span className="form-checkbox-text">I certify that I am 18 years of age or older, and agree to the User Agreement and Privacy Policy.</span>
                 </div>
-                <button className="btn w-100 btn-lg btn-custom" type="submit">Sign in</button>
+                <button className="btn w-100 btn-lg btn-custom" type="submit">Sign Up</button>
                 <div className="text-center">
                 <br/>
                  <p >Already Registered?<Link to="/login" className="anchor">Sign In</Link></p>
@@ -125,12 +176,10 @@ function Register(props){
             
             </main>
             </Col>
-               </>
-           }
+       
         </Row>
         </div>
         </Container>
-        {props.footer}
         </>
     )
 }

@@ -3,7 +3,7 @@ import { Col, Container, Form, Row } from "react-bootstrap"
 import OtpInput from 'react-otp-input';
 import { useNavigate } from "react-router-dom";
 
-function Verification(){
+function Verification(props){
     const [OTP, setOTP] = useState("");
     const navigate = useNavigate()
  
@@ -13,6 +13,7 @@ function Verification(){
     }
     return (
         <>
+        {props.header}
         <Container>
         <div className="section-margin">
         <Row>
@@ -22,7 +23,10 @@ function Verification(){
                <Form onSubmit={(e) => {
 				Verify(e);
 				}}>
-               <h1 className="h3 mb-5 fw-normal text-center">Verification</h1>
+               <h1 className="h3 mb-3 fw-normal text-center">Phone Verification</h1>
+               <div className="text-center mb-2">
+               <span className="text-center">Please enter the 6 digit verification  code <br/> that was sent to you.<br/>The code is valid</span>
+               </div>
                <div className="text-center digit-group">
                <OtpInput
                value={OTP}
