@@ -162,10 +162,11 @@ function Home(props){
                                         <span>
                                             <p><b>Change</b></p>
 
-                                            <p>
+                                            <p className="green">
                                                 <i class="fa fa-caret-up"></i>
                                                 $3%
                                             </p>
+
                                         </span>
 
                                 </div>
@@ -208,7 +209,7 @@ function Home(props){
                                         <span>
                                             <p><b>Change</b></p>
 
-                                            <p>
+                                            <p className="green">
                                                 <i class="fa fa-caret-up"></i>
                                                 $3%
                                             </p>
@@ -254,7 +255,7 @@ function Home(props){
                                         <span>
                                             <p><b>Change</b></p>
 
-                                            <p>
+                                            <p className="green">
                                                 <i class="fa fa-caret-up"></i>
                                                 $3%
                                             </p>
@@ -300,7 +301,7 @@ function Home(props){
                                         <span>
                                             <p><b>Change</b></p>
 
-                                            <p>
+                                            <p className="green">
                                                 <i class="fa fa-caret-up"></i>
                                                 $3%
                                             </p>
@@ -346,10 +347,11 @@ function Home(props){
                                         <span>
                                             <p><b>Change</b></p>
 
-                                            <p>
-                                                <i class="fa fa-caret-up"></i>
+                                            <p className="red">
+                                                <i class="fa fa-caret-down"></i>
                                                 $3%
                                             </p>
+
                                         </span>
 
                                 </div>
