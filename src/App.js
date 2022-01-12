@@ -2,7 +2,7 @@
 import './assets/css/Style.css'
 import './assets/css/flagicon.css'
 import {Header,Footer,UserPanelHeader,FormTopBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc} from './screens';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History,Kyc,Welcome_DashB,Market} from './screens';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { useState } from 'react';
 
@@ -22,6 +22,10 @@ function App() {
         <Route path="/dashboard/swap" element={<Swap header={<UserPanelHeader/>}/>} />
         <Route path="/dashboard/wallet" element={<Wallet header={<UserPanelHeader/>}/>} />
         <Route path="/dashboard/history" element={<History header={<UserPanelHeader/>}/>} />
+        <Route path="/welcome" element={<Welcome_DashB header={<FormTopBar/>} />} />
+        <Route path="/market" element={<Market header={<Header/>} footer={<Footer/>}/>} />
+      
+        
         </Routes>
     </Router>
     </>
