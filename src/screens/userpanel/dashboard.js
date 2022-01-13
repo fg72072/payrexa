@@ -1,14 +1,65 @@
-import { Row,Col, Tab, Tabs, Table } from "react-bootstrap"
+import { useState } from "react"
+import { Row,Col, Tab, Tabs, Table,Modal,Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 function Dashboard(props){
+
+    const [show, setShow] = useState(true);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
         {props.header}
+        
+        
+
+                <Modal show={show} onHide={handleClose} centered className="security-verify-modal">
+                    
+                {/* <Modal.Header closeButton className="">
+                
+                </Modal.Header> */}
+
+                        <Modal.Body className="box-bg">
+
+                        <i class="fa-solid fa-xmark" onClick={handleClose}></i>
+
+                        <div className="modal-title">
+                            <h3>Security Verification</h3>
+                            <p>Enable 2FA, Email Authentication, to increase your account security</p>
+                        </div>
+
+                        <div className="modal-box-verify">
+
+                            <Link to={'/'}>
+
+                                <img src={require("../../assets/images/emails.png").default} />
+                                <p>Enable Email Verication</p>
+
+                            </Link>
+
+                            <Link to={'/'}>
+
+                                <img src={require("../../assets/images/verification.png").default} />
+                                <p>Enable Phone Verication</p>
+
+                            </Link>
+
+                        </div>
+
+
+                        <Link to={'/'} className="custom-icon-btn primary-btn">Continue</Link>
+                        
+
+                        </Modal.Body>
+                        
+                </Modal>
+
         <div className="dashboard-section">
             {props.sidebar}
             <div className="dashboard-main">
-                <div className="normal-box">
+                <div className="normal-box big-bg">
                     <h3>Welcome to PayRexa</h3>
                     <p>Just a few more steps and you're good to go!</p>
                 </div>
@@ -20,7 +71,7 @@ function Dashboard(props){
                     <h4>Balance Details</h4>
                     <div className="d-j-flex">
                     <a href="#" class="custom-btn-sm">Deposit</a>
-                    <a href="#" class="custom-btn-sm">Withdraw</a>
+                    <a href="#" class="custom-btn-sm-sec">Withdraw</a>
                     </div>
                     </div>
 
@@ -110,7 +161,7 @@ function Dashboard(props){
                         </div>
                     </Tab>
                     </Tabs>
-                    <a className="red pointer disable-btn">Disable Account</a>
+                    <Link to={'/security/disable-account'} className="red pointer disable-btn">Disable Account</Link>
                     </div>
                     </div>
                     </Col>

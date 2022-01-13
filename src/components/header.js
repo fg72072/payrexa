@@ -8,7 +8,7 @@ function Header(){
         <>
         <div className="sticky-nav">
         <Container>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <Link to={"/"} className="navbar-brand">
           <img width="50" src={require("../assets/images/logo.png").default}/>
@@ -30,16 +30,13 @@ function Header(){
 
           <ul className="navbar-nav  mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to={"/dashboard/swap"} className="custom-link nav-link active" onClick={()=>setIsHidden(true)}>Dashboard</Link>
+              <Link to={"/dashboard/swap"} className="custom-link nav-link active" onClick={()=>setIsHidden(true)}>Buy Crypto</Link>
             </li>
             <li className="nav-item">
-            <Link to={"/"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Invest & Earn</Link>
+            <Link to={"/"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Market</Link>
             </li>
             <li className="nav-item">
-            <Link to={"/about"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>About Us</Link>
-            </li>
-            <li className="nav-item">
-            <Link to={"/blog"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Blog</Link>
+            <Link to={"/about"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Trade</Link>
             </li>
             <li className="nav-item">
             <Link to={"/login"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Login</Link>
@@ -50,20 +47,40 @@ function Header(){
           </ul>
 
           <div className="d-flex">
-            <div className="social-links-section">
-              <a target="_blank" href="https://facebook.com/obiexfinance">
-              <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a target="_blank" href="https://t.me/joinchat/U5jIDQ3cSYYdabGr">
-              <i class="fa-brands fa-telegram"></i>
-                </a>
-                <a target="_blank" href="https://twitter.com/obiexfinance">
-                <i class="fa-brands fa-twitter"></i>
-                  </a><a
-                target="_blank" href="https://instagram.com/obiexfinance">
-                  <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  </div>
+
+            <ul className="navbar-nav">
+
+              <li className="nav-item">
+
+                <Link to={"#"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Wallet</Link>
+                
+              </li>
+
+              <li className="nav-item">
+
+                <Link to={"#"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Orders</Link>
+
+              </li>
+
+
+              <li className="nav-item">
+
+                <Link to={"#"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}><i class="fa-regular fa-circle-user"></i></Link>
+
+              </li>
+
+
+              <li className="nav-item">
+
+                <Link to={"#"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}><i class="fa-regular fa-bell"></i></Link>
+
+              </li>
+
+
+
+            </ul>
+
+          
           </div>
         </div>
       </div>
