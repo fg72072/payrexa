@@ -37,6 +37,8 @@ function CountryFlag(props) {
       </div>
     );
   };
+
+  
 function Register(props){
     const [regstatus,setRegstatus] = useState('email');
     const [selectcountry,setSelectcountry] = useState("")
@@ -68,7 +70,7 @@ function Register(props){
         <div className="form-section-margin">
         <Row className="justify-content-center">
        
-                      <Modal show={show} onHide={handleClose} centered>
+                    <Modal show={show} onHide={handleClose} centered>
                         <Modal.Body>
                     <Form onSubmit={(e) => {
                         ChooseCountry(e);

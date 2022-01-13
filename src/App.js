@@ -3,7 +3,9 @@ import './assets/css/Style.css'
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
 import {Header,Footer,UserPanelHeader,FormTopBar, SideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market} from './screens';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity} from './screens';
+import {Accountlogon} from './screens';
+
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { useState } from 'react';
 
@@ -21,6 +23,9 @@ function App() {
         <Route path="/" element={<Home header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/dashboard" element={<Dashboard header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/security" element={<Security header={<Header/>} sidebar={<SideBar/>}/>} />
+        <Route path="/security/disable-account" element={<Disableaccount header={<Header/>} sidebar={<SideBar/>}/>} />
+        <Route path="/security/account-activity" element={<Accountactivity header={<Header/>} sidebar={<SideBar/>}/>} />
+        <Route path="/security/device-logon" element={<Accountlogon header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/payment" element={<Payment header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/setting" element={<Setting header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/dashboard/swap" element={<Swap header={<UserPanelHeader/>}/>} />

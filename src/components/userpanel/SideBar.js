@@ -18,7 +18,7 @@ function SideBar(){
                 <ul>
                     <li><Link to={'/dashboard'}><i class="fa-regular fa-circle-user"></i><span>Dashboard</span></Link></li>
                     <li><Link to={'/security'}><i class="fa-solid fa-shield"></i><span>Security</span></Link></li>
-                    <li><Link to={'/'}><i class="fa-solid fa-pen-to-square"></i><span>Personal Info</span></Link></li>
+                    <li><Link to={'/kyc'}><i class="fa-solid fa-pen-to-square"></i><span>Personal Info</span></Link></li>
                     <li><Link to={'/payment'}><i class="fa-brands fa-bitcoin"></i><span>Payment</span></Link></li>
                     <li><Link to={'/setting'}><i class="fa-solid fa-gear"></i><span>Settings</span></Link></li>
 

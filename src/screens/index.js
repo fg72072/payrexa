@@ -13,4 +13,11 @@ import Market from "./market";
 import Security from "./userpanel/Security";
 import Payment from "./userpanel/Payment";
 import Setting from "./userpanel/Setting";
-export {Login,Register,Forgot,Verification,Kyc,Home,Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market};
+import Disableaccount from "./userpanel/disableAccount";
+import Accountactivity from "./userpanel/accountActivity";
+import Accountlogon from "./userpanel/deviceLogon";
+
+
+
+export {Login,Register,Forgot,Verification,Kyc,Home,
+    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon};

@@ -1,4 +1,5 @@
 import { Col, Container, Form, Row, Table } from "react-bootstrap";
+import { Link } from "react-router-dom"
 
 
 function Market(props){
@@ -323,7 +324,7 @@ function Market(props){
                                     <td>49,000.00 / 49,000.00</td>
                                     <td>380.72M</td>
                                     <td>$916,473.65M</td>
-                                    <td><a href="#" className="primary-a">Trade</a></td>
+                                    <td><Link to={"/"} className="primary-a">Trade</Link></td>
 
                                 </tr>
 
@@ -337,7 +338,7 @@ function Market(props){
                                     <td>49,000.00 / 49,000.00</td>
                                     <td>380.72M</td>
                                     <td>$916,473.65M</td>
-                                    <td><a href="#" className="primary-a">Trade</a></td>
+                                    <td><Link to={"/"} className="primary-a">Trade</Link></td>
 
                                 </tr>
 
@@ -351,7 +352,7 @@ function Market(props){
                                     <td>49,000.00 / 49,000.00</td>
                                     <td>380.72M</td>
                                     <td>$916,473.65M</td>
-                                    <td><a href="#" className="primary-a">Trade</a></td>
+                                    <td><Link to={"/"} className="primary-a">Trade</Link></td>
 
                                 </tr>
 
@@ -365,7 +366,7 @@ function Market(props){
                                     <td>49,000.00 / 49,000.00</td>
                                     <td>380.72M</td>
                                     <td>$916,473.65M</td>
-                                    <td><a href="#" className="primary-a">Trade</a></td>
+                                    <td><Link to={"/"} className="primary-a">Trade</Link></td>
 
                                 </tr>
 
@@ -379,7 +380,7 @@ function Market(props){
                                     <td>49,000.00 / 49,000.00</td>
                                     <td>380.72M</td>
                                     <td>$916,473.65M</td>
-                                    <td><a href="#" className="primary-a">Trade</a></td>
+                                    <td><Link to={"/"} className="primary-a">Trade</Link></td>
 
                                 </tr>
 
@@ -396,15 +397,14 @@ function Market(props){
                 
                 <div class="tab-pane fade" id="all-crypto" role="tabpanel" aria-labelledby="all-crypto-tab">
 
-                <Table responsive="lg">
+                    <Table responsive="lg">
 
                     <thead className="t-heading">
                         <tr>
-                        <th></th>
+                     
                         <th>Name</th>
                         <th>Price</th>
                         <th>24h Change</th>
-                        <th>24h High/Low</th>
                         <th>24h Volume</th>
                         <th>Market Cap</th>
                         </tr>
@@ -415,72 +415,104 @@ function Market(props){
 
                         <tr>
 
-                            <td><i class="fa-solid fa-star star"></i></td>
-                            <td>BTC/USDT</td>
-                            <td><span className="green">49,000.00</span> / <span>49,000.00</span></td>
+                            <td className="d-flex text-center align-items-center">
+                                <img className="radius-50 me-2" src={require("../assets/images/logo.png").default} width="30"/>
+                                <h6 className="mb-0">USDT</h6>
+                                <span className="text">BFC</span>
+                            </td>
+                            <td>49,000.00</td>
                             <td><span className="red">-1.30%</span></td>
-                            <td>49,000.00 / 49,000.00</td>
                             <td>380.72M</td>
                             <td>$916,473.65M</td>
-                            <td><a href="#" className="primary-a">Trade</a></td>
+                            <td>
+                                <Link to={"/"} className="primary-a">Detail</Link>
+                                
+                                <Link to={"/"} className="primary-a">Trade</Link>
+                            </td>
 
                         </tr>
 
 
                         <tr>
 
-                            <td><i class="fa-solid fa-star star"></i></td>
-                            <td>BTC/USDT</td>
-                            <td><span className="green">49,000.00</span> / <span>49,000.00</span></td>
+                            <td className="d-flex text-center align-items-center">
+                                <img className="radius-50 me-2" src={require("../assets/images/logo.png").default} width="30"/>
+                                <h6 className="mb-0">USDT</h6>
+                                <span className="text">BFC</span>
+                            </td>
+                            <td>49,000.00</td>
                             <td><span className="red">-1.30%</span></td>
-                            <td>49,000.00 / 49,000.00</td>
                             <td>380.72M</td>
                             <td>$916,473.65M</td>
-                            <td><a href="#" className="primary-a">Trade</a></td>
+                            <td>
+                                <Link to={"/"} className="primary-a">Detail</Link>
+                                
+                                <Link to={"/"} className="primary-a">Trade</Link>
+                            </td>
 
-                        </tr>
+                            </tr>
 
 
-                        <tr>
+                            <tr>
 
-                            <td><i class="fa-solid fa-star star"></i></td>
-                            <td>BTC/USDT</td>
-                            <td><span className="green">49,000.00</span> / <span>49,000.00</span></td>
+                            <td className="d-flex text-center align-items-center">
+                                <img className="radius-50 me-2" src={require("../assets/images/logo.png").default} width="30"/>
+                                <h6 className="mb-0">USDT</h6>
+                                <span className="text">BFC</span>
+                            </td>
+                            <td>49,000.00</td>
                             <td><span className="red">-1.30%</span></td>
-                            <td>49,000.00 / 49,000.00</td>
                             <td>380.72M</td>
                             <td>$916,473.65M</td>
-                            <td><a href="#" className="primary-a">Trade</a></td>
+                            <td>
+                                <Link to={"/"} className="primary-a">Detail</Link>
+                                
+                                <Link to={"/"} className="primary-a">Trade</Link>
+                            </td>
 
-                        </tr>
+                            </tr>
 
 
-                        <tr>
+                            <tr>
 
-                            <td><i class="fa-solid fa-star star"></i></td>
-                            <td>BTC/USDT</td>
-                            <td><span className="green">49,000.00</span> / <span>49,000.00</span></td>
+                            <td className="d-flex text-center align-items-center">
+                                <img className="radius-50 me-2" src={require("../assets/images/logo.png").default} width="30"/>
+                                <h6 className="mb-0">USDT</h6>
+                                <span className="text">BFC</span>
+                            </td>
+                            <td>49,000.00</td>
                             <td><span className="red">-1.30%</span></td>
-                            <td>49,000.00 / 49,000.00</td>
                             <td>380.72M</td>
                             <td>$916,473.65M</td>
-                            <td><a href="#" className="primary-a">Trade</a></td>
+                            <td>
+                                <Link to={"/"} className="primary-a">Detail</Link>
+                                
+                                <Link to={"/"} className="primary-a">Trade</Link>
+                            </td>
 
-                        </tr>
+                            </tr>
 
 
-                        <tr>
+                            <tr>
 
-                            <td><i class="fa-solid fa-star star"></i></td>
-                            <td>BTC/USDT</td>
-                            <td><span className="green">49,000.00</span> / <span>49,000.00</span></td>
+                            <td className="d-flex text-center align-items-center">
+                                <img className="radius-50 me-2" src={require("../assets/images/logo.png").default} width="30"/>
+                                <h6 className="mb-0">USDT</h6>
+                                <span className="text">BFC</span>
+                            </td>
+                            <td>49,000.00</td>
                             <td><span className="red">-1.30%</span></td>
-                            <td>49,000.00 / 49,000.00</td>
                             <td>380.72M</td>
                             <td>$916,473.65M</td>
-                            <td><a href="#" className="primary-a">Trade</a></td>
+                            <td>
+                                <Link to={"/"} className="primary-a">Detail</Link>
+                                
+                                <Link to={"/"} className="primary-a">Trade</Link>
+                            </td>
 
-                        </tr>
+                            </tr>
+
+
 
 
 
@@ -497,13 +529,151 @@ function Market(props){
 
                 <div class="tab-pane fade" id="market-over" role="tabpanel" aria-labelledby="market-over-tab">
 
-                    ...
+                   <Row className="mt-5">
+
+                        <Col lg={4}>
+
+                            <div className="market-overview-box">
+                                
+                                <div className="market-overview-head">
+                                    <span>
+                                        <p>bnb/usdt</p>
+                                        <p className="red">-4.4 -0.8%</p>
+                                    </span>
+
+                                    <p>528.3/$528.30</p>
+
+                                </div>
+
+                                <img src={require("../assets/images/graph.png").default} style={{width:"100%"}}/>
+
+                            </div>
+
+                        </Col>
+
+                        <Col lg={4}>
+
+                            <div className="market-overview-box">
+                                
+                                <div className="market-overview-head">
+                                    <span>
+                                        <p>bnb/usdt</p>
+                                        <p className="red">-4.4 -0.8%</p>
+                                    </span>
+
+                                    <p>528.3/$528.30</p>
+
+                                </div>
+
+                                <img src={require("../assets/images/graph.png").default} style={{width:"100%"}}/>
+
+                            </div>
+
+                        </Col>
+
+                        <Col lg={4}>
+
+                            <div className="market-overview-box">
+                                
+                                <div className="market-overview-head">
+                                    <span>
+                                        <p>bnb/usdt</p>
+                                        <p className="red">-4.4 -0.8%</p>
+                                    </span>
+
+                                    <p>528.3/$528.30</p>
+
+                                </div>
+
+                                <img src={require("../assets/images/graph.png").default} style={{width:"100%"}}/>
+
+                            </div>
+
+                        </Col>
+
+                   </Row>
 
                 </div>
 
                 <div class="tab-pane fade" id="top-movers" role="tabpanel" aria-labelledby="top-movers-tab">
                     
-                    ...
+                    <Table striped responsive="lg">
+
+
+                        <tbody className="text-center align-items-center">
+
+
+                            <tr>
+
+                            
+                                <td>18:14:19</td>
+                                <td>MASK/USDT</td>
+                                <td>New 24h High</td>
+                                <td className="text-center">
+                                    <span className="red">-3.0%</span> 
+                                    <i class="fa-solid fa-arrow-trend-down market-down"></i>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+                            
+                                <td>18:14:19</td>
+                                <td>MASK/USDT</td>
+                                <td>New 24h High</td>
+                                <td className="text-center">
+                                    <span className="green">+3.0%</span> 
+                                    <i class="fa-solid fa-arrow-trend-up market-up"></i>
+                                </td>
+                                
+                            </tr>
+
+                            
+                            <tr>
+
+                                <td>18:14:19</td>
+                                <td>MASK/USDT</td>
+                                <td>New 24h High</td>
+                                <td className="text-center">
+                                    <span className="green">+3.0%</span> 
+                                    <i class="fa-solid fa-arrow-trend-up market-up"></i>
+                                </td>
+                                
+                            </tr>
+
+                            <tr>
+
+                                                        
+                                <td>18:14:19</td>
+                                <td>MASK/USDT</td>
+                                <td>New 24h High</td>
+                                <td className="text-center">
+                                    <span className="red">-3.0%</span> 
+                                    <i class="fa-solid fa-arrow-trend-down market-down"></i>
+                                </td>
+
+                                </tr>
+
+                                <tr>
+
+                                                        
+                                <td>18:14:19</td>
+                                <td>MASK/USDT</td>
+                                <td>New 24h High</td>
+                                <td className="text-center">
+                                    <span className="red">-3.0%</span> 
+                                    <i class="fa-solid fa-arrow-trend-down market-down"></i>
+                                </td>
+
+                            </tr>
+                            
+
+
+                        </tbody>
+
+
+                    </Table>
 
                 </div>
 
@@ -518,6 +688,7 @@ function Market(props){
         </Container>
 
         {props.footer}
+
         </>
 
     )
