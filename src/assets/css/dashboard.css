@@ -239,3 +239,52 @@
 .text-left{
   text-align: left;
 }
+
+.verification {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 70px 0 120px 0;
+}
+
+.verification-item {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.verification-item .verification-content {
+  margin-bottom: 0;
+  position: absolute;
+  top: 120%;
+  /* left: 0%;
+  width: 200px; */
+}
+
+.verification-circle {
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verification-hr {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  width: 150px;
+  height: 1px !important;
+  margin: 0;
+  opacity: 1 !important;
+}
+
+.circle-done {
+  background-color: var(--primary);
+  color: var(--text-white);
+}

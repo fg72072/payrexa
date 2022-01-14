@@ -9,6 +9,10 @@
   --light-bg: #f5f5f5;
 }
 
+body {
+  font-family: "Raleway" !important ;
+}
+
 ::selection {
   background: var(--primary);
   color: var(--text-white);
@@ -70,117 +74,93 @@ button:disabled:hover {
   padding: 0 2rem !important;
 } */
 
-/* start media screen min-widht:320px and max-width:768 */
-@media (min-width: 320px) and (max-width: 990px) {
-  .custom-link {
-    padding: 0.5rem 1rem !important;
-  }
+.sticky-nav {
+  box-shadow: 0px 0px 18px 2px rgb(112 110 110 / 41%);
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--text-white);
+  padding: 0 2rem;
+}
 
-  .custom-nav {
-    flex-direction: column;
-    text-align: center;
-  }
-  .social-links-section {
-    padding: 1.5rem 0;
-  }
-  .navbar-nav {
-    margin-right: 0 !important;
-  }
-  .nav-hide {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease;
-  }
-  .nav-show {
-    height: 320px;
-    overflow: hidden;
-    transition: height 0.5s ease;
-  }
-  .c-order-1 {
-    order: 1;
-  }
-  .c-order-2 {
-    order: 2;
-  }
-  .banner-text {
-    margin-top: 46px;
-  }
-  .banner-img {
-    display: none;
-  }
+.dropdown-menu {
+  width: 13rem;
+  box-shadow: var(--shadow);
 }
-/* end media screen min-widht:320px and max-width:768 */
 
-@media (min-width: 918px) and (max-width: 2560px) {
-  .custom-link {
-    padding: 0 1rem !important;
-  }
-  .slick-prev {
-    left: 93% !important;
-  }
+.dropdown-menu-lg {
+  width: 22rem;
+  box-shadow: var(--shadow);
 }
-@media (min-width: 320px) and (max-width: 425px) {
-  .form {
-    padding: 1rem !important;
-  }
-  .slick-prev {
-    left: 80% !important;
-  }
-  .c-nav-tabs {
-    width: 55% !important;
-  }
-  .btn-box {
-    flex-direction: column;
-  }
-  .btn-box .btn-crypto {
-    margin-top: 7px;
-    width: 238px;
-  }
-  .banner-text h1 {
-    font-size: 40px !important;
-  }
-  .section-text h1 {
-    font-size: 50px !important;
-  }
-  .btn-box .btn-crypto .d-column {
-    align-items: flex-start;
-  }
-  .nav.nav-pills {
-    flex-direction: column;
-    align-items: center;
-  }
-  .btn-lg.btn-crypto {
-    width: 50%;
-    margin-top: 7px;
-  }
-  .crypto-text {
-    font-size: 20px !important;
-  }
-  .crypto-text-large {
-    font-size: 20px !important;
-  }
-  .d-column {
-    align-items: center;
-  }
-  .popup .d-j-flex {
-    flex-direction: column;
-  }
-  .popup {
-    margin-bottom: -200px !important;
-  }
+
+.dropdown-menu li {
+  padding: 12px 10px;
+  margin: 0 10px;
 }
-@media (min-width: 552px) and (max-width: 990px) {
-  .slick-prev {
-    left: 90% !important;
-  }
-  .c-nav-tabs {
-    width: 28% !important;
-  }
+
+.dropdown-menu li:not(:last-child) {
+  border-bottom: 1px solid var(--text-disable);
 }
-@media (min-width: 1008px) and (max-width: 1132px) {
-  .btn-crypto i {
-    font-size: 22px !important;
-  }
+
+.dropdown-menu li a {
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--text-black);
+  font-size: 18px;
+}
+
+.dropdown-menu li i,
+.dropdown-menu li img {
+  margin-right: 10px;
+}
+.dropdown-menu li img {
+  width: 20px;
+}
+
+.dropdown-menu .notification-dropdown {
+  border: none !important;
+}
+
+.dropdown-menu .notification-dropdown:first-child {
+  text-align: right;
+}
+
+.dropdown-menu .notification-dropdown p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  margin-bottom: 0;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.dropdown-menu .notification-dropdown p:last-child {
+  font-size: 12px;
+}
+
+.dropdown-menu .notification-dropdown .unread {
+  position: relative;
+}
+
+.dropdown-menu .notification-dropdown .unread:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  background: var(--primary);
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+}
+
+.dropdown-menu li:hover {
+  background: var(--light-bg);
+  border-radius: 5px;
 }
 
 .social-links-section a {
@@ -256,15 +236,7 @@ button:disabled:hover {
   overflow: hidden;
   box-shadow: 0px 0px 18px 2px rgb(68 68 68 / 41%);
 }
-.sticky-nav {
-  box-shadow: 0px 0px 18px 2px rgb(112 110 110 / 41%);
-  position: sticky;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var(--text-white);
-}
+
 .form-ul .active {
   background: var(--primary);
   padding-left: 1.5rem;
@@ -1109,30 +1081,6 @@ footer {
   bottom: 0;
   background: #ffffff7a;
   z-index: -1;
-}
-@media (min-width: 866px) and (max-width: 1024px) {
-  .bg-section {
-    background-position: -254%;
-  }
-  .bg-section-lg {
-    background-position: 128%;
-  }
-}
-@media (min-width: 375px) and (max-width: 425px) {
-  .bg-section {
-    background-position: -83%;
-  }
-  .bg-section-lg {
-    background-position: -40%;
-  }
-}
-@media (min-width: 320px) and (max-width: 412px) {
-  .bg-section {
-    background-position: 8%;
-  }
-  .bg-section-lg {
-    background-position: 13%;
-  }
 }
 
 /* WASI NEW*/
