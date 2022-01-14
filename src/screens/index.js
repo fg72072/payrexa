@@ -3,6 +3,7 @@ import Register from "./register";
 import Forgot from "./forgot";
 import Home from "./home";
 import Verification from "./verification";
+import EmailVerification from "./EmailVerfication";
 import Dashboard from "./userpanel/dashboard";
 import Swap from "./userpanel/swap";
 import Wallet from "./userpanel/wallet";
@@ -16,8 +17,9 @@ import Setting from "./userpanel/Setting";
 import Disableaccount from "./userpanel/disableAccount";
 import Accountactivity from "./userpanel/accountActivity";
 import Accountlogon from "./userpanel/deviceLogon";
+import AddPayment from "./userpanel/AddPayment";
 
 
 
 export {Login,Register,Forgot,Verification,Kyc,Home,
-    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon};
+    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification};

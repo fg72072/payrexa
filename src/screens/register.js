@@ -55,7 +55,12 @@ function Register(props){
     }
     const SignUp = (e)=>{
         e.preventDefault();
-        navigate('/verification')
+        if(regstatus == 'email'){
+        navigate('/email/verification')
+        }
+        else{
+          navigate('/phone/verification')
+        }
     }
     const changeHandler = value => {
         setValue(value );

@@ -17,7 +17,7 @@ function Payment(props){
                     <div class="normal-box">
                         <div className="d-j-flex">
                         <h4>P2P</h4>
-                        <button class="custom-btn-sm">+ Add Payment Details</button>
+                        <Link to={'/payment/add'} class="custom-btn-sm">+ Add Payment Details</Link>
                         </div>
                         <hr/>
                         <p>
