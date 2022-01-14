@@ -233,6 +233,12 @@
 .toggle-switch input[type="checkbox"]:checked + .switch {
   background-color: var(--primary);
 }
+.react-tel-input .country-list .country{
+  text-align: left;
+}
+.text-left{
+  text-align: left;
+}
 
 .verification {
   display: flex;

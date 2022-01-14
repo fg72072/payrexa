@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { firebase, auth } from '../components/FirebaseOtp';
 import { Col, Container, Form, Row } from "react-bootstrap"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from '../assets/images/formlogo.png'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 import SliderCaptcha from '@slider-captcha/react';
+import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+
 function verifiedCallback(token) {
     console.log('Captcha token: ' + token);
   }
@@ -15,6 +17,7 @@ function Login(props){
         const [otp, setotp] = useState('');
         const [show, setshow] = useState(false);
         const [final, setfinal] = useState('');
+        const [ispasswordshow, setIspasswordshow] = useState(false);
       
         // Sent OTP
         const signin = (e) => {
@@ -68,7 +71,7 @@ function Login(props){
                 <Col lg="12">
                 <div className="form">
                 <Form onSubmit={(e) => {
-				signin(e);
+				SignIn(e);
 				}}>
                 <div className="head-section">
                 <img src={Logo}/>
@@ -91,14 +94,15 @@ function Login(props){
                     <Form.Group className="" controlId="phone">
                         <Form.Label>Phone Number</Form.Label>
                         <div className="d-flex">
-                        {/* <Form.Control type="password" className="form-control country-code" />
-                        <input type="phone" className="form-control" value={mynumber} onChange={(e) => { 
-                       setnumber(e.target.value) }}/> */}
-                        <PhoneInput
-                        country={'us'}
+                        {/* <PhoneInput
+                        country={'pk'}
                         enableSearch={true}
                         value={mynumber} 
                         onChange={(e) => setnumber(e) }
+                        className="form-control"/> */}
+                    <PhoneInput
+                        country={'pk'}
+                        enableSearch={true}
                         className="form-control"/>
                         </div>
                     </Form.Group>
@@ -107,12 +111,22 @@ function Login(props){
                 <Form.Group className="mt-3 " controlId="password">
                         <Form.Label>Password</Form.Label>
                         <div className='position-relative'>
-                        <Form.Control type="password" />
-                        <i class="fa fa-eye-slash form-icon"></i>
+                        <Form.Control type={ispasswordshow == false ? "password" : "text"} />
+                        {
+                            ispasswordshow == false ?<>
+                        <i class="fa fa-eye-slash form-icon pointer" onClick={(e)=>setIspasswordshow(true)}></i>
+                        </>
+                        :<>
+                        <i class="fa fa-eye form-icon pointer" onClick={(e)=>setIspasswordshow(false)}></i>
+                        </>
+                        }
                         </div>
                 </Form.Group>
                 <div className='mt-2'>
-                <div id="recaptcha-container"></div>
+                {/* <div id="recaptcha-container"></div> */}
+                <div>
+                </div>
+         
                 </div>
                 <div className="mt-5">
                 <button className="btn w-100 btn-lg btn-custom" type="submit" >Sign in</button>
@@ -121,8 +135,9 @@ function Login(props){
                 
 
                 <div className="d-grid form-ul text-center justify-content-center w-100">
-                <a href="">Register Now</a>
-                <a href="">Forgot password?</a>
+                
+                <Link to={'/register'}>Register Now</Link>
+                <Link to={'/'}>Forgot password?</Link>
                 </div>
                 </div>
             </Form>

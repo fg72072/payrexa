@@ -25,21 +25,21 @@ function Dashboard(props){
 
                         <i class="fa-solid fa-xmark" onClick={handleClose}></i>
 
-                        <div className="modal-title">
+                        <div className="modal-title text-center">
                             <h3>Security Verification</h3>
                             <p>Enable 2FA, Email Authentication, to increase your account security</p>
                         </div>
 
-                        <div className="modal-box-verify">
+                        <div className="modal-box-verify text-center">
 
-                            <Link to={'/'}>
+                            <Link to={'/security'}>
 
                                 <img src={require("../../assets/images/emails.png").default} />
                                 <p>Enable Email Verication</p>
 
                             </Link>
 
-                            <Link to={'/'}>
+                            <Link to={'/security'}>
 
                                 <img src={require("../../assets/images/verification.png").default} />
                                 <p>Enable Phone Verication</p>
@@ -262,13 +262,9 @@ function Dashboard(props){
                         <div className="security-section">
                             <ul>
                                 <li><span>Enable 2FA</span> <a>ON</a></li>
-                                <hr/>
                                 <li><span>Identification Verication</span> <a>Verify</a></li>
-                                <hr/>
                                 <li><span>Anti-phishing Code</span> <a>Setup</a></li>
-                                <hr/>
                                 <li><span>Turn-on Withdrawal Whitelist</span> <a>Turn on</a></li>
-                                <hr/>
 
                             </ul>
                         </div>

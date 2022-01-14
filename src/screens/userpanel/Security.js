@@ -6,19 +6,26 @@ import LoginImg from '../../assets/images/login.png';
 import PadlockImg from '../../assets/images/padlock.png';
 import VerificationImg from '../../assets/images/verification.png';
 import CustomerImg from '../../assets/images/customer-service.png';
-
+import PhoneModal from '../../components/modals/Phone';
+import EmailModal from "../../components/modals/Email";
+import ChangePasswordModal from "../../components/modals/ChangePassword";
 function Security(props){
 
 
-    const [show, setShow] = useState(false);
+    const [phoneshow, setPhonshow] = useState(false);
+    const [emailshow, setEmailshow] = useState(false);
+    const [changepasswordshow, setChangepasswordshow] = useState(false);
 
     // MOBILE AUTHENTICATION POPUP
-    const phone_close = () => setShow(false);
-    const phone_modal = () => setShow(true);
+    const phone_close = () => setPhonshow(false);
+    const phone_modal = () => setPhonshow(true);
+    // email modal 
+    const email_close = () => setEmailshow(false);
+    const email_modal = () => setEmailshow(true);
 
     // CHANGE PASSWORD POPUP
-    const ch_pass_close = () => setShow(false);
-    const ch_pass_modal = () => setShow(true);
+    const ch_pass_close = () => setChangepasswordshow(false);
+    const ch_pass_modal = () => setChangepasswordshow(true);
    
 
     return (
@@ -52,45 +59,7 @@ function Security(props){
                                         </div>
 
                                         <button className="custom-btn-sm-sec" onClick={phone_modal}>Setup</button>
-
-                                        <Modal show={show} onHide={phone_close} centered className="security-verify-modal">
-                    
-                
-
-                                                <Modal.Body className="box-bg">
-
-                                                <i class="fa-solid fa-xmark" onClick={phone_close}></i>
-
-                                                <div className="modal-title">
-                                                    <h3>Security Verification</h3>
-                                                    <p>Enable 2FA, Email Authentication, to increase your account security</p>
-                                                </div>
-
-                                                <div className="modal-box-verify">
-
-                                                    <Link to={'/'}>
-
-                                                        <img src={require("../../assets/images/emails.png").default} />
-                                                        <p>Enable Email Verication</p>
-
-                                                    </Link>
-
-                                                    <Link to={'/'}>
-
-                                                        <img src={require("../../assets/images/verification.png").default} />
-                                                        <p>Enable Phone Verication</p>
-
-                                                    </Link>
-
-                                                </div>
-
-
-                                                <Link to={'/'} className="custom-icon-btn primary-btn">Continue</Link>
-                                                
-
-                                                </Modal.Body>
-                                    
-                                        </Modal>
+                                        <PhoneModal phone_close={phone_close} show={phoneshow}/>
 
 
                                     </li>
@@ -105,8 +74,10 @@ function Security(props){
                                         </div> 
 
                                         <div>
-                                                <button className="custom-btn-sm">Manage</button>
+                                                <button className="custom-btn-sm" onClick={email_modal}>Manage</button>
                                                 <button className="custom-btn-sm-sec">Remove</button>
+                                                <EmailModal email_close={email_close} show={emailshow}/>
+
 
                                         </div>
                                 </li>
@@ -123,45 +94,8 @@ function Security(props){
                                         </div> 
 
                                         <button className="custom-btn-sm-sec" onClick={ch_pass_modal}>Change</button>
-
-                                        <Modal show={show} onHide={ch_pass_close} centered className="security-verify-modal">
-                    
-                
-
-                                                <Modal.Body className="box-bg">
-
-                                                <i class="fa-solid fa-xmark" onClick={ch_pass_close}></i>
-
-                                                <div className="modal-title">
-                                                    <h3>Security Verification</h3>
-                                                    <p>Enable 2FA, Email Authentication, to increase your account security</p>
-                                                </div>
-
-                                                <div className="modal-box-verify">
-
-                                                    <Link to={'/'}>
-
-                                                        <img src={require("../../assets/images/emails.png").default} />
-                                                        <p>Enable Email Verication</p>
-
-                                                    </Link>
-
-                                                    <Link to={'/'}>
-
-                                                        <img src={require("../../assets/images/verification.png").default} />
-                                                        <p>Enable Phone Verication</p>
-
-                                                    </Link>
-
-                                                </div>
-
-
-                                                <Link to={'/'} className="custom-icon-btn primary-btn">Continue</Link>
-                                                
-
-                                                </Modal.Body>
-                                    
-                                        </Modal>
+                                        <ChangePasswordModal ch_pass_close={ch_pass_close} show={changepasswordshow}/>
+                                   
                                 </li>
 
                              

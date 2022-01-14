@@ -1330,7 +1330,9 @@ footer {
   margin-right: 8px;
 }
 .form-slash i {
-  transform: rotate(51deg);
+  transform: rotate(
+    52deg
+    );
   font-size: 25px;
   font-weight: bolder;
 }
@@ -1371,7 +1373,6 @@ footer {
 }
 
 .security-verify-modal .modal-body {
-  text-align: center;
   padding: 30px 50px;
 }
 
