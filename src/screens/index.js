@@ -18,8 +18,9 @@ import Disableaccount from "./userpanel/disableAccount";
 import Accountactivity from "./userpanel/accountActivity";
 import Accountlogon from "./userpanel/deviceLogon";
 import AddPayment from "./userpanel/AddPayment";
+import Deposit from "./userpanel/deposit";
 
 
 
 export {Login,Register,Forgot,Verification,Kyc,Home,
-    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification};
+    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit};

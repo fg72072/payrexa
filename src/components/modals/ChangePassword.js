@@ -1,5 +1,4 @@
-import { Row,Col, Tab, Tabs, Table, Modal, Form } from "react-bootstrap"
-import { Link } from "react-router-dom";
+import { Modal, Form } from "react-bootstrap"
 
 
 function ChangePasswordModal(props){
