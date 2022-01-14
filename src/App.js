@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './assets/css/Style.css'
+import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
 import {Header,Footer,UserPanelHeader,FormTopBar, SideBar} from './components';
