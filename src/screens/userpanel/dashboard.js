@@ -57,12 +57,71 @@ function Dashboard(props){
                 </Modal>
 
         <div className="dashboard-section">
+
             {props.sidebar}
+
             <div className="dashboard-main">
                 <div className="normal-box big-bg">
                     <h3>Welcome to PayRexa</h3>
                     <p>Just a few more steps and you're good to go!</p>
+
+
+                    <div class="verification">
+
+
+                        <div class="verification-item">
+
+                            <div class="verification-circle circle-done">
+                                1
+                            </div>
+
+                            
+                            <div className="verification-content">
+
+                                <p className="f-bold">Register Account</p>
+
+                            </div>
+
+                        </div>
+
+                        <hr class="verification-hr" />
+
+                        <div class="verification-item">
+
+                            <div class="verification-circle">
+                                2
+                            </div>
+
+                            <div className="verification-content">
+
+                            <p className="f-bold">2FA</p>
+                            <Link to={'#'} className="custom-btn primary-btn m-0">Verify</Link>
+
+                            </div>
+
+                        </div>
+
+                        <hr class="verification-hr" />
+
+                        <div class="verification-item">
+
+                            <div class="verification-circle">
+                                3
+                            </div>
+
+                            <div className="verification-content">
+
+                                <p className="f-bold">Deposit Funds</p>
+
+                            </div>
+
+                            </div>
+
+                    </div>
+
+
                 </div>
+
                 <div className="dashboard-margin">
                 <Row>
                     <Col lg={7}>
