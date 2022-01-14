@@ -30,6 +30,8 @@ function Deposit(props) {
 
         </div>
 
+        <h3 className="mb-4">Deposit Crypto</h3>
+
         <div className="grey-bg deposit-flex">
 
             <img src={require("../../assets/images/excited-man.png").default} className="deposit-img"/>
@@ -124,7 +126,7 @@ function Deposit(props) {
 
                         <div className="group-basis">
 
-                        <label className="label">Coin</label>
+                        <label className="label">Network</label>
                         <button type="button" onClick={select_network_modal} className="btn form-control swap-btn text-right">
                             <div className="coins d-flex align-items-center content">
 
