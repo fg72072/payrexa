@@ -4,7 +4,7 @@ import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
 import {Header,Footer,UserPanelHeader,FormTopBar, SideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification} from './screens';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit} from './screens';
 import {Accountlogon} from './screens';
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
@@ -29,6 +29,7 @@ function App() {
         <Route path="/payment/add" element={<AddPayment header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/security/account-activity" element={<Accountactivity header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/security/device-logon" element={<Accountlogon header={<Header/>} sidebar={<SideBar/>}/>} />
+        <Route path="/wallet/deposit" element={<Deposit header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/payment" element={<Payment header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/setting" element={<Setting header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/dashboard/swap" element={<Swap header={<UserPanelHeader/>}/>} />
