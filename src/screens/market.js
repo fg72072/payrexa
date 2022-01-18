@@ -1,4 +1,4 @@
-import { Col, Container, Form, Row, Table } from "react-bootstrap";
+import { Col, Container, Form, Row, Table,Tab,Tabs } from "react-bootstrap";
 import { Link } from "react-router-dom"
 
 
@@ -17,20 +17,24 @@ function Market(props){
                 <div className="heading-border text-center">
                     <h1 className="dual-heading">Markets</h1>
                     <hr/>
-                </div>
 
+                    
                 <Form>
 
-<Form.Group className="search-coins" controlId="searcg-coin">
-            
-    <Form.Control type="text" placeholder="Search Coin"/>
-    <i class="fa-solid fa-magnifying-glass"></i>
-</Form.Group>
 
-</Form>
+
+                <Form.Group className="search-coins" controlId="searcg-coin">
+                            
+                    <Form.Control type="text" placeholder="Search Coin"/>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </Form.Group>
+
+                    </Form>
+
+
+                    </div>
             </div>
 
-            
         
 
         </Container>
@@ -292,7 +296,7 @@ function Market(props){
 
                    
 
-                </ul>
+            </ul>
 
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="favourite" role="tabpanel" aria-labelledby="favourite-tab">
@@ -529,7 +533,7 @@ function Market(props){
 
                 <div class="tab-pane fade" id="market-over" role="tabpanel" aria-labelledby="market-over-tab">
 
-                   <Row className="mt-5">
+                   <Row className="mt-5 gy-5">
 
                         <Col lg={4}>
 
@@ -590,6 +594,458 @@ function Market(props){
                             </div>
 
                         </Col>
+
+
+                        <Col lg={6}>
+
+                        <div className="market-overview-box p-0 ">
+
+                        <p className="p-3 m-0 f-bold b-bottom">Top Movers</p>
+
+                            <Table striped responsive="lg">
+
+
+                                    <tbody className="text-center align-items-center">
+
+
+                                
+
+
+                                    <tr>
+
+                                                                    
+                                        <td>18:35:19</td>
+                                        <td>FLOW/USDT</td>
+                                        <td>New 7d High</td>
+                                        <td className="text-center green">+8.45%</td>
+
+                                    </tr>
+
+
+                                    
+                                    <tr>
+
+                                                                    
+                                        <td>18:35:19</td>
+                                        <td>FLOW/USDT</td>
+                                        <td>New 7d High</td>
+                                        <td className="text-center green">+8.45%</td>
+
+                                    </tr>
+
+
+                                    
+                                    <tr>
+
+                                                                    
+                                        <td>18:35:19</td>
+                                        <td>FLOW/USDT</td>
+                                        <td>New 7d High</td>
+                                        <td className="text-center green">+8.45%</td>
+
+                                    </tr>
+
+
+                                    
+                                    <tr>
+
+                                                                    
+                                        <td>18:35:19</td>
+                                        <td>FLOW/USDT</td>
+                                        <td>New 7d High</td>
+                                        <td className="text-center green">+8.45%</td>
+
+                                    </tr>
+
+
+                                    
+                                    <tr>
+
+                                                                    
+                                        <td>18:35:19</td>
+                                        <td>FLOW/USDT</td>
+                                        <td>New 7d High</td>
+                                        <td className="text-center green">+8.45%</td>
+
+                                    </tr>
+
+
+                                    
+                                    <tr>
+
+                                                                    
+                                        <td>18:35:19</td>
+                                        <td>FLOW/USDT</td>
+                                        <td>New 7d High</td>
+                                        <td className="text-center green">+8.45%</td>
+
+                                    </tr>
+                                        
+
+
+                                    </tbody>
+
+
+                            </Table>
+                            
+                        </div>
+        
+                        </Col>
+
+                        <Col lg={6}>
+
+                            <div className="market-overview-box p-0">
+
+                                <p className="p-3 m-0 f-bold b-bottom">24H Rankings</p>
+
+                                <Tabs defaultActiveKey="Volume" id="uncontrolled-tab-example" className="mb-3">
+
+                                    <Tab eventKey="Volume" title="Volume">
+
+                                        <Table striped responsive="lg">
+
+
+                                            <tbody className="text-center align-items-center">
+
+
+                                            <tr>
+
+                                                <th>Pair</th>
+                                                <th>Last Price</th>
+                                                <th>24h Volume</th>
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+                                               
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+
+
+
+                                            </tbody>
+
+
+                                        </Table>
+
+                                    </Tab>
+
+                                    <Tab eventKey="Top-Gainers" title="Top Gainers">
+
+                                    <Table striped responsive="lg">
+
+
+                                            <tbody className="text-center align-items-center">
+
+
+                                            <tr>
+
+                                                <th>Pair</th>
+                                                <th>Last Price</th>
+                                                <th>24h Volume</th>
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+                                            
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+
+
+
+                                            </tbody>
+
+
+                                    </Table>
+                                    
+                                    </Tab>
+
+
+                                    <Tab eventKey="Top-Loosers" title="Top Loosers">
+
+                                        <Table striped responsive="lg">
+
+
+                                        <tbody className="text-center align-items-center">
+
+
+                                            <tr>
+
+                                                <th>Pair</th>
+                                                <th>Last Price</th>
+                                                <th>24h Volume</th>
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+
+
+
+                                            </tbody>
+
+
+                                        </Table>
+                                    
+                                    </Tab>
+
+                                </Tabs>
+
+                               
+                                
+                            </div>
+
+                        </Col>
+                        
+
+
+                        <Col lg={6}>
+
+                        <div className="market-overview-box p-0 ">
+
+                        <p className="p-3 m-0 f-bold b-bottom">Price Change Distribution</p>
+
+                            <div className="price-change-chart">
+
+                                <div className="chart-data">
+                                    <p>21</p>
+                                    <div className="chart-green" style={{height:"20px"}}></div>
+                                </div>
+
+                                <div className="chart-data">
+                                    <p>21</p>
+                                    <div className="chart-green" style={{height:"20px"}}></div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+        
+                        </Col>
+
+                        <Col lg={6}>
+
+                            <div className="market-overview-box p-0">
+
+                                <p className="p-3 m-0 f-bold b-bottom">24H Rankings</p>
+
+                                <Tabs defaultActiveKey="Volume" id="uncontrolled-tab-example" className="mb-3">
+
+                                    <Tab eventKey="Volume" title="Volume">
+
+                                        <Table striped responsive="lg">
+
+
+                                            <tbody className="text-center align-items-center">
+
+
+                                            <tr>
+
+                                                <th>Pair</th>
+                                                <th>Last Price</th>
+                                                <th>24h Volume</th>
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+                                               
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+
+
+
+                                            </tbody>
+
+
+                                        </Table>
+
+                                    </Tab>
+
+                                    <Tab eventKey="Top-Gainers" title="Top Gainers">
+
+                                    <Table striped responsive="lg">
+
+
+                                            <tbody className="text-center align-items-center">
+
+
+                                            <tr>
+
+                                                <th>Pair</th>
+                                                <th>Last Price</th>
+                                                <th>24h Volume</th>
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+                                            
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+
+
+
+                                            </tbody>
+
+
+                                    </Table>
+                                    
+                                    </Tab>
+
+
+                                    <Tab eventKey="Top-Loosers" title="Top Loosers">
+
+                                        <Table striped responsive="lg">
+
+
+                                        <tbody className="text-center align-items-center">
+
+
+                                            <tr>
+
+                                                <th>Pair</th>
+                                                <th>Last Price</th>
+                                                <th>24h Volume</th>
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+                                            <tr>
+
+                                                                            
+                                                <td>18:35:19</td>
+                                                <td>FLOW/USDT</td>
+                                                <td>New 7d High</td>
+
+
+                                            </tr>
+
+
+
+
+
+                                            </tbody>
+
+
+                                        </Table>
+                                    
+                                    </Tab>
+
+                                </Tabs>
+
+                               
+                                
+                            </div>
+
+                        </Col>
+                    
 
                    </Row>
 
@@ -677,7 +1133,7 @@ function Market(props){
 
                 </div>
 
-            </div>
+                </div>
 
 
                     

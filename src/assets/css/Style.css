@@ -686,11 +686,17 @@ span.text {
   color: #575757 !important;
 }
 .green {
-  color: var(--text-green);
+  color: var(--text-green) !important;
 }
 
 .red {
   color: var(--text-red);
+}
+
+.b-bottom{
+
+  border-bottom: 1px solid #dee2e6;
+
 }
 
 .primary-a {
@@ -712,6 +718,7 @@ td {
 
 th {
   padding: 20px 10px !important;
+  text-align: left !important;
 }
 
 .t-heading {
@@ -1267,6 +1274,7 @@ label{
 .search-coins i {
   position: absolute;
   bottom: 0;
+  left: 0;
   transform: translate(15px, -100%);
   color: var(--text-disable);
 }
@@ -1312,8 +1320,11 @@ label{
 }
 
 .market-overview-box {
-  border: 1px solid var(--text-black);
+  border: 1px solid var(--text-disable);
   padding: 25px;
+  height: 370px;
+  overflow-y: auto;
+  position: relative;
 }
 
 .market-overview-head {
@@ -1322,6 +1333,26 @@ label{
   text-transform: uppercase;
   font-weight: 600;
 }
+
+.price-change-chart{
+
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+
+}
+
+.chart-data{
+
+  width: 50px;
+
+}
+
+.chart-green{
+  background: var(--text-green);
+}
+
 
 .security-verify-modal .modal-body i {
   text-align: end;
