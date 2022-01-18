@@ -23,5 +23,8 @@ import P2P from "./userpanel/trade/P2P";
 
 
 
+
 export {Login,Register,Forgot,Verification,Kyc,Home,
+
     Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P};
+

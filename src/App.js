@@ -29,6 +29,7 @@ function App() {
         <Route path="/payment/add" element={<AddPayment header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/security/account-activity" element={<Accountactivity header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/security/device-logon" element={<Accountlogon header={<Header/>} sidebar={<SideBar/>}/>} />
+        <Route path="/wallet/deposit" element={<Deposit header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/payment" element={<Payment header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/setting" element={<Setting header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/dashboard/swap" element={<Swap header={<UserPanelHeader/>}/>} />
