@@ -20,11 +20,15 @@ import Accountlogon from "./userpanel/deviceLogon";
 import AddPayment from "./userpanel/AddPayment";
 import Deposit from "./userpanel/deposit";
 import P2P from "./userpanel/trade/P2P";
-
+import MyAds from "./userpanel/trade/Ads";
+import MyOrders from "./userpanel/trade/MyOrder";
+import Express from "./userpanel/trade/Express";
+import UserCenter from "./userpanel/trade/UserCenter";
+import PostAds from "./userpanel/trade/PostAds";
 
 
 
 export {Login,Register,Forgot,Verification,Kyc,Home,
 
-    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P};
+    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P,MyAds,MyOrders,Express,UserCenter,PostAds};
 

@@ -5,6 +5,8 @@ import Accordion from "./Accordion";
 import Icon1 from '../../../assets/images/icon_3.png';
 import Icon2 from '../../../assets/images/icon_2.png';
 import Icon3 from '../../../assets/images/icon_3.png';
+import WhiteHeader from '../../../components/p2p/WhiteHeader';
+import BlackHeader from "../../../components/p2p/BlackHeader";
 
 
 function P2P(props){
@@ -28,18 +30,8 @@ function P2P(props){
             </div>
 
         </Container>
-        <div className="black-header">
-            <div>
-                <a href="">Express</a>
-                <a href="">P2P Trade</a>
-            </div>
-            <div>
-                <a href="">Orders</a>
-                <a href="">P2P User Center</a>
-                <a href="">P2P User Center</a>
-            </div>
-        </div>
-    
+      <BlackHeader/>
+        <WhiteHeader/>
         <Container>
         <div className="trading-section">
             <div className="filter">

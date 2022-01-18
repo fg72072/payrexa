@@ -1723,3 +1723,134 @@ border: 2px solid gray;
   font-size: 20px;
 }
 
+.custom-selector{
+  height: 28px;
+}
+.round-icon{
+  color: var(--text-green);
+  padding-right: 5px;
+}
+.buy-type{
+  color: var(--text-green);
+  padding-right: 1rem;
+}
+.express-section{
+  margin: 5rem 0;
+}
+.shadow{
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+}
+.express-form-section{
+  padding: 2rem;
+}
+.coins-btn-ab{
+  position: absolute;
+  right: 11px;
+  top: 43px;
+  cursor: pointer;
+}
+.form-tabs{
+  display: flex;
+  justify-content: space-between;
+}
+.form-tabs .nav-item{
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+}
+.form-tabs .nav-pills .nav-link.active{
+  background: var(--primary) !important;
+  color: var(--text-white) !important;
+}
+.form-tabs .nav{
+  display: flex;
+  width: 100%;
+  
+}
+.user-email-section{
+  display: flex;
+  align-items: center;
+}
+.user-email-section span{
+  padding-left: 1rem;
+}
+.user-center-header{
+  display: flex;
+  justify-content: space-between;
+}
+.user-center-ul{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-center-ul li{
+  width: 16%;
+  margin-top: 1rem;
+}
+.user-center-ul li p{
+  color: var(--gray);
+}
+.post-ads-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px 0 120px 0;
+}
+.post-ads-bar .verification-item .verification-content{
+  width: 300px;
+}
+.post-ads-bar .verification-hr{
+  width: 250px !important;
+}
+.post-new-box{
+  box-shadow: var(--shadow);
+}
+.post-inner-box{
+  padding: 2rem;
+}
+.post-inner-box ul{
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.post-inner-box ul li{
+width: 10%;
+}
+.post-inner-box ul li input{
+  accent-color: var(--primary);
+  margin-right: 0.5rem;
+}
+.post-footer-ul li{
+  width: 25% !important;
+}
+.text-ab{
+  position: absolute;
+  right: 17px;
+  top: 46px;
+}
+.small-icon-btn{
+  margin-right: 20px;
+  border-radius: 5px;
+  padding: 0.3rem 2rem !important;
+  text-decoration: none;
+  background: transparent;
+  display: flex;
+    align-items: center;
+}
+.small-icon-btn i{
+margin-left: 5px;
+}
+.btn-white{
+  color: var(--text-black);
+  border: 1px solid var(--gray);
+
+}
+.small-primary-btn{
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.payment-btn-group{
+  display: flex;
+}
