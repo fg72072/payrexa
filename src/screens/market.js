@@ -598,7 +598,7 @@ function Market(props){
 
                         <Col lg={6}>
 
-                        <div className="market-overview-box p-0 ">
+                        <div className="market-overview-box p-0 market-box-height">
 
                         <p className="p-3 m-0 f-bold b-bottom">Top Movers</p>
 
@@ -694,7 +694,7 @@ function Market(props){
 
                         <Col lg={6}>
 
-                            <div className="market-overview-box p-0">
+                            <div className="market-overview-box p-0 market-box-height">
 
                                 <p className="p-3 m-0 f-bold b-bottom">24H Rankings</p>
 
@@ -860,7 +860,7 @@ function Market(props){
 
                         <Col lg={6}>
 
-                        <div className="market-overview-box p-0 ">
+                        <div className="market-overview-box p-0 market-box-height">
 
                         <p className="p-3 m-0 f-bold b-bottom">Price Change Distribution</p>
 
@@ -873,8 +873,48 @@ function Market(props){
 
                                 <div className="chart-data">
                                     <p>21</p>
-                                    <div className="chart-green" style={{height:"20px"}}></div>
+                                    <div className="chart-green" style={{height:"40px"}}></div>
                                 </div>
+
+                                <div className="chart-data">
+                                    <p>21</p>
+                                    <div className="chart-green" style={{height:"200px"}}></div>
+                                </div>
+
+                                <div className="chart-data">
+                                    <p>21</p>
+                                    <div className="chart-red" style={{height:"200px"}}></div>
+                                </div>
+
+                                <div className="chart-data">
+                                    <p>21</p>
+                                    <div className="chart-red" style={{height:"40px"}}></div>
+                                </div>
+
+                                <div className="chart-data">
+                                    <p>21</p>
+                                    <div className="chart-red" style={{height:"20px"}}></div>
+                                </div>
+                                
+
+                            </div>
+
+
+                            <div className="chart-price">
+
+                                    <span className="price-up">
+
+                                        <p>Price Up 3022</p>
+                                        <div className="price-up-bar"></div>
+
+                                    </span>
+
+                                    <span className="price-down">
+
+                                        <p>Price Up 3022</p>
+                                        <div className="price-down-bar"></div>
+
+                                    </span>
 
                             </div>
                             
@@ -884,7 +924,7 @@ function Market(props){
 
                         <Col lg={6}>
 
-                            <div className="market-overview-box p-0">
+                            <div className="market-overview-box p-0 market-box-height">
 
                                 <p className="p-3 m-0 f-bold b-bottom">24H Rankings</p>
 
