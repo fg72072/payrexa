@@ -4,7 +4,7 @@ import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
 import {Header,Footer,UserPanelHeader,FormTopBar, SideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P} from './screens';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds} from './screens';
 import {Accountlogon} from './screens';
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
@@ -35,11 +35,15 @@ function App() {
         <Route path="/dashboard/swap" element={<Swap header={<UserPanelHeader/>}/>} />
         <Route path="/dashboard/wallet" element={<Wallet header={<UserPanelHeader/>}/>} />
         <Route path="/dashboard/history" element={<History header={<UserPanelHeader/>}/>} />
+        <Route path="/wallet/deposit" element={<Deposit header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/welcome" element={<Welcome_DashB header={<FormTopBar/>} />} />
         <Route path="/market" element={<Market header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/trade/p2p" element={<P2P header={<Header/>} footer={<Footer/>}/>} />
-      
-        
+        <Route path="/trade/my-adds" element={<MyAds header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/fiat-orders" element={<MyOrders header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/express" element={<Express header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/user-center" element={<UserCenter header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/post-ads" element={<PostAds header={<Header/>} footer={<Footer/>}/>} />
         </Routes>
     </Router>
     </>

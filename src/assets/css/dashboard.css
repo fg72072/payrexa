@@ -133,8 +133,8 @@
   font-weight: bold;
 }
 .flex-end {
-  display: flex;
-  justify-content: flex-end;
+  display: flex !important;
+  justify-content: flex-end !important;
 }
 .normal-box .security-section ul {
   list-style: none;
