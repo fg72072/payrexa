@@ -12,25 +12,25 @@ function Market(props){
 
         <Container >
 
-            <div className="banner-section">
+            <div className="banner-section big-bg">
 
                 <div className="heading-border text-center">
                     <h1 className="dual-heading">Markets</h1>
                     <hr/>
                 </div>
 
+                <Form>
+
+<Form.Group className="search-coins" controlId="searcg-coin">
+            
+    <Form.Control type="text" placeholder="Search Coin"/>
+    <i class="fa-solid fa-magnifying-glass"></i>
+</Form.Group>
+
+</Form>
             </div>
 
             
-            <Form>
-
-                <Form.Group className="search-coins" controlId="searcg-coin">
-                            
-                    <Form.Control type="text" placeholder="Search Coin"/>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </Form.Group>
-
-                </Form>
         
 
         </Container>

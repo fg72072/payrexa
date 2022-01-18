@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 function Welcome_DashB(props){
@@ -10,7 +11,7 @@ function Welcome_DashB(props){
          {props.header}
 
         <Container >
-
+            <Link to={'/dashboard'} className="anchor flex-end">Dashboard</Link>
             <div className="banner-section">
 
                 <div className="heading-border text-center">

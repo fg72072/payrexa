@@ -9,7 +9,7 @@ function EmailVerification(props){
  
     const Verify = (e)=>{
         e.preventDefault();
-        navigate('/dashboard')
+        navigate('/welcome')
     }
     return (
         <>
