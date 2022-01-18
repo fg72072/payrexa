@@ -55,7 +55,7 @@ function Login(props){
       }
     const SignIn = (e)=>{
         e.preventDefault();
-        navigate('/dashboard')
+        navigate('/')
     }
     return (
         <>

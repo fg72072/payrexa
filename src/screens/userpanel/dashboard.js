@@ -95,7 +95,7 @@ function Dashboard(props){
                             <div className="verification-content">
 
                             <p className="f-bold">2FA</p>
-                            <Link to={'#'} className="custom-btn primary-btn m-0">Verify</Link>
+                            <Link to={'#'} className="custom-btn primary-btn m-0" onClick={handleShow}>Verify</Link>
 
                             </div>
 
@@ -162,6 +162,29 @@ function Dashboard(props){
                         </div>
                     </Tab>
                     <Tab eventKey="P2P" title="P2P">
+                    <div className="balance-details">
+                            <div className="text-center position-relative">
+                            <h6>Account Balance</h6>
+                            <i class="fa fa-eye-slash balance-icon"></i>
+                            </div>
+                            <div className="total-balance text-center">
+                                <h2>0.00</h2><span>BTC</span>
+                            </div>
+                            <div className="bar-section">
+                                <div>
+                                    <h6>Estimate Value</h6>
+                                    <h2>$ 0.00</h2>
+                                </div>
+                                <div>
+                                    <h6>Estimate Value</h6>
+                                    <h2>$ 0.00</h2>
+                                </div>
+                                <div>
+                                    <h6>Estimate Value</h6>
+                                    <h2>$ 0.00</h2>
+                                </div>
+                            </div>
+                        </div>
                     </Tab>
                     </Tabs>
                     </div>
