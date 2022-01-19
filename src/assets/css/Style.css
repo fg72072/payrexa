@@ -1933,3 +1933,6 @@ margin-left: 5px;
 .flex-div input{
   accent-color: var(--primary);
 }
+.more-list{
+  list-style: none;
+}

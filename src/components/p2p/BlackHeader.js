@@ -1,14 +1,28 @@
+import { Link } from "react-router-dom";
+
 function BlackHeader(){
     return <>
     <div className="black-header">
             <div>
-                <a href="">Express</a>
-                <a href="">P2P Trade</a>
+                <Link to={'/express'}>Express</Link>
+                <Link to={'/trade/p2p'}>P2P Trade</Link>
             </div>
-            <div>
-                <a href="">Orders</a>
-                <a href="">P2P User Center</a>
-                <a href="">P2P User Center</a>
+            <div className="d-flex">
+                <Link to={'/fiat-orders'}>Orders</Link>
+                <Link to={'/user'}>P2P User Center</Link>
+                <li className="dropdown more-list">
+                    <Link to={"#"} className=" dropdown-toggle"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                    </Link>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <li><Link to={'/post-ads'}> Post new Ad</Link></li>
+                        <li><Link to={'/trade/my-adds'}>My Ads</Link></li>
+
+                    </ul>
+
+                    </li>
             </div>
         </div>
     </>
