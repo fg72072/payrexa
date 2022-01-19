@@ -49,7 +49,7 @@ function Header(){
 
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                          <li><Link to={'#'}><img src={require("../assets/images/p2p.png").default} /> P2P Trade</Link></li>
+                          <li><Link to={'/trade/p2p'}><img src={require("../assets/images/p2p.png").default} /> P2P Trade</Link></li>
                           <li><Link to={'#'}><img src={require("../assets/images/exchange1.png").default} /> Spot Trade</Link></li>
 
                         </ul>
