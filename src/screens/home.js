@@ -40,9 +40,10 @@ function Home(props){
         infinite: true,
         speed: 200,
         autoplay:true,
-        slidesToShow: 4,
+        slidesToShow: 1,
         slidesToScroll: 1,
         arrows:false,
+        vertical:true,
         responsive: [
             {
             breakpoint: 1024,
@@ -71,7 +72,7 @@ function Home(props){
         infinite: true,
         speed: 200,
         autoplay:true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         arrows:true,
         dots:true,
@@ -140,54 +141,9 @@ function Home(props){
                 
                 <Slider {...market}>
 
-                        <Col lg={2} sm={12} className="market-box">
-
-                           <div className="d-flex align-items-center">
-
-                                <img src={require("../assets/images/Binance.svg").default}/>
-
-                                <div className="market-data">
-
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
-
-                                </div>
-
-                           </div>
-
-                            <div className="market-footer">
-
-                                <div className="market-change">
-
-                                        <span>
-                                            <p><b>Change</b></p>
-
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-
-                                        </span>
-
-                                </div>
-
-                                <div className="market-volume">
-
-                                        <span>
-                                            <p><b>Volume</b></p>
-
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                           </div>
-
-                        </Col>
-
-                        <Col lg={2} sm={12} className="market-box">
+                        <Col lg={12}>
+                            <Row>
+                            <Col lg={2} sm={12} className="market-box">
 
                             <div className="d-flex align-items-center">
 
@@ -232,10 +188,9 @@ function Home(props){
                             </div>
 
                             </Col>
+                            <Col lg={2} sm={12} className="market-box">
 
-                        <Col lg={2} sm={12} className="market-box">
-
-                           <div className="d-flex align-items-center">
+                            <div className="d-flex align-items-center">
 
                                 <img src={require("../assets/images/Binance.svg").default}/>
 
@@ -246,7 +201,7 @@ function Home(props){
 
                                 </div>
 
-                           </div>
+                            </div>
 
                             <div className="market-footer">
 
@@ -275,13 +230,12 @@ function Home(props){
 
                                 </div>
 
-                           </div>
+                            </div>
 
-                        </Col>
+                            </Col>
+                            <Col lg={2} sm={12} className="market-box">
 
-                        <Col lg={2} sm={12} className="market-box">
-
-                           <div className="d-flex align-items-center">
+                            <div className="d-flex align-items-center">
 
                                 <img src={require("../assets/images/Binance.svg").default}/>
 
@@ -292,7 +246,7 @@ function Home(props){
 
                                 </div>
 
-                           </div>
+                            </div>
 
                             <div className="market-footer">
 
@@ -321,13 +275,12 @@ function Home(props){
 
                                 </div>
 
-                           </div>
+                            </div>
 
-                        </Col>
+                            </Col>
+                            <Col lg={2} sm={12} className="market-box">
 
-                        <Col lg={2} sm={12} className="market-box">
-
-                           <div className="d-flex align-items-center">
+                            <div className="d-flex align-items-center">
 
                                 <img src={require("../assets/images/Binance.svg").default}/>
 
@@ -338,7 +291,7 @@ function Home(props){
 
                                 </div>
 
-                           </div>
+                            </div>
 
                             <div className="market-footer">
 
@@ -347,11 +300,10 @@ function Home(props){
                                         <span>
                                             <p><b>Change</b></p>
 
-                                            <p className="red">
-                                                <i class="fa fa-caret-down"></i>
+                                            <p className="green">
+                                                <i class="fa fa-caret-up"></i>
                                                 $3%
                                             </p>
-
                                         </span>
 
                                 </div>
@@ -368,8 +320,374 @@ function Home(props){
 
                                 </div>
 
-                           </div>
+                            </div>
 
+                            </Col>
+                            <Col lg={2} sm={12} className="market-box">
+
+                                <div className="d-flex align-items-center">
+
+                                    <img src={require("../assets/images/Binance.svg").default}/>
+
+                                    <div className="market-data">
+
+                                        <p><b>TRX :</b> $0.030304</p>
+                                        <p>Binance Coin</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div className="market-footer">
+
+                                    <div className="market-change">
+
+                                            <span>
+                                                <p><b>Change</b></p>
+
+                                                <p className="green">
+                                                    <i class="fa fa-caret-up"></i>
+                                                    $3%
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                    <div className="market-volume">
+
+                                            <span>
+                                                <p><b>Volume</b></p>
+
+                                                <p>
+                                                    $13,1333,4556
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                </div>
+
+                                </Col>
+                                <Col lg={2} sm={12} className="market-box">
+
+                                <div className="d-flex align-items-center">
+
+                                    <img src={require("../assets/images/Binance.svg").default}/>
+
+                                    <div className="market-data">
+
+                                        <p><b>TRX :</b> $0.030304</p>
+                                        <p>Binance Coin</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div className="market-footer">
+
+                                    <div className="market-change">
+
+                                            <span>
+                                                <p><b>Change</b></p>
+
+                                                <p className="green">
+                                                    <i class="fa fa-caret-up"></i>
+                                                    $3%
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                    <div className="market-volume">
+
+                                            <span>
+                                                <p><b>Volume</b></p>
+
+                                                <p>
+                                                    $13,1333,4556
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                </div>
+
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col lg={12}>
+                            <Row>
+                            <Col lg={2} sm={12} className="market-box">
+
+                            <div className="d-flex align-items-center">
+
+                                <img src={require("../assets/images/Binance.svg").default}/>
+
+                                <div className="market-data">
+
+                                    <p><b>TRX :</b> $0.030304</p>
+                                    <p>Binance Coin</p>
+
+                                </div>
+
+                            </div>
+
+                            <div className="market-footer">
+
+                                <div className="market-change">
+
+                                        <span>
+                                            <p><b>Change</b></p>
+
+                                            <p className="green">
+                                                <i class="fa fa-caret-up"></i>
+                                                $3%
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                                <div className="market-volume">
+
+                                        <span>
+                                            <p><b>Volume</b></p>
+
+                                            <p>
+                                                $13,1333,4556
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                            </div>
+
+                            </Col>
+                            <Col lg={2} sm={12} className="market-box">
+
+                            <div className="d-flex align-items-center">
+
+                                <img src={require("../assets/images/Binance.svg").default}/>
+
+                                <div className="market-data">
+
+                                    <p><b>TRX :</b> $0.030304</p>
+                                    <p>Binance Coin</p>
+
+                                </div>
+
+                            </div>
+
+                            <div className="market-footer">
+
+                                <div className="market-change">
+
+                                        <span>
+                                            <p><b>Change</b></p>
+
+                                            <p className="green">
+                                                <i class="fa fa-caret-up"></i>
+                                                $3%
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                                <div className="market-volume">
+
+                                        <span>
+                                            <p><b>Volume</b></p>
+
+                                            <p>
+                                                $13,1333,4556
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                            </div>
+
+                            </Col>
+                            <Col lg={2} sm={12} className="market-box">
+
+                            <div className="d-flex align-items-center">
+
+                                <img src={require("../assets/images/Binance.svg").default}/>
+
+                                <div className="market-data">
+
+                                    <p><b>TRX :</b> $0.030304</p>
+                                    <p>Binance Coin</p>
+
+                                </div>
+
+                            </div>
+
+                            <div className="market-footer">
+
+                                <div className="market-change">
+
+                                        <span>
+                                            <p><b>Change</b></p>
+
+                                            <p className="green">
+                                                <i class="fa fa-caret-up"></i>
+                                                $3%
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                                <div className="market-volume">
+
+                                        <span>
+                                            <p><b>Volume</b></p>
+
+                                            <p>
+                                                $13,1333,4556
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                            </div>
+
+                            </Col>
+                            <Col lg={2} sm={12} className="market-box">
+
+                            <div className="d-flex align-items-center">
+
+                                <img src={require("../assets/images/Binance.svg").default}/>
+
+                                <div className="market-data">
+
+                                    <p><b>TRX :</b> $0.030304</p>
+                                    <p>Binance Coin</p>
+
+                                </div>
+
+                            </div>
+
+                            <div className="market-footer">
+
+                                <div className="market-change">
+
+                                        <span>
+                                            <p><b>Change</b></p>
+
+                                            <p className="green">
+                                                <i class="fa fa-caret-up"></i>
+                                                $3%
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                                <div className="market-volume">
+
+                                        <span>
+                                            <p><b>Volume</b></p>
+
+                                            <p>
+                                                $13,1333,4556
+                                            </p>
+                                        </span>
+
+                                </div>
+
+                            </div>
+
+                            </Col>
+                            <Col lg={2} sm={12} className="market-box">
+
+                                <div className="d-flex align-items-center">
+
+                                    <img src={require("../assets/images/Binance.svg").default}/>
+
+                                    <div className="market-data">
+
+                                        <p><b>TRX :</b> $0.030304</p>
+                                        <p>Binance Coin</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div className="market-footer">
+
+                                    <div className="market-change">
+
+                                            <span>
+                                                <p><b>Change</b></p>
+
+                                                <p className="green">
+                                                    <i class="fa fa-caret-up"></i>
+                                                    $3%
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                    <div className="market-volume">
+
+                                            <span>
+                                                <p><b>Volume</b></p>
+
+                                                <p>
+                                                    $13,1333,4556
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                </div>
+
+                                </Col>
+                                <Col lg={2} sm={12} className="market-box">
+
+                                <div className="d-flex align-items-center">
+
+                                    <img src={require("../assets/images/Binance.svg").default}/>
+
+                                    <div className="market-data">
+
+                                        <p><b>TRX :</b> $0.030304</p>
+                                        <p>Binance Coin</p>
+
+                                    </div>
+
+                                </div>
+
+                                <div className="market-footer">
+
+                                    <div className="market-change">
+
+                                            <span>
+                                                <p><b>Change</b></p>
+
+                                                <p className="green">
+                                                    <i class="fa fa-caret-up"></i>
+                                                    $3%
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                    <div className="market-volume">
+
+                                            <span>
+                                                <p><b>Volume</b></p>
+
+                                                <p>
+                                                    $13,1333,4556
+                                                </p>
+                                            </span>
+
+                                    </div>
+
+                                </div>
+
+                                </Col>
+                            </Row>
                         </Col>
                      
 
@@ -411,6 +729,11 @@ function Home(props){
 
                         </div>
 
+                        <div className="news-slides">
+
+                            <img className="w-100" src={require("../assets/images/news.jpg").default}/>
+
+                        </div>
                         <div className="news-slides">
 
                             <img className="w-100" src={require("../assets/images/news.jpg").default}/>

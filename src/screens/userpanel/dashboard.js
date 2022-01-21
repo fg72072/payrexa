@@ -129,8 +129,8 @@ function Dashboard(props){
                     <div className="box-top">
                     <h4>Balance Details</h4>
                     <div className="d-j-flex">
-                    <Link to={'/wallet/deposit'} href="#" class="custom-btn-sm">Deposit</Link>
-                    <a href="#" class="custom-btn-sm-sec">Withdraw</a>
+                    <Link to={'/wallet/deposit'} class="custom-btn-sm">Deposit</Link>
+                    <Link to={'/wallet/withdrawal'} class="custom-btn-sm-sec">Withdraw</Link>
                     </div>
                     </div>
 

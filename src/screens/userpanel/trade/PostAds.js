@@ -6,6 +6,7 @@ import Icon1 from '../../../assets/images/icon_3.png';
 import Icon2 from '../../../assets/images/icon_2.png';
 import Icon3 from '../../../assets/images/icon_3.png';
 import BlackHeader from "../../../components/p2p/BlackHeader";
+import PostStep1 from "./poststeps/Step1";
 import PostStep2 from "./poststeps/Step2";
 import { useState } from "react";
 import PostStep3 from "./poststeps/Step3";
@@ -97,11 +98,35 @@ function PostAds(props){
         <div className="trading-section">
         <div className="express-section">
         <div className="post-new-box">
-        
+       {
+           stepNum == 1 &&  <div className="form-tabs">
+           <Nav variant="pills" defaultActiveKey="link-1">
+          <Nav.Item>
+              <Nav.Link eventKey="link-1" >I want to Buy</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+              <Nav.Link eventKey="link-2" >I want to Sell</Nav.Link>
+          </Nav.Item>
+          </Nav>
+        </div>
+       }
         <div className="post-inner-box">
-            <PostStep3/>
+            {
+               stepNum == 1 && <PostStep1/>
+            }
+             {
+               stepNum == 2 && <PostStep2/>
+            }
+             {
+               stepNum == 3 && <PostStep3/>
+            }
+            
             <div className="flex-end">
-            <button class="custom-btn primary-btn  mb-5  flex-end">Next</button>
+            {
+                stepNum != 1 &&<button class="custom-btn secondary-btn  mb-5  flex-end" onClick={stepNum == 2 ?(e)=>setStepNum(1) :(e)=>setStepNum(2)}>Previos</button>
+            }
+            
+            <button class="custom-btn primary-btn  mb-5  flex-end" onClick={stepNum == 1 ?(e)=>setStepNum(2) :(e)=>setStepNum(3)}>Next</button>
             </div>
         </div>
         </div>

@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
+
 function WhiteHeader(){
     return <>
         <div className="white-header">
             <div className="white-header-box">
-            <a href="" className="h-active">BUY</a>
-             <a href="">SELL</a>
+            <Link to={'/buy/usdt'} className="h-active">BUY</Link>
+             <Link to={'/sale/usdt'}>SELL</Link>
             </div>
             <div className="ul">
-                <a href="">USDT</a>
-                <a href="">BTC</a>
-                <a href="">BNB</a>
-                <a href="">ETH</a>
+                <Link to={'/buy/usdt'}>USDT</Link>
+                <Link to={'/buy/btc'}>BTC</Link>
+                <Link to={'/buy/bnb'}>BNB</Link>
+                <Link to={'/buy/eth'}>ETH</Link>
             </div>
            
         </div>

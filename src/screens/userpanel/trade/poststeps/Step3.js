@@ -8,11 +8,11 @@ function PostStep3(){
             <Col lg={12}>
             <Form.Group className="mb-3 position-relative" controlId="Remarks">
             <Form.Label>Remarks (Optional)</Form.Label>
-            <Form.Control as="textarea" rows={3} type="type" placeholder="Lorem Ipsum" />
+            <Form.Control as="textarea" rows={5} type="type" placeholder="Lorem Ipsum" />
             </Form.Group>
             <Form.Group className="mb-3 position-relative" controlId="autoreply">
             <Form.Label>Autoreply (Optional)</Form.Label>
-            <Form.Control as="textarea" rows={3} type="autoreply" placeholder="Lorem Ipsum" />
+            <Form.Control as="textarea" rows={5} type="autoreply" placeholder="Lorem Ipsum" />
             </Form.Group>
             </Col>
         </Row>

@@ -1,16 +1,7 @@
 
 function PostStep1(){
     return (<>
-    <div className="form-tabs">
-                 <Nav variant="pills" defaultActiveKey="link-1">
-                <Nav.Item>
-                    <Nav.Link eventKey="link-1" >I want to Buy</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-2" >I want to Sell</Nav.Link>
-                </Nav.Item>
-                </Nav>
-        </div>
+ 
         
     <h4>Asset</h4>
             <ul>
