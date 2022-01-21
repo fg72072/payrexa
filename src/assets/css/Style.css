@@ -10,8 +10,12 @@
   --gray : #838383;
 }
 
+
+
 body {
+
   /* font-family: "Roboto" !important ; */
+
 }
 
 ::selection {
@@ -1323,9 +1327,15 @@ input.form-control {
 .market-overview-box {
   border: 1px solid var(--text-disable);
   padding: 25px;
-  height: 370px;
+ 
   overflow-y: auto;
   position: relative;
+}
+
+.market-box-height{
+  
+  height: 500px;
+
 }
 
 .market-overview-head {
@@ -1337,10 +1347,14 @@ input.form-control {
 
 .price-change-chart{
 
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  left: 50%;
+  /* position: absolute;
+  bottom: 0; */
+  border-bottom: 1px solid var(--text-disable);
+  display: flex;
+  justify-content:space-around;
+  width: 100%;
+  height: 70%;
+  align-items: flex-end;
 
 }
 
@@ -1350,10 +1364,66 @@ input.form-control {
 
 }
 
+.chart-data p{
+
+  text-align: center;
+  margin: 0;
+
+}
+
 .chart-green{
   background: var(--text-green);
 }
 
+.chart-red{
+
+  background: var(--text-red);
+
+}
+
+.chart-price{
+
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem
+
+}
+
+.chart-price p{
+
+  margin: 0;
+
+}
+
+.price-up{
+
+  flex:1 1 0;
+
+}
+
+.price-down{
+
+  flex:1 1 0;
+  text-align: right;
+
+}
+
+.price-up-bar{
+
+width: 100%;
+height: 15px;
+background-color: var(--text-green);
+
+}
+
+.price-down-bar{
+
+  width: 80%;
+  margin-left: auto;
+  height: 15px;
+  background-color: var(--text-red);
+  
+  }
 
 .security-verify-modal .modal-body i {
   text-align: end;
