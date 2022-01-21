@@ -6,7 +6,7 @@ import Icon1 from '../../../assets/images/icon_3.png';
 import Icon2 from '../../../assets/images/icon_2.png';
 import Icon3 from '../../../assets/images/icon_3.png';
 import BlackHeader from "../../../components/p2p/BlackHeader";
-
+import PaymentDetail from "../PaymentDetail";
 
 function UserCenter(props){
 
@@ -95,6 +95,9 @@ function UserCenter(props){
                  <p>Positive</p>
              </li>
          </ul>
+        </div>
+        <div className="trading-section mt-5">
+        <PaymentDetail/>
         </div>
         
 

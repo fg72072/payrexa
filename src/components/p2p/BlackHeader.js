@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 function BlackHeader(){
     return <>
     <div className="black-header">
-            <div>
+            <div className="d-flex">
                 <Link to={'/express'}>Express</Link>
-                <Link to={'/trade/p2p'}>P2P Trade</Link>
+                <Link to={'/buy/usdt'}>P2P Trade</Link>
             </div>
             <div className="d-flex">
                 <Link to={'/fiat-orders'}>Orders</Link>
-                <Link to={'/user'}>P2P User Center</Link>
+                <Link to={'/user-center'}>P2P User Center</Link>
                 <li className="dropdown more-list">
                     <Link to={"#"} className=" dropdown-toggle"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     More

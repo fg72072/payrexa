@@ -25,10 +25,19 @@ import MyOrders from "./userpanel/trade/MyOrder";
 import Express from "./userpanel/trade/Express";
 import UserCenter from "./userpanel/trade/UserCenter";
 import PostAds from "./userpanel/trade/PostAds";
-
-
-
+import BuyUSDT from "./userpanel/trade/buy/USDT";
+import BuyBTC from "./userpanel/trade/buy/BTC";
+import BuyBNB from "./userpanel/trade/buy/BNB";
+import BuyETH from "./userpanel/trade/buy/ETH";
+import SaleUSDT from "./userpanel/trade/sale/USDT";
+import SaleBTC from "./userpanel/trade/sale/BTC";
+import SaleBNB from "./userpanel/trade/sale/BNB";
+import SaleETH from "./userpanel/trade/sale/ETH";
+import Withdrawal from "./userpanel/Withdrawal";
+import Overview from "./userpanel/wallet/Overview";
+import Funding from "./userpanel/wallet/Funding";
 export {Login,Register,Forgot,Verification,Kyc,Home,
 
-    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P,MyAds,MyOrders,Express,UserCenter,PostAds};
+    Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P,MyAds,MyOrders,Express,UserCenter
+    ,PostAds,BuyUSDT,BuyBTC,BuyBNB,BuyETH,SaleUSDT,SaleBTC,SaleBNB,SaleETH,Withdrawal,Overview,Funding};
 

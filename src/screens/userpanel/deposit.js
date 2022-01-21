@@ -24,7 +24,7 @@ function Deposit(props) {
 
         <div className="back-link">
 
-          <Link to={"/wallet"}>
+          <Link to={"/wallet/overview"}>
             <i class="fa-solid fa-angle-left"></i> Wallet
           </Link>
 
@@ -135,9 +135,49 @@ function Deposit(props) {
                                 
                             </div>
                         </button>
+                        <div className="mt-4">
 
+                        <label className="label">Address</label>
+                        <div className="d-flex justify-content-between">
+                          <p>0x76aB059eb0D26AE8521042becb44FD89ecA8B78E</p>
+                          <i class="fa-regular fa-copy pointer"></i>
                         </div>
+                        <div className="deposit-footer-text">
+                        <div>
+                          <span>Expected arrival</span>
+                          <p>12 network confirmations</p>
+                        </div>
+                        <div>
+                          <span>Expected unlock</span>
+                          <p>12 network confirmations</p>
+                        </div>
+                        </div>
+                        <div className="deposit-footer-text">
+                        <div>
+                          <span>Minimum Deposit</span>
+                          <p>0.00001</p>
+                        </div>
+                        <div>
+                          <span>Select Wallet</span>
+                          <li className="flex-div">
+                            <input type="radio" name="wallet_type"/>
+                            <span>Spot Wallet</span>
+                          </li>
+                          <li className="flex-div">
+                            <input type="radio" name="wallet_type"/>
+                            <span>Funding Wallet</span>
+                          </li>
+                        </div>
+                        </div>
+                        <div>
+                          <span>Send only USDT to this deposit address</span>
+                          <p>Ensure the network is <span className="red">Ethereum (ERC20)</span>.</p>
+                        </div>
+                        </div>
+                        </div>
+                      
                 </Form.Group>
+                
                                         
 
 

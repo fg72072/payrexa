@@ -49,7 +49,7 @@ function Header(){
 
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                          <li><Link to={'/trade/p2p'}><img src={require("../assets/images/p2p.png").default} /> P2P Trade</Link></li>
+                          <li><Link to={'/buy/usdt'}><img src={require("../assets/images/p2p.png").default} /> P2P Trade</Link></li>
                           <li><Link to={'#'}><img src={require("../assets/images/exchange1.png").default} /> Spot Trade</Link></li>
 
                         </ul>
@@ -76,8 +76,8 @@ function Header(){
 
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <li><Link to={'#'}><img src={require("../assets/images/p2p.png").default} />Spot Wallet</Link></li>
-                        <li><Link to={'#'}><img src={require("../assets/images/share.png").default} />Funding Wallet</Link></li>
+                        <li><Link to={'/wallet/spot'}><img src={require("../assets/images/p2p.png").default} />Spot Wallet</Link></li>
+                        <li><Link to={'/wallet/funding'}><img src={require("../assets/images/share.png").default} />Funding Wallet</Link></li>
                        
 
                       </ul>
@@ -92,7 +92,7 @@ function Header(){
 
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                          <li><Link to={'#'}><img src={require("../assets/images/p2p.png").default} /> P2P Orders</Link></li>
+                          <li><Link to={'/fiat-orders'}><img src={require("../assets/images/p2p.png").default} /> P2P Orders</Link></li>
                           <li><Link to={'#'}><img src={require("../assets/images/exchange1.png").default} /> Spot Orders</Link></li>
                       
 
