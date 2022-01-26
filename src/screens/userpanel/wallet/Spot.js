@@ -8,7 +8,7 @@ import WithdrawIcon from '../../../assets/images/withdraw-icon.png';
 import TransferIcon from '../../../assets/images/transefer-icon.png';
 import TransferModal from "../../../components/modals/Transfer";
 
-function Funding(props){
+function Spot(props){
     const [transfershow, setTransfershow] = useState(false);
 
     const transfer_close = () => setTransfershow(false);
@@ -37,8 +37,8 @@ function Funding(props){
             width: 100,
           },
           {
-            label: 'Frozen',
-            field: 'frozen',
+            label: 'In Order',
+            field: 'in_order',
             sort: 'asc',
             width: 100,
           },
@@ -61,69 +61,78 @@ function Funding(props){
             assets: <><div className="td-image-flex"><img src={BTCImage}/><div className="span-div"><span>BTC</span><span>Bitcoin</span></div></div></>,
             total_ammount: '0.0000000',
             available: '0.0000000',
-            frozen: '0.0000000',
+            in_order: <Link to={'#'} className="anchor">0.0000000</Link>,
             value: '0.0000000',
-            action: <div className="td-image-flex"><Link to={'/buy/usdt'} className="anchor">Buy / Sale</Link>
-            <li className="dropdown table-dropdown">
-                    <Link to={"#"} className=" dropdown-toggle"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-ellipsis"></i>
+            action: <div className="td-image-flex">
+            <Link to={'/wallet/deposit'} className="anchor">Deposit</Link>
+            <Link to={'/wallet/withdrawal'} className="anchor">Withdraw</Link>
+            <li className="dropdown table-dropdown p-0 m-0">
+                    <Link to={"#"} className="anchor"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trade
                     </Link>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <li><img src={DepositIcon}/><Link to={'/wallet/deposit'}> Deposit</Link></li>
-                        <li><img src={WithdrawIcon}/><Link to={'/wallet/withdrawal'}>Withdraw</Link></li>
-                        <li><img src={TransferIcon}/><Link to={'#'} onClick={transfer_show}>Transfer</Link></li>
+                        <li><Link to={'#'}> BTC/AUD</Link></li>
+                        <li><Link to={'#'}>BTC/BIDR</Link></li>
+                        <li><Link to={'#'}>BTC/BRL</Link></li>
 
                     </ul>
 
-                    </li>
+             </li>
+            <Link to={'#'} onClick={transfer_show} className="anchor">Transfer</Link>
             </div>,
           },
           {
             assets: <><div className="td-image-flex"><img src={BTCImage}/><div className="span-div"><span>BTC</span><span>Bitcoin</span></div></div></>,
             total_ammount: '0.0000000',
             available: '0.0000000',
-            frozen: '0.0000000',
+            in_order: <Link to={'#'} className="anchor">0.0000000</Link>,
             value: '0.0000000',
-            action: <div className="td-image-flex"><Link to={'/buy/usdt'} className="anchor">Buy / Sale</Link>
-            <li className="dropdown table-dropdown">
-                    <Link to={"#"} className=" dropdown-toggle"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-ellipsis"></i>
+            action: <div className="td-image-flex">
+            <Link to={'/wallet/deposit'} className="anchor">Deposit</Link>
+            <Link to={'/wallet/withdrawal'} className="anchor">Withdraw</Link>
+            <li className="dropdown table-dropdown p-0 m-0">
+                    <Link to={"#"} className="anchor"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trade
                     </Link>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <li><img src={DepositIcon}/><Link to={'/wallet/deposit'}> Deposit</Link></li>
-                        <li><img src={WithdrawIcon}/><Link to={'/wallet/withdrawal'}>Withdraw</Link></li>
-                        <li><img src={TransferIcon}/><Link to={'#'} onClick={transfer_show}>Transfer</Link></li>
+                        <li><Link to={'#'}> BTC/AUD</Link></li>
+                        <li><Link to={'#'}>BTC/BIDR</Link></li>
+                        <li><Link to={'#'}>BTC/BRL</Link></li>
 
                     </ul>
 
-                    </li>
+             </li>
+            <Link to={'#'} onClick={transfer_show} className="anchor">Transfer</Link>
             </div>,
           },
           {
             assets: <><div className="td-image-flex"><img src={BTCImage}/><div className="span-div"><span>BTC</span><span>Bitcoin</span></div></div></>,
             total_ammount: '0.0000000',
             available: '0.0000000',
-            frozen: '0.0000000',
+            in_order: <Link to={'#'} className="anchor">0.0000000</Link>,
             value: '0.0000000',
-            action: <div className="td-image-flex"><Link to={'/buy/usdt'} className="anchor">Buy / Sale</Link>
-            <li className="dropdown table-dropdown">
-                    <Link to={"#"} className=" dropdown-toggle"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-ellipsis"></i>
+            action: <div className="td-image-flex">
+            <Link to={'/wallet/deposit'} className="anchor">Deposit</Link>
+            <Link to={'/wallet/withdrawal'} className="anchor">Withdraw</Link>
+            <li className="dropdown table-dropdown p-0 m-0">
+                    <Link to={"#"} className="anchor"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trade
                     </Link>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                        <li><img src={DepositIcon}/><Link to={'/wallet/deposit'}> Deposit</Link></li>
-                        <li><img src={WithdrawIcon}/><Link to={'/wallet/withdrawal'}>Withdraw</Link></li>
-                        <li><img src={TransferIcon}/><Link to={'#'} onClick={transfer_show}>Transfer</Link></li>
+                        <li><Link to={'#'}> BTC/AUD</Link></li>
+                        <li><Link to={'#'}>BTC/BIDR</Link></li>
+                        <li><Link to={'#'}>BTC/BRL</Link></li>
 
                     </ul>
 
-                    </li>
+             </li>
+            <Link to={'#'} onClick={transfer_show} className="anchor">Transfer</Link>
             </div>,
           },
         ],
@@ -137,7 +146,7 @@ function Funding(props){
             {props.sidebar}
             <div className="dashboard-main">
                 <div className="text-btn-flex normal-box big-bg">
-                    <h3 className="">Funding</h3>
+                    <h3 className="">Spot</h3>
                     <div className="">
                         <Link to={'/wallet/deposit'} className="custom-btn primary-btn">Deposit</Link>
                         <Link to={'/wallet/withdrawal'} className="custom-btn secondary-btn">Withdraw</Link>
@@ -149,15 +158,12 @@ function Funding(props){
                 <div className="text-btn-flex normal-box">
                     <div>
                     <div className="mb-3 d-flex align-items-center">
-                    <h5 className="">Estimated Balance</h5>
+                    <h5 className="">Spot balance</h5>
                     <button className="ml-1 custom-btn secondary-btn"><i className="fa fa-eye-slash" style={{marginRight:'5px'}}></i><span>Hide Balance</span></button>
                     </div>
-                    <h5>0.00000000 BTC</h5>
+                    <h5>0.00000000 BTC ≈ $0.000000</h5>
                     </div>
-                    <div className="">
-                        <Link to={'/buy/usdt'} className="custom-btn primary-btn">Buy</Link>
-                        <Link to={'/sale/usdt'} className="custom-btn secondary-btn">Sale</Link>
-                    </div>
+                   
                     
                 </div>
                 </div>
@@ -182,4 +188,4 @@ function Funding(props){
     )
 
 }
-export default Funding;
+export default Spot;

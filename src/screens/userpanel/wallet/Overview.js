@@ -24,9 +24,9 @@ function Overview(props){
                     <h3 className="">Wallet Overview</h3>
                     <div className="mt-4">
                         <Link to={'/wallet/deposit'} className="custom-btn primary-btn">Deposit</Link>
-                        <Link to={'/wallet/withdraw'} className="custom-btn secondary-btn">Withdraw</Link>
+                        <Link to={'/wallet/withdrawal'} className="custom-btn secondary-btn">Withdraw</Link>
                         <button className="custom-btn secondary-btn" onClick={transfer_show}>Transfer</button>
-                        <a className="anchor" href="">Transaction History</a>
+                        <Link to={'/wallet/deposit/history'} className="anchor" >Transaction History</Link>
                     </div>
                 </div>
                 <div className="dashboard-margin">
@@ -51,22 +51,22 @@ function Overview(props){
                         <div className="text-with-button">
                         <p className="">This is your spot trading account. Simply transfer finds to start trading <br/>on the world's leading crypto exchange instantly!</p>
                         <div>
-                            <Link to={'/wallet/withdraw'} className="custom-btn secondary-btn">Withdraw</Link>
+                            <Link to={'/wallet/withdrawal'} className="custom-btn secondary-btn">Withdraw</Link>
                             <button className="custom-btn secondary-btn" onClick={transfer_show}>Transfer</button>
                         </div>
                         </div>
                         </div>
                         <div className="wallet-spot">
                         <div>
-                        <h5 className="">Spot</h5>
+                        <h5 className="">Funding</h5>
                         <h6>0.000000000 BTC</h6>
                         </div>
                         <div className="text-with-button">
                         <p className="">Buy Crypto with cash to start trading!</p>
                         <div>
                             <Link to={'/buy/usdt'} className="custom-btn secondary-btn">Buy/Sale</Link>
-                            <button className="custom-btn secondary-btn">Pay</button>
-                            <button className="custom-btn secondary-btn">Recieve</button>
+                            <Link to={'/wallet/deposit'} className="custom-btn secondary-btn">Deposit</Link>
+                            <Link to={'/wallet/withdrawal'} className="custom-btn secondary-btn">Withdraw</Link>
                             <button className="custom-btn secondary-btn" onClick={transfer_show}>Transfer</button>
                         </div>
                         </div>

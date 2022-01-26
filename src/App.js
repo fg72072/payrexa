@@ -4,7 +4,7 @@ import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
 import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding} from './screens';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter} from './screens';
 import {Accountlogon} from './screens';
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
@@ -33,6 +33,9 @@ function App() {
         <Route path="/wallet/withdrawal" element={<Withdrawal header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/wallet/overview" element={<Overview header={<Header/>} sidebar={<WalletSideBar/>}/>} />
         <Route path="/wallet/funding" element={<Funding header={<Header/>} sidebar={<WalletSideBar/>}/>} />
+        <Route path="/wallet/spot" element={<Spot header={<Header/>} sidebar={<WalletSideBar/>}/>} />
+        <Route path="/wallet/deposit/history" element={<WalletHistory header={<Header/>} sidebar={<WalletSideBar/>}/>} />
+        <Route path="/wallet/transfer/history" element={<TransferHistory header={<Header/>} sidebar={<WalletSideBar/>}/>} />
         <Route path="/payment" element={<Payment header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/setting" element={<Setting header={<Header/>} sidebar={<SideBar/>}/>} />
         <Route path="/dashboard/swap" element={<Swap header={<UserPanelHeader/>}/>} />
@@ -56,6 +59,7 @@ function App() {
         <Route path="/sale/btc" element={<SaleBTC header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/sale/bnb" element={<SaleBNB header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/sale/eth" element={<SaleETH header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/support-center" element={<SupportCenter header={<Header/>} footer={<Footer/>}/>} />
         </Routes>
     </Router>
     </>

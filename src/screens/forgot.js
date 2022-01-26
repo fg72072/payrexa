@@ -1,55 +1,93 @@
-import { useState } from "react"
+import React, { useState } from 'react';
+import { firebase, auth } from '../components/FirebaseOtp';
 import { Col, Container, Form, Row } from "react-bootstrap"
+import { Link, useNavigate } from "react-router-dom";
+import Logo from '../assets/images/formlogo.png'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
 
 function Forgot(props){
-    const [forgotstatus,setForgotstatus] = useState('email');
+        // Inputs
+    const [ispasswordshow, setIspasswordshow] = useState(false);
+    const [loginstatus,setLoginstatus] = useState('email');
+    const navigate = useNavigate()
+
+    const SignIn = (e)=>{
+        e.preventDefault();
+        navigate('/')
+    }
     return (
         <>
-        {props.header}
+    {props.header}
+       
         <Container>
-        <div className="section-margin">
-        <Row>
-               <div className="center-form col-lg-6 col-12">
-               <main className="form-section">
-               <div className="form">
-               <Form>
-               <h1 className="h3 mb-5 fw-normal text-center">Forgot Password</h1>
-               <div className="d-j-flex form-ul">
-                    <a href="javascript::void()" className={forgotstatus == "email" ?"active":""} onClick={()=>setForgotstatus("email")}>Email</a>
-                    <a>OR</a>
-                    <a href="javascript::void()" className={forgotstatus == "phone" ?"active":""} onClick={()=>setForgotstatus("phone")}>Phone</a>
+    
+        <div className="form-section-margin mt-5">
+        <Row className="justify-content-center">
+            <Col lg="6" sm="12" >
+            <main className="form-section">
+            <Row>
+                <Col lg="12">
+                <div className="form">
+                <Form onSubmit={(e) => {
+				SignIn(e);
+				}}>
+                <div className="head-section">
+                <img src={Logo}/>
+                <h2>Forgot Password</h2>
                 </div>
+                <div className="d-flex justify-content-center form-ul">
+                    <a href="javascript::void()" className={loginstatus == "email" ?"active":""} onClick={()=>setLoginstatus("email")}>Email</a>
+                    <a className="form-slash"><i class="fa-solid fa-slash"></i></a>
+                    <a href="javascript::void()" className={loginstatus == "phone" ?"active":""} onClick={()=>setLoginstatus("phone")}>Phone</a>
+                </div>
+                
                 {
-                    forgotstatus == "email" ? <>
-                    <div className="form-floating">
-                    <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/>
-                    <label for="floatingInput">Email address</label>
-                    <i class="fa fa-envelope form-icon"></i>
-                    </div>
+                    loginstatus == "email" ? <>
+                    <Form.Group className="" controlId="email">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email"/>
+                    </Form.Group>
                     </>
                     :<>
-                    <div className="form-floating">
-                    <div className="d-flex">
-                    <select className="form-control country-code" name="country" >
-                    <option value="+ 92" selected>+ 92</option>
-                    <option value="+ 971">+ 971</option>
-                    <option value="+ 91">+ 91</option>
-                    </select>
-                    <input type="phone" className="form-control" id="floatingInput" placeholder="Phone Number"/>
-                    </div>
-                    <i class="fa fa-phone form-icon mobile-icon"></i>
-                    </div>
+                    <Form.Group className="" controlId="phone">
+                        <Form.Label>Phone Number</Form.Label>
+                        <div className="d-flex">
+                    <PhoneInput
+                        country={'pk'}
+                        enableSearch={true}
+                        className="form-control"/>
+                        </div>
+                    </Form.Group>
                     </>
                 }
-                <button className="btn w-100 btn-lg btn-custom mt-5" type="submit">Proceed</button>
-                </Form>
+                <div className='mt-2'>
+                {/* <div id="recaptcha-container"></div> */}
+                <div>
                 </div>
-               </main>
-               </div>
+         
+                </div>
+                <div className="mt-5">
+                <button className="w-100 custom-btn primary-btn" type="submit" >Reset Password</button>
+                </div>
+                <div className="d-j-flex">
+                
+
+                <div className="d-grid form-ul text-center justify-content-center w-100">
+                
+                </div>
+                </div>
+            </Form>
+                </div>
+                </Col>
+            </Row>
+            
+            </main>
+            </Col>
         </Row>
         </div>
         </Container>
-        {props.footer}
         </>
     )
 }

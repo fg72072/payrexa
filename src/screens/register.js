@@ -92,12 +92,9 @@ function Register(props){
                                     ValueContainer: CountryFlagValueContainer
                                 }}
                             />
-                        <button className="btn w-100 btn-lg btn-custom mt-5" type="submit" onClick={handleClose}>Confirm</button>
+                        <button className="w-100 custom-btn primary-btn mt-5" type="submit" onClick={handleClose}>Confirm</button>
                     </Form>
                         </Modal.Body>
-                        <Modal.Footer>
-           
-                        </Modal.Footer>
                     </Modal>
                
 
@@ -171,7 +168,7 @@ function Register(props){
                  </label>
                  <span className="form-checkbox-text">I certify that I am 18 years of age or older, and agree to the User Agreement and Privacy Policy.</span>
                 </div>
-                <button className="btn w-100 btn-lg btn-custom" type="submit">Sign Up</button>
+                <button className="w-100 custom-btn primary-btn" type="submit">Sign Up</button>
                 <div className="text-center">
                 <br/>
                  <p >Already Registered?<Link to="/login" className="anchor">Sign In</Link></p>

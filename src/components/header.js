@@ -99,8 +99,13 @@ function Header(){
                       </ul>
 
                     </li>
+                    <li className="nav-item">
 
+                    <Link to={"/support-center"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Support Center</Link>
+
+                    </li>
                 </ul>
+                
 
                 <div className="d-flex">
 
