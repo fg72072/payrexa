@@ -28,7 +28,7 @@ function TransferModal(props){
                         <Form.Label>From</Form.Label>
                         <div className='position-relative'>
                         <Form.Select size="lg">
-                            <option>Fiat and Spot</option>
+                            <option>Spot</option>
                         </Form.Select>
                         {/* <i class="fa fa-eye-slash form-icon pointer"></i> */}
                         </div>

@@ -1,5 +1,5 @@
 :root {
-  --primary: #4f2fcc;
+  --primary: #691388;
   --text-black: #000;
   --text-white: #fff;
   --text-disable: #d3d3d3;
@@ -67,6 +67,11 @@
 }
 .sidebar ul li a span {
   padding-left: 10px;
+  box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    word-break: break-word;
 }
 .normal-box {
   box-shadow: var(--shadow);

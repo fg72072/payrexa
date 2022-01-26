@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import {useState} from "react";
 import CoinsModal from "../../components/modals/coinsModal";
 import SelectNetwork from "../../components/modals/selectnetwork";
+import BNBImage from '../../assets/images/BNB.svg'
+import DepositDetailModal from "../../components/modals/DepositDetail";
 
 function Deposit(props) {
 
     const [show, setShow] = useState(false);
     const [changepasswordshow, setSelectnetworkshow] = useState(false);
+    const [depositshow, setDepositshow] = useState(false);
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -15,6 +18,9 @@ function Deposit(props) {
     // Select Network
     const network_close = () => setSelectnetworkshow(false);
     const select_network_modal = () => setSelectnetworkshow(true);
+
+    const deposit_close = () => setDepositshow(false);
+    const deposit_show = () => setDepositshow(true);
 
   return (
     <>
@@ -216,13 +222,38 @@ function Deposit(props) {
        
 
         </Row>
-
+        <Row>
+            <Col lg={12}>
+            <h2>Recent Deposit</h2>
+            <div className="normal-box ">
+             <div onClick={deposit_show}>
+             <div className="recent-history-row">
+              <img src={BNBImage}/>
+              <h6 className="h6">   0.0190000 BNB   </h6>
+              <p className="p text-green">   Completed</p>
+              </div>
+              <div className="recent-history-row-second">
+              <p>2022-01-22 14:11</p>
+              {/* <span>Deposit wallet : Spot Wallet</span> */}
+              <p>Network <span className="f-bold">BSC</span></p>
+              <p>Address <span className="f-bold">0x0000304232423432423343ewresdfafda</span><i class="fa-solid fa-link ml-1 pointer"></i> <i class="fa-regular fa-copy ml-1 pointer"></i></p>
+              <p>TxID <span className="f-bold">0x0000304232423432423343ewresdfafda</span><i class="fa-solid fa-link ml-1 pointer"></i> <i class="fa-regular fa-copy ml-1 pointer"></i></p>
+              <p><i class="fa-solid fa-angle-right"></i></p>
+              </div>
+              <p>Deposit wallet   <span className="f-bold">Spot Wallet</span></p>
+             </div>
+            </div>
+            <div className="mt-3 mb-3">
+            <Link to={'/wallet/deposit/history'} className="anchor">View All</Link>
+            </div>
+            </Col>
+        </Row>
 
         
 
 
             <CoinsModal showModal={show} hideModal={handleClose}/>
-
+            <DepositDetailModal depositshow={depositshow} deposit_close={deposit_close}/>
             <SelectNetwork network_close={network_close} show={changepasswordshow}/>
 
       </Container>

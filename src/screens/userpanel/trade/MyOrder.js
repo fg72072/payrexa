@@ -32,14 +32,10 @@ function MyOrders(props){
         </Container>
       <BlackHeader/>
       <div className="white-header">
-      <div className="ul">
-        <Tabs defaultActiveKey="processing" id="uncontrolled-tab-example" className="mb-3" >
-        <Tab eventKey="processing" title="Processing" onClick={(e)=>setOrderType("orders")}>
-            
-        </Tab>
-        <Tab eventKey="all-orders" title="All Orders" onClick={(e)=>setOrderType("orders")}>
-        </Tab>
-        </Tabs>
+      <div className="ul custom-tab-ul">
+        <a className={orderType == 'processing' ? "custom-tab-active custom-tab-link" : "custom-tab-link"} href="#" onClick={(e)=>setOrderType("processing")}>Processing</a>
+        <a className={orderType == 'all-orders' ? "custom-tab-active custom-tab-link" : "custom-tab-link"} href="#" onClick={(e)=>setOrderType("all-orders")}>All Ordres</a>
+
             </div>
       </div>
         <Container>

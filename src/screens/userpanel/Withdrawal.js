@@ -4,10 +4,15 @@ import {useState} from "react";
 import CoinsModal from "../../components/modals/coinsModal";
 import SelectNetwork from "../../components/modals/selectnetwork";
 import NotFound from '../../assets/images/not-found.png';
+import WithdrawDetailModal from "../../components/modals/WithdrawDetail";
+import BNBImage from '../../assets/images/BNB.svg'
+
 function Withdrawal(props) {
 
     const [show, setShow] = useState(false);
     const [changepasswordshow, setSelectnetworkshow] = useState(false);
+    const [withdrawshow, setWithdrawshow] = useState(false);
+
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -15,6 +20,10 @@ function Withdrawal(props) {
     // Select Network
     const network_close = () => setSelectnetworkshow(false);
     const select_network_modal = () => setSelectnetworkshow(true);
+
+    const withdraw_close = () => setWithdrawshow(false);
+    const withdraw_show = () => setWithdrawshow(true);
+
 
   return (
     <>
@@ -270,17 +279,36 @@ function Withdrawal(props) {
         </Row>
         <Row>
             <Col lg={12}>
-            <h2>Recent Withdrawal</h2>
-            <div className="normal-box not-found">
-                <img src={NotFound}/>
+            <h2>Recent Withdraw</h2>
+            <div className="normal-box ">
+             <div onClick={withdraw_show}>
+             <div className="recent-history-row">
+              <img src={BNBImage}/>
+              <h6 className="h6">   0.0190000 BNB   </h6>
+              <p className="p text-green">   Completed</p>
+              </div>
+              <div className="recent-history-row-second">
+              <p>2022-01-22 14:11</p>
+              {/* <span>Deposit wallet : Spot Wallet</span> */}
+              <p>Network <span className="f-bold">BSC</span></p>
+              <p>Address <span className="f-bold">0x0000304232423432423343ewresdfafda</span><i class="fa-solid fa-link ml-1 pointer"></i> <i class="fa-regular fa-copy ml-1 pointer"></i></p>
+              <p>TxID <span className="f-bold">0x0000304232423432423343ewresdfafda</span><i class="fa-solid fa-link ml-1 pointer"></i> <i class="fa-regular fa-copy ml-1 pointer"></i></p>
+              <p><i class="fa-solid fa-angle-right"></i></p>
+              </div>
+              <p>Withdraw wallet   <span className="f-bold">Spot Wallet</span></p>
+             </div>
+            </div>
+            <div className="mt-3 mb-3">
+            <Link to={'/wallet/deposit/history'} className="anchor">View All</Link>
             </div>
             </Col>
         </Row>
+
         
 
 
             <CoinsModal showModal={show} hideModal={handleClose}/>
-
+            <WithdrawDetailModal withdrawshow={withdrawshow} withdraw_close={withdraw_close}/>
             <SelectNetwork network_close={network_close} show={changepasswordshow}/>
 
       </Container>

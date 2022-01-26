@@ -35,7 +35,7 @@ function Verification(props){
                isInputNum={true}
                 />
                 </div>
-                <button className="btn w-100 btn-lg btn-custom mt-5" type="submit">Proceed</button>
+                <button className="w-100 custom-btn primary-btn mt-5" type="submit">Proceed</button>
                 </Form>
                 </div>
                </main>

@@ -129,7 +129,7 @@ function Login(props){
          
                 </div>
                 <div className="mt-5">
-                <button className="btn w-100 btn-lg btn-custom" type="submit" >Sign in</button>
+                <button className="w-100 custom-btn primary-btn" type="submit" >Sign in</button>
                 </div>
                 <div className="d-j-flex">
                 
@@ -137,7 +137,7 @@ function Login(props){
                 <div className="d-grid form-ul text-center justify-content-center w-100">
                 
                 <Link to={'/register'}>Register Now</Link>
-                <Link to={'/'}>Forgot password?</Link>
+                <Link to={'/forgot-password'}>Forgot password?</Link>
                 </div>
                 </div>
             </Form>
