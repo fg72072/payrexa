@@ -12,7 +12,7 @@ function Market(props){
 
         <Container >
 
-            <div className="banner-section big-bg">
+            <div className="banner-section big-bg py-5">
 
                 <div className="heading-border text-center">
                     <h1 className="dual-heading">Markets</h1>
@@ -21,15 +21,17 @@ function Market(props){
                     
                 <Form>
 
+                    <Form.Group className="mb-3 " controlId="search">
+                        
+                            <div className="position-relative search-coins">
+                            <Form.Control type="text" placeholder="Search"/>
+                            <button className="form-search-btn custom-btn-sm">Search</button>
+                            </div>
 
-
-                <Form.Group className="search-coins" controlId="searcg-coin">
-                            
-                    <Form.Control type="text" placeholder="Search Coin"/>
-                        <i class="fa-solid fa-magnifying-glass"></i>
                     </Form.Group>
 
-                    </Form>
+
+                </Form>
 
 
                     </div>

@@ -3,10 +3,9 @@ import './assets/css/Style.css'
 import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
-import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter, ChangeEmail, ResetVerifiction, UnlockAccount, Pad, ViewAllLPD, Subscription, ViewAllLP, LaunchPool} from './screens';
+import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar, FaqSideBar} from './components';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter, ChangeEmail, ResetVerifiction, UnlockAccount, Pad, ViewAllLPD, Subscription, ViewAllLP, LaunchPool,Faq} from './screens';
 import {Accountlogon} from './screens';
-
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { useState } from 'react';
 
@@ -49,12 +48,16 @@ function App() {
         <Route path="/express" element={<Express header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/user-center" element={<UserCenter header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/post-ads" element={<PostAds header={<Header/>} footer={<Footer/>}/>} />
+
         {/* buy routes */}
+
         <Route path="/buy/usdt" element={<BuyUSDT header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/buy/btc" element={<BuyBTC header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/buy/bnb" element={<BuyBNB header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/buy/eth" element={<BuyETH header={<Header/>} footer={<Footer/>}/>} />
+
         {/* sale routes */}
+
         <Route path="/sale/usdt" element={<SaleUSDT header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/sale/btc" element={<SaleBTC header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/sale/bnb" element={<SaleBNB header={<Header/>} footer={<Footer/>}/>} />
@@ -69,6 +72,10 @@ function App() {
         <Route path="/launchpool/:id" element={<LaunchPool header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/subscription/:id" element={<Subscription header={<Header/>} footer={<Footer/>}/>} />
         
+        {/* FAQ */}
+
+        <Route path="/faq" element={<Faq header={<Header/>} footer={<Footer/>} sidebar={<FaqSideBar/>} />} />
+
         </Routes>
     </Router>
     </>

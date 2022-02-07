@@ -8,6 +8,7 @@ function WalletSideBar(){
         <div className="sidebar">
                 <div className="container-fluid">
                 <ul className="mt-3">
+                    
                     <li><Link to={'/wallet/overview'}><img src={OverviewIcon}/><span>Overview</span></Link></li>
                     <li><Link to={'/wallet/spot'}><img src={SpotIcon}/><span>Spot</span></Link></li>
                     <li><Link to={'/wallet/funding'}><img src={FundingIcon}/><span>Funding</span></Link></li>
