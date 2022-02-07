@@ -4,7 +4,7 @@ import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
 import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter} from './screens';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter, ChangeEmail, ResetVerifiction, UnlockAccount, Pad, ViewAllLPD, Subscription} from './screens';
 import {Accountlogon} from './screens';
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
@@ -60,6 +60,13 @@ function App() {
         <Route path="/sale/bnb" element={<SaleBNB header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/sale/eth" element={<SaleETH header={<Header/>} footer={<Footer/>}/>} />
         <Route path="/support-center" element={<SupportCenter header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/change/email" element={<ChangeEmail header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/reset/verification" element={<ResetVerifiction header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/unlock/account" element={<UnlockAccount header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/launch/pad" element={<Pad header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/viewall/lpd" element={<ViewAllLPD header={<Header/>} footer={<Footer/>}/>} />
+        <Route path="/subscription/:id" element={<Subscription header={<Header/>} footer={<Footer/>}/>} />
+        
         </Routes>
     </Router>
     </>

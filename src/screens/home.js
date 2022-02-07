@@ -1,14 +1,26 @@
 import { useState } from "react"
 import { Accordion, Col, Container, Form, Nav, Row, Table, Tabs, Tab } from "react-bootstrap"
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
-
+import DownIcon from '../assets/images/down-icon.png';
+import RegIcon from '../assets/images/b-reg.png';
+import TradeIcon from '../assets/images/b-trade.png';
+import BTCIcon from '../assets/images/btc.svg';
+import FastIcon from '../assets/images/fast-trade-icon.png';
+import PayIcon from '../assets/images/quick-pay-icon.png';
+import CustomerIcon from '../assets/images/customer-suppor-icon.png';
+import ChartIcon from '../assets/images/live-chart-icon.png';
+import CommissionIcon from '../assets/images/commision-icon.png';
+import SecurityIcon from '../assets/images/high-security-icon.png';
+import Star from '../assets/images/star.png';
+import DownMobile from '../assets/images/down-mobile.png';
 
 function Home(props){
 
     var carouselsettings = {
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows:true,
         responsive: [
@@ -72,9 +84,9 @@ function Home(props){
         infinite: true,
         speed: 200,
         autoplay:true,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
-        arrows:true,
+        arrows:false,
         dots:true,
         responsive: [
             {
@@ -105,22 +117,23 @@ function Home(props){
         {props.header}
 
         <section className="banner-section">
-        <Container className="h-100">
-            <Row className="banner-row h-100">
+        <Container className="">
+            <Row className="banner-row ">
                 <Col lg="6" sm={12}>
                 <div className=" banner-text">
 
-                <img  width={100} src={require('../assets/images/logo.png').default}/>
-                <h1 className="dual-heading">Swap, Invest, and <span>Earn</span> <br/> Interest on your Crypto </h1>
+                <h1 className="dual-heading">Swap, Invest, and Earn <br/> Interest on your Crypto </h1>
+                <p className="banner-p">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit ut aliquam, purus sit 
+                    amet luctus venenatis</p>
                 <div>
                 <div className="btn-box">
-                <a href="#" className="custom-icon-btn primary-btn"><i class="fa-brands fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></a>
-                <a href="#" className="custom-icon-btn secondary-btn"><i class="fa-brands fa-google-play"></i><span className="d-column">Download From <b>App Store</b></span></a>
+                <Link to={'/register'} className="custom-btn primary-btn">Register</Link>
                 </div>
                 </div>
                 </div>
                 </Col>
-                <Col lg="6" sm={12} className="h-100 d-flex align-items-end">
+                <Col lg="6" sm={12} className=" d-flex ">
 
                     
 
@@ -129,6 +142,40 @@ function Home(props){
                     
 
                 </Col>
+                <Col lg={12} sm={12} md={12}>
+                    <Row>
+                        <Col lg={4} sm={12} md={6}>
+                            <div className="banner-box-custom">
+                                <h4>Download the App</h4>
+                                <span className="banner-span">Get from apple or<br/> play store</span>
+                                <div className="inner">
+                                    <span>Get</span>
+                                    <img src={DownIcon}/>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4} sm={12} md={6}>
+                            <div className="banner-box-custom">
+                                <h4>Register</h4>
+                                <span className="banner-span">Create an account after downloading the app</span>
+                                <div className="inner">
+                                    <span>Register</span>
+                                    <img src={RegIcon}/>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col lg={4} sm={12} md={6}>
+                            <div className="banner-box-custom">
+                                <h4>Start Trading</h4>
+                                <span className="banner-span">Start trading with PayRexa to enjoy the benefits.</span>
+                                <div className=" inner">
+                                    <span>Trading</span>
+                                    <img src={TradeIcon}/>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Col>
 
             </Row>
         </Container>
@@ -136,564 +183,186 @@ function Home(props){
         
             <section>
 
+                <Container>
                 <Row className="g-0">
 
                 
-                <Slider {...market}>
+<Slider {...market}>
 
-                        <Col lg={12}>
-                            <Row>
-                            <Col lg={2} sm={12} className="market-box">
+        <Col lg={12}>
+            <Row>
+            <Col lg={3} sm={12} className="market-box">
 
-                            <div className="d-flex align-items-center">
+            <div className="">
 
-                                <img src={require("../assets/images/Binance.svg").default}/>
 
-                                <div className="market-data">
+                <div className="market-data">
 
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
+                    <p>SHIB/BUSD</p>
+                    <p>+3.06%</p>
 
-                                </div>
+                </div>
+                <div className="innner">
+                    <p>0.0000298</p>
+                    <span>$0.00002</span>
+                </div>
 
-                            </div>
+            </div>
 
-                            <div className="market-footer">
 
-                                <div className="market-change">
+            </Col>
+            <Col lg={3} sm={12} className="market-box">
 
-                                        <span>
-                                            <p><b>Change</b></p>
+                <div className="">
 
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
 
-                                </div>
+                    <div className="market-data">
 
-                                <div className="market-volume">
+                        <p>SHIB/BUSD</p>
+                        <p>+3.06%</p>
 
-                                        <span>
-                                            <p><b>Volume</b></p>
+                    </div>
+                    <div className="innner">
+                        <p>0.0000298</p>
+                        <span>$0.00002</span>
+                    </div>
 
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
+                </div>
 
-                                </div>
 
-                            </div>
+                </Col>
+                <Col lg={3} sm={12} className="market-box">
 
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
+                <div className="">
 
-                            <div className="d-flex align-items-center">
 
-                                <img src={require("../assets/images/Binance.svg").default}/>
+                    <div className="market-data">
 
-                                <div className="market-data">
+                        <p>SHIB/BUSD</p>
+                        <p>+3.06%</p>
 
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
+                    </div>
+                    <div className="innner">
+                        <p>0.0000298</p>
+                        <span>$0.00002</span>
+                    </div>
 
-                                </div>
+                </div>
 
-                            </div>
 
-                            <div className="market-footer">
+                </Col>
+                <Col lg={3} sm={12} className="market-box">
 
-                                <div className="market-change">
+                <div className="">
 
-                                        <span>
-                                            <p><b>Change</b></p>
 
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
+                    <div className="market-data">
 
-                                </div>
+                        <p>SHIB/BUSD</p>
+                        <p>+3.06%</p>
 
-                                <div className="market-volume">
+                    </div>
+                    <div className="innner">
+                        <p>0.0000298</p>
+                        <span>$0.00002</span>
+                    </div>
 
-                                        <span>
-                                            <p><b>Volume</b></p>
+                </div>
 
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
 
-                                </div>
+                </Col>
+            </Row>
+        </Col>
+        <Col lg={12}>
+            <Row>
+            <Col lg={3} sm={12} className="market-box">
 
-                            </div>
+            <div className="">
 
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
 
-                            <div className="d-flex align-items-center">
+                <div className="market-data">
 
-                                <img src={require("../assets/images/Binance.svg").default}/>
+                    <p>SHIB/BUSD</p>
+                    <p>+3.06%</p>
 
-                                <div className="market-data">
+                </div>
+                <div className="innner">
+                    <p>0.0000298</p>
+                    <span>$0.00002</span>
+                </div>
 
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
+            </div>
 
-                                </div>
 
-                            </div>
+            </Col>
+            <Col lg={3} sm={12} className="market-box">
 
-                            <div className="market-footer">
+                <div className="">
 
-                                <div className="market-change">
 
-                                        <span>
-                                            <p><b>Change</b></p>
+                    <div className="market-data">
 
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
+                        <p>SHIB/BUSD</p>
+                        <p>+3.06%</p>
 
-                                </div>
+                    </div>
+                    <div className="innner">
+                        <p>0.0000298</p>
+                        <span>$0.00002</span>
+                    </div>
 
-                                <div className="market-volume">
+                </div>
 
-                                        <span>
-                                            <p><b>Volume</b></p>
 
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
+                </Col>
+                <Col lg={3} sm={12} className="market-box">
 
-                                </div>
+                <div className="">
 
-                            </div>
 
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
+                    <div className="market-data">
 
-                            <div className="d-flex align-items-center">
+                        <p>SHIB/BUSD</p>
+                        <p>+3.06%</p>
 
-                                <img src={require("../assets/images/Binance.svg").default}/>
+                    </div>
+                    <div className="innner">
+                        <p>0.0000298</p>
+                        <span>$0.00002</span>
+                    </div>
 
-                                <div className="market-data">
+                </div>
 
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
 
-                                </div>
+                </Col>
+                <Col lg={3} sm={12} className="market-box">
 
-                            </div>
+                <div className="">
 
-                            <div className="market-footer">
 
-                                <div className="market-change">
+                    <div className="market-data">
 
-                                        <span>
-                                            <p><b>Change</b></p>
+                        <p>SHIB/BUSD</p>
+                        <p>+3.06%</p>
 
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
+                    </div>
+                    <div className="innner">
+                        <p>0.0000298</p>
+                        <span>$0.00002</span>
+                    </div>
 
-                                </div>
+                </div>
 
-                                <div className="market-volume">
 
-                                        <span>
-                                            <p><b>Volume</b></p>
+                </Col>
+            </Row>
+        </Col>
+     
 
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
+    </Slider>
 
-                                </div>
-
-                            </div>
-
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
-
-                                <div className="d-flex align-items-center">
-
-                                    <img src={require("../assets/images/Binance.svg").default}/>
-
-                                    <div className="market-data">
-
-                                        <p><b>TRX :</b> $0.030304</p>
-                                        <p>Binance Coin</p>
-
-                                    </div>
-
-                                </div>
-
-                                <div className="market-footer">
-
-                                    <div className="market-change">
-
-                                            <span>
-                                                <p><b>Change</b></p>
-
-                                                <p className="green">
-                                                    <i class="fa fa-caret-up"></i>
-                                                    $3%
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                    <div className="market-volume">
-
-                                            <span>
-                                                <p><b>Volume</b></p>
-
-                                                <p>
-                                                    $13,1333,4556
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                </div>
-
-                                </Col>
-                                <Col lg={2} sm={12} className="market-box">
-
-                                <div className="d-flex align-items-center">
-
-                                    <img src={require("../assets/images/Binance.svg").default}/>
-
-                                    <div className="market-data">
-
-                                        <p><b>TRX :</b> $0.030304</p>
-                                        <p>Binance Coin</p>
-
-                                    </div>
-
-                                </div>
-
-                                <div className="market-footer">
-
-                                    <div className="market-change">
-
-                                            <span>
-                                                <p><b>Change</b></p>
-
-                                                <p className="green">
-                                                    <i class="fa fa-caret-up"></i>
-                                                    $3%
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                    <div className="market-volume">
-
-                                            <span>
-                                                <p><b>Volume</b></p>
-
-                                                <p>
-                                                    $13,1333,4556
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                </div>
-
-                                </Col>
-                            </Row>
-                        </Col>
-                        <Col lg={12}>
-                            <Row>
-                            <Col lg={2} sm={12} className="market-box">
-
-                            <div className="d-flex align-items-center">
-
-                                <img src={require("../assets/images/Binance.svg").default}/>
-
-                                <div className="market-data">
-
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
-
-                                </div>
-
-                            </div>
-
-                            <div className="market-footer">
-
-                                <div className="market-change">
-
-                                        <span>
-                                            <p><b>Change</b></p>
-
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                                <div className="market-volume">
-
-                                        <span>
-                                            <p><b>Volume</b></p>
-
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                            </div>
-
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
-
-                            <div className="d-flex align-items-center">
-
-                                <img src={require("../assets/images/Binance.svg").default}/>
-
-                                <div className="market-data">
-
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
-
-                                </div>
-
-                            </div>
-
-                            <div className="market-footer">
-
-                                <div className="market-change">
-
-                                        <span>
-                                            <p><b>Change</b></p>
-
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                                <div className="market-volume">
-
-                                        <span>
-                                            <p><b>Volume</b></p>
-
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                            </div>
-
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
-
-                            <div className="d-flex align-items-center">
-
-                                <img src={require("../assets/images/Binance.svg").default}/>
-
-                                <div className="market-data">
-
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
-
-                                </div>
-
-                            </div>
-
-                            <div className="market-footer">
-
-                                <div className="market-change">
-
-                                        <span>
-                                            <p><b>Change</b></p>
-
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                                <div className="market-volume">
-
-                                        <span>
-                                            <p><b>Volume</b></p>
-
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                            </div>
-
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
-
-                            <div className="d-flex align-items-center">
-
-                                <img src={require("../assets/images/Binance.svg").default}/>
-
-                                <div className="market-data">
-
-                                    <p><b>TRX :</b> $0.030304</p>
-                                    <p>Binance Coin</p>
-
-                                </div>
-
-                            </div>
-
-                            <div className="market-footer">
-
-                                <div className="market-change">
-
-                                        <span>
-                                            <p><b>Change</b></p>
-
-                                            <p className="green">
-                                                <i class="fa fa-caret-up"></i>
-                                                $3%
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                                <div className="market-volume">
-
-                                        <span>
-                                            <p><b>Volume</b></p>
-
-                                            <p>
-                                                $13,1333,4556
-                                            </p>
-                                        </span>
-
-                                </div>
-
-                            </div>
-
-                            </Col>
-                            <Col lg={2} sm={12} className="market-box">
-
-                                <div className="d-flex align-items-center">
-
-                                    <img src={require("../assets/images/Binance.svg").default}/>
-
-                                    <div className="market-data">
-
-                                        <p><b>TRX :</b> $0.030304</p>
-                                        <p>Binance Coin</p>
-
-                                    </div>
-
-                                </div>
-
-                                <div className="market-footer">
-
-                                    <div className="market-change">
-
-                                            <span>
-                                                <p><b>Change</b></p>
-
-                                                <p className="green">
-                                                    <i class="fa fa-caret-up"></i>
-                                                    $3%
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                    <div className="market-volume">
-
-                                            <span>
-                                                <p><b>Volume</b></p>
-
-                                                <p>
-                                                    $13,1333,4556
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                </div>
-
-                                </Col>
-                                <Col lg={2} sm={12} className="market-box">
-
-                                <div className="d-flex align-items-center">
-
-                                    <img src={require("../assets/images/Binance.svg").default}/>
-
-                                    <div className="market-data">
-
-                                        <p><b>TRX :</b> $0.030304</p>
-                                        <p>Binance Coin</p>
-
-                                    </div>
-
-                                </div>
-
-                                <div className="market-footer">
-
-                                    <div className="market-change">
-
-                                            <span>
-                                                <p><b>Change</b></p>
-
-                                                <p className="green">
-                                                    <i class="fa fa-caret-up"></i>
-                                                    $3%
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                    <div className="market-volume">
-
-                                            <span>
-                                                <p><b>Volume</b></p>
-
-                                                <p>
-                                                    $13,1333,4556
-                                                </p>
-                                            </span>
-
-                                    </div>
-
-                                </div>
-
-                                </Col>
-                            </Row>
-                        </Col>
-                     
-
-                    </Slider>
-                
-                </Row>
+</Row>
+                </Container>
 
             </section>
 
@@ -701,12 +370,10 @@ function Home(props){
         
             
             <section className="carousel-section">
-                <div className="d-j-flex heading">
-                    <h3>News & Ads</h3>
-                    <div className="text">
-                    </div>
+                <div className="mb-4 ">
+                    <h2>Announcement</h2>
+                  
                 </div>
-                    <hr class="hr"/>
                 <div className="main-carousel">
                     
                     <Slider {...news_slider}>
@@ -714,33 +381,52 @@ function Home(props){
                         <div className="news-slides">
 
                             <img className="w-100" src={require("../assets/images/news.jpg").default}/>
+                            <div className="text-end mt-2">
+                            <span >12/12/2022</span>
+                            </div>
+                            <div className="slider-text-section">
+                                <p className="p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
+                                <p className="text-p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
+                            </div>
                             
                         </div>
-
                         <div className="news-slides">
 
-                            <img className="w-100" src={require("../assets/images/news.jpg").default}/>
+                        <img className="w-100" src={require("../assets/images/news.jpg").default}/>
+                        <div className="text-end mt-2">
+                        <span >12/12/2022</span>
+                        </div>
+                        <div className="slider-text-section">
+                            <p className="p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
+                            <p className="text-p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
+                        </div>
 
                         </div>
 
                         <div className="news-slides">
 
-                            <img className="w-100" src={require("../assets/images/news.jpg").default}/>
-
+                        <img className="w-100" src={require("../assets/images/news.jpg").default}/>
+                        <div className="text-end mt-2">
+                        <span >12/12/2022</span>
+                        </div>
+                        <div className="slider-text-section">
+                            <p className="p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
+                            <p className="text-p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
                         </div>
 
+                        </div>
                         <div className="news-slides">
 
-                            <img className="w-100" src={require("../assets/images/news.jpg").default}/>
+                        <img className="w-100" src={require("../assets/images/news.jpg").default}/>
+                        <div className="text-end mt-2">
+                        <span >12/12/2022</span>
+                        </div>
+                        <div className="slider-text-section">
+                            <p className="p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
+                            <p className="text-p">Lorem Lorem lorem lorem lorem lorem lorem lorem loeem loren lore </p>
+                        </div>
 
                         </div>
-                        <div className="news-slides">
-
-                            <img className="w-100" src={require("../assets/images/news.jpg").default}/>
-
-                        </div>
-
-                      
 
                     </Slider>
                    
@@ -748,13 +434,13 @@ function Home(props){
             </section>
 
 
-            <section className="section">
+            <section className="section custom-table-primary-th">
 
 
-            <h2 className="dual-heading text-center">Market Trends</h2>
+            <h2 className="text-center mb-5">Trending Cryptocurrencies</h2>
 
 
-            <Tabs defaultActiveKey="top-gainers" id="uncontrolled-tab-example" className="mb-3 justify-content-center loosers-gainers-tabs">
+            <Tabs defaultActiveKey="top-gainers" id="uncontrolled-tab-example" className="mb-3 custom-tabs-new  loosers-gainers-tabs">
 
 
                 <Tab eventKey="top-gainers" title="Top Gainers">
@@ -766,21 +452,22 @@ function Home(props){
                     <thead className="t-heading">
                         <tr>
                         <th>#</th>
-                        <th>Name</th>
+                        <th>Currency</th>
                         <th>Price</th>
-                        <th>24h</th>
-                        <th>Volume(24h)</th>
+                        <th>Change(25h)</th>
+                        <th>Volume</th>
+                        <th></th>
                         </tr>
                     </thead>
 
                     <tbody className="text-center align-items-center">
 
                         <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
                         </td>
                         <td>$0.32323</td>
                         <td >
@@ -791,14 +478,12 @@ function Home(props){
                         <td>$434.32323</td>
                         <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
-
-
                         <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
                         </td>
                         <td>$0.32323</td>
                         <td >
@@ -809,14 +494,12 @@ function Home(props){
                         <td>$434.32323</td>
                         <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
-
-
                         <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
                         </td>
                         <td>$0.32323</td>
                         <td >
@@ -827,14 +510,12 @@ function Home(props){
                         <td>$434.32323</td>
                         <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
-
-
                         <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
                         </td>
                         <td>$0.32323</td>
                         <td >
@@ -845,14 +526,12 @@ function Home(props){
                         <td>$434.32323</td>
                         <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
-
-
                         <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
                         </td>
                         <td>$0.32323</td>
                         <td >
@@ -863,7 +542,6 @@ function Home(props){
                         <td>$434.32323</td>
                         <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
-                       
 
                     </tbody>
                     </Table>
@@ -878,103 +556,81 @@ function Home(props){
                     <thead className="t-heading">
                         <tr>
                         <th>#</th>
-                        <th>Name</th>
+                        <th>Currency</th>
                         <th>Price</th>
-                        <th>24h</th>
-                        <th>Volume(24h)</th>
+                        <th>Change(25h)</th>
+                        <th>Volume</th>
+                        <th></th>
                         </tr>
                     </thead>
 
                     <tbody className="text-center align-items-center">
 
-                        <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
+                    <tr>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
                         </td>
                         <td>$0.32323</td>
                         <td >
                             <div className="red d-flex text-center align-items-center">
-                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
+                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            </div>
+                        </td>
+                        <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
+                        </tr>
+                        <tr>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
+                        </td>
+                        <td>$0.32323</td>
+                        <td >
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            </div>
+                        </td>
+                        <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
+                        </tr>
+                        <tr>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
+                        </td>
+                        <td>$0.32323</td>
+                        <td >
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
+                            </div>
+                        </td>
+                        <td>$434.32323</td>
+                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
+                        </tr>
+                        <tr>
+                        <td><span className="purple">1</span></td>
+                        <td className="td-flex-img">
+                        <img className="radius-50 " src={BTCIcon} width="30"/>
+                        <h6 className="mb-0">BTC</h6>
+                        <span className="">Bitcoin</span>
+                        </td>
+                        <td>$0.32323</td>
+                        <td >
+                            <div className="red d-flex text-center align-items-center">
+                            <i class="fa fa-sort-up"></i> <span>198.43%</span>
                             </div>
                         </td>
                         <td>$434.32323</td>
                         <td><a href="#" className="custom-btn-sm">Trade</a></td>
                         </tr>
 
-
-                        <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
-                        </td>
-                        <td>$0.32323</td>
-                        <td >
-                            <div className="red d-flex text-center align-items-center">
-                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
-                            </div>
-                        </td>
-                        <td>$434.32323</td>
-                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
-                        </tr>
-
-
-                        <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
-                        </td>
-                        <td>$0.32323</td>
-                        <td >
-                            <div className="red d-flex text-center align-items-center">
-                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
-                            </div>
-                        </td>
-                        <td>$434.32323</td>
-                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
-                        </tr>
-
-
-                        <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
-                        </td>
-                        <td>$0.32323</td>
-                        <td >
-                            <div className="red d-flex text-center align-items-center">
-                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
-                            </div>
-                        </td>
-                        <td>$434.32323</td>
-                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
-                        </tr>
-
-
-                        <tr>
-                        <td><span className="grey">1</span></td>
-                        <td className="d-flex text-center align-items-center">
-                        <img className="radius-50 " src={require("../assets/images/logo.png").default} width="30"/>
-                        <h6 className="mb-0">Block Farm Club</h6>
-                        <span className="text">BFC</span>
-                        </td>
-                        <td>$0.32323</td>
-                        <td >
-                            <div className="red d-flex text-center align-items-center">
-                            <i class="fa fa-sort-down"></i> <span>198.43%</span>
-                            </div>
-                        </td>
-                        <td>$434.32323</td>
-                        <td><a href="#" className="custom-btn-sm">Trade</a></td>
-                        </tr>
                        
 
                     </tbody>
@@ -983,187 +639,108 @@ function Home(props){
                 </Tab>
                
             </Tabs>
-
+            <div className="text-center mt-5">
+                <Link to={'/market'} className="custom-btn primary-btn">Market Place</Link>
+            </div>
                        
             </section>
 
 
          
             <section className="section">
-                <Row className="banner-row ">
-                    <Col lg={6} className="c-order-2">
-                    <Row >
-                        <Col lg={6} md={6}>
-                        <div className="box text-center">
-                            <img className="box-icon" src={require("../assets/images/easy.svg").default}/>
-                            <br/>
-                            <h3>Easy</h3>
-                            <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-                            </p>
+            <h2 className="text-center ">Trending Crypto with PayRexa</h2>
+
+                <Row className="home-trade-section">
+                    <Col lg={4}>
+                        <div className="home-trading-box">
+                            <img src={FastIcon}/>
+                            <h4>Fast Trading</h4>
+                            <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
                         </div>
-                        </Col>
-                        <Col lg={6} md={6}>
-                        <div className="box text-center cmt-2">
-                            <img className="box-icon" src={require("../assets/images/easy.svg").default}/>
-                            <br/>
-                            <h3>Easy</h3>
-                            <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-                            </p>
-                        </div>
-                        </Col>
-                        <Col lg={6} md={6}>
-                        <div className="box text-center">
-                            <img className="box-icon" src={require("../assets/images/easy.svg").default}/>
-                            <br/>
-                            <h3>Easy</h3>
-                            <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-                            </p>
-                        </div>
-                        </Col>
-                        <Col lg={6} md={6}>
-                        <div className="box text-center cmt-2">
-                            <img className="box-icon" src={require("../assets/images/easy.svg").default}/>
-                            <br/>
-                            <h3>Easy</h3>
-                            <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-                            </p>
-                        </div>
-                        </Col>
-                    </Row>
                     </Col>
-                    <Col lg="6" className="c-order-1">
-                        <div className="section-text">
-                        <h1>Why Are <br/>People Using <br/><span className="purple">PayRexa</span> </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-                        </p>
+                    <Col lg={4}>
+                        <div className="home-trading-box">
+                            <img src={PayIcon}/>
+                            <h4>Quick Payment</h4>
+                            <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
+                        </div>
+                    </Col>
+                    <Col lg={4}>
+                        <div className="home-trading-box">
+                            <img src={CustomerIcon}/>
+                            <h4>Customer Support</h4>
+                            <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
+                        </div>
+                    </Col>
+                    <Col lg={4}>
+                        <div className="home-trading-box">
+                            <img src={ChartIcon}/>
+                            <h4>Live Charts</h4>
+                            <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
+                        </div>
+                    </Col>
+                    <Col lg={4}>
+                        <div className="home-trading-box">
+                            <img src={CommissionIcon}/>
+                            <h4>Commissions</h4>
+                            <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
+                        </div>
+                    </Col>
+                    <Col lg={4}>
+                        <div className="home-trading-box">
+                            <img src={SecurityIcon}/>
+                            <h4>High Security</h4>
+                            <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
                         </div>
                     </Col>
                 </Row>
+                <div className="text-center mt-5">
+                <button className="custom-btn primary-btn">Start Trading Now</button>
+            </div>
             </section>
 
 
             </Container>
 
-            <section className="section">
-
-                <h2 className="dual-heading text-center">Trading With <span>PayRexa</span> Is Simple</h2>
-   
-            <Container fluid className="half-color">
-
-                <Container>
-                    <Row>
-
-                        <Col lg={4}>
-
-                        <div className="box-two">
-
-                            <img src={require("../assets/images/Layer-50.png").default} />
-
-                            <h4>Create Your Account</h4>
-                            <p>Lorem ipsum adasd ask afasfkqw fakfa sfaks fapkeqwor afc ajcnais nca nwqniasndiasj ajjc acapsjdwjq ac ap</p>
-
-                        </div>
-                
-                        </Col>
-
-                        
-                        <Col lg={4}>
-
-                        <div className="box-two">
-
-                            <img src={require("../assets/images/Layer-49.png").default} />
-
-                            <h4>Create Your Account</h4>
-                            <p>Lorem ipsum adasd ask afasfkqw fakfa sfaks fapkeqwor afc ajcnais nca nwqniasndiasj ajjc acapsjdwjq ac ap</p>
-
-                        </div>
-                
-                        </Col>
-
-                        
-                        <Col lg={4}>
-
-                        <div className="box-two">
-
-                            <img src={require("../assets/images/Layer-51.png").default} />
-
-                            <h4>Create Your Account</h4>
-                            <p>Lorem ipsum adasd ask afasfkqw fakfa sfaks fapkeqwor afc ajcnais nca nwqniasndiasj ajjc acapsjdwjq ac ap</p>
-
-                        </div>
-                
-                        </Col>
-                    
-                    
-
-                    </Row>
-                </Container>
-
-            </Container>
-            </section>
 
             <Container>
+                <section className="section">
+                    <Row className="align-items-center">
+                        <Col lg={6}>
+                        <div class="section-text">
+                        <h1>About Us</h1>
+                        </div>
+                        </Col>
+                        <Col lg={6}>
+                        <div className="home-about-flex">
+                            <div className="inner-box">
+                                <img src={Star}/>
+                                <img src={Star}/>
+                                <img src={Star}/>
+                                <img src={Star}/>
+                                <img src={Star}/>
+                            </div>
+                            <div className="inner-box">
+                                <h4>2020</h4>
+                                <span>Entry Year</span>
+                            </div>
+                        </div>
 
-            <section className="section">
-                <Row>
-                    <Col lg={6} sm={12}>
-                    <img className="w-100" src={require("../assets/images/trade-with.png").default}/>
-                    </Col>
-                    <Col lg={6} sm={12}>
-                    <h4 className="purple">Trade Crypto</h4>
-                    <h2 className="dual-heading">To Financial Freedom</h2>
-                    <br/>
-                    <p className="crypto-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-                    </p>
-                    <br/>
-                    <a className="custom-btn secondary-btn">Get Started For Free</a>
-                    </Col>
-                </Row>
-            </section>
-            
-            <section className="section">
-
-            <Row className="align-items-center">
-
-                <Col lg={6}>
-
-
-                <h2 className="dual-heading">Recieve Crypto Easily On <span>PayRexa</span></h2>
-                <p className="crypto-text-large">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat explicabo, consequuntur, nisi totam itaque, odit possimus tenetur provident et
-                </p>
-                <div className="btn-box">
-                <a href="#" className="custom-icon-btn primary-btn"><i class="fa-brands fa-apple"></i><span className="d-column">Download From <b>App Store</b></span></a>
-                <a href="#" className="custom-icon-btn secondary-btn"><i class="fa-brands fa-google-play"></i><span className="d-column">Download From <b>App Store</b></span></a>
-                </div>
-
-                </Col> 
-
-                <Col lg={6}>
-                <img className="w-100" src={require("../assets/images/download-app.png").default}/>
-                </Col>
-               
-                  
-               
-                   
-                
-                
-
-            </Row>
-
-            </section>
-
-            <section className="section">
-            <h2 className="dual-heading text-center">F.A.Q.S</h2>
-            <p className="crypto-text-large text-center purple">
-                Get answers to the most frequently asked questions.
-            </p>
+                        <div className="home-second-about-flex">
+                            <div className="inner-box">
+                                     <h4>4M+</h4>
+                                <span>Downloads</span>
+                            </div>
+                            <div className="inner-box">
+                                <h4>99+</h4>
+                                <span>Countries</span>
+                            </div>
+                        </div>
+                        </Col>
+                    </Row>
+                </section>
+                <section className="section">
+            <h3>Get Answers to the most <br/> Frequently Asked Questions</h3>
             <Accordion defaultActiveKey="0" flush>
             <Accordion.Item eventKey="0">
                 <Accordion.Header>What is PayRexa</Accordion.Header>
@@ -1237,9 +814,23 @@ function Home(props){
                 </Accordion.Body>
             </Accordion.Item>
             </Accordion>
-            
+            <div className="text-center mt-5">
+                <p className="font-25 mb-4">Did not get what you are looking for?</p>
+                <a className="custom-btn primary-btn" href="#">Get in <b>Touch</b></a>
+            </div>
             </section>
-
+            <section className="section">
+                <Row className="down-section">
+                    <Col lg={6}>
+                        <h2>Download PayRexa <br/>Mobile App</h2>
+                        <p>Lorem ipsum dolor sit amet, adipiscing elit ut aliquam, amet luctus venenatis</p>
+                        <div class="btn-box"><a href="#" class="custom-icon-btn primary-btn"><i class="fa-brands fa-apple"></i><span class="d-column">Download From <b>App Store</b></span></a><a href="#" class="custom-icon-btn secondary-btn"><i class="fa-brands fa-google-play"></i><span class="d-column">Download From <b>App Store</b></span></a></div>
+                    </Col>
+                    <Col lg={6}>
+                        <img src={DownMobile}/>
+                    </Col>
+                </Row>
+            </section>
             </Container>
             
         {props.footer}

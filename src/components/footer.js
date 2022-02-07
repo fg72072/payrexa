@@ -4,12 +4,7 @@ function Footer(){
     return (
         <>
     <Container>
-    <div className="popup">
-                <div className="d-j-flex">
-                <h1>Don't be shy, message us anytime. We're<br/>looking for ward to speaking with you</h1>
-                <a className="custom-btn primary-btn" href="#">Get in <b>Touch</b></a>
-                </div>
-            </div>
+   
     </Container>
     <section className="footer-section">
     <Container>
@@ -24,10 +19,10 @@ function Footer(){
                 veniam.
                 </p>
           <ul class="list-unstyled d-flex footer-icon">
-            <li class=""><a class="link-dark" href="#"><i class="fa fa-facebook-f"></i></a></li>
-            <li class=""><a class="link-dark" href="#"><i class="fa fa-telegram"></i></a></li>
-            <li class=""><a class="link-dark" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li class=""><a class="link-dark" href="#"><i class="fa fa-instagram"></i></a></li>
+            <li class=""><a class="link-dark" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li class=""><a class="link-dark" href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li class=""><a class="link-dark" href="#"><i class="fa-brands fa-discord"></i></a></li>
+            <li class=""><a class="link-dark" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
           </ul>
           </Col>
 

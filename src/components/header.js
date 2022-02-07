@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container,Row,Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import LiIcon from '../assets/images/b-trade.png'
 
 function Header(){
   let [ isHidden, setIsHidden ] = useState(true)
@@ -33,7 +34,68 @@ function Header(){
 
                 <ul className="navbar-nav  mb-2 mb-lg-0">
 
-                 
+                <li className="nav-item dropdown ">
+
+                  <Link to={"#"} className="custom-link nav-link dropdown-toggle" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Products
+                  </Link>
+
+                    <ul class="dropdown-menu dropdown-menu-x-lg" aria-labelledby="navbarDropdown">
+                     <Row>
+                       <Col lg={6}>
+                       <div className="dropdown-heading">
+                       <span >Traders</span>
+                       </div>
+                      <li><Link to={'/buy/usdt'}><img src={LiIcon} />
+                      <div>
+                    <p>P2P Trade</p>
+                    <span>Place limit, market orders and more</span>
+                    </div>
+                      </Link></li>
+                      <li><Link to={'#'}><img src={LiIcon} />
+                      <div>
+                    <p>Spot Trade</p>
+                    <span>Place limit, market orders and more</span>
+                    </div>
+                      </Link></li>
+                     
+                       </Col>
+                       <Col lg={6}>
+                       <div className="dropdown-heading">
+                       <span >Everyone</span>
+                       </div>
+                      <li><Link to={'/buy/usdt'}><img src={LiIcon} />
+                      <div>
+                    <p>Instant Buy</p>
+                    <span>Place limit, market orders and more</span>
+                    </div>
+                      </Link></li>
+                      <li><Link to={'/sell/usdt'}><img src={LiIcon} />
+                      <div>
+                    <p>Instant Sell</p>
+                    <span>Place limit, market orders and more</span>
+                    </div>
+                      </Link></li>
+                      <li><Link to={'/wallet/spot'}><img src={LiIcon} />
+                        <div>
+                        <p>Spot Wallet</p>
+                        <span>Place limit, market orders and more</span>
+                        </div>
+                        </Link></li>
+                        <li><Link to={'/wallet/funding'}><img src={LiIcon} />
+                        <div>
+                        <p>Funding Wallet</p>
+                        <span>Place limit, market orders and more</span>
+
+                        </div>
+
+                        </Link></li>
+                       </Col>
+                     </Row>
+
+                    </ul>
+
+                  </li>
 
                   <li className="nav-item">
 
@@ -41,48 +103,9 @@ function Header(){
 
                   </li>
 
-                  <li className="nav-item dropdown ">
 
-                      <Link to={"#"} className="custom-link nav-link dropdown-toggle" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        Trade
-                      </Link>
+                 
 
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                          <li><Link to={'/buy/usdt'}><img src={require("../assets/images/p2p.png").default} /> P2P Trade</Link></li>
-                          <li><Link to={'#'}><img src={require("../assets/images/exchange1.png").default} /> Spot Trade</Link></li>
-
-                        </ul>
-
-                    </li>
-
-                  <li className="nav-item">
-
-                    <Link to={"/login"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Login</Link>
-
-                  </li>
-
-                  <li className="nav-item">
-
-                    <Link to={"/register"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Register</Link>
-
-                  </li>
-
-                  <li className="nav-item dropdown">
-
-                      <Link to={"#"} className="custom-link nav-link dropdown-toggle" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        Wallet
-                      </Link>
-
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                        <li><Link to={'/wallet/spot'}><img src={require("../assets/images/p2p.png").default} />Spot Wallet</Link></li>
-                        <li><Link to={'/wallet/funding'}><img src={require("../assets/images/share.png").default} />Funding Wallet</Link></li>
-                       
-
-                      </ul>
-
-                  </li>
 
                   <li className="nav-item dropdown">
 
@@ -92,16 +115,69 @@ function Header(){
 
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                          <li><Link to={'/fiat-orders'}><img src={require("../assets/images/p2p.png").default} /> P2P Orders</Link></li>
-                          <li><Link to={'#'}><img src={require("../assets/images/exchange1.png").default} /> Spot Orders</Link></li>
+                          <li><Link to={'/fiat-orders'}><img src={LiIcon} />
+                          <div>
+                        <p>P2P Orders</p>
+                        <span>Place limit, market orders and more</span>
+                        </div>
+                           </Link></li>
+                          <li><Link to={'#'}><img src={LiIcon} /> 
+                          <div>
+                        <p>Spot Orders</p>
+                        <span>Place limit, market orders and more</span>
+                        </div>
+                          </Link></li>
                       
 
                       </ul>
 
                     </li>
+
+                    <li className="nav-item dropdown">
+
+                          <Link to={"#"} className="custom-link nav-link dropdown-toggle" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                          </Link>
+
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         
+
+                              <li> 
+                                <Link to={"/support-center"}  onClick={()=>setIsHidden(true)}><img src={LiIcon} />
+                                <div>
+                                  <p>Support Center</p>
+                                </div>
+                                </Link>
+                              </li>
+                              <li> 
+                                <Link to={"#"}  onClick={()=>setIsHidden(true)}><img src={LiIcon} />
+                                <div>
+                                  <p>Contact Us</p>
+                                </div>
+                                </Link>
+                              </li>
+                              <li> 
+                                <Link to={"#"}  onClick={()=>setIsHidden(true)}><img src={LiIcon} />
+                                <div>
+                                  <p>Blog</p>
+                                </div>
+                                </Link>
+                              </li>
+                              <li> 
+                                <Link to={"#"}  onClick={()=>setIsHidden(true)}><img src={LiIcon} />
+                                <div>
+                                  <p>Get In Touch</p>
+                                </div>
+                                </Link>
+                              </li>
+
+
+
+                          </ul>
+
+                          </li>
                     <li className="nav-item">
 
-                    <Link to={"/support-center"} className="custom-link nav-link" onClick={()=>setIsHidden(true)}>Support Center</Link>
 
                     </li>
                 </ul>
@@ -111,8 +187,18 @@ function Header(){
 
                   <ul className="navbar-nav">
 
-                    
+                  <li className="nav-item">
 
+                  <Link to={"/login"} className="custom-btn secondary-btn" onClick={()=>setIsHidden(true)}>Login</Link>
+
+                  </li>
+
+                  <li className="nav-item">
+
+                  <Link to={"/register"} className="custom-btn primary-btn" onClick={()=>setIsHidden(true)}>Register</Link>
+
+                  </li>
+{/* 
 
                 
                     
@@ -190,7 +276,7 @@ function Header(){
 
                       </ul>
 
-                    </li>
+                    </li> */}
 
 
 
