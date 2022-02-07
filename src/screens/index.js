@@ -40,8 +40,14 @@ import Spot from "./userpanel/wallet/Spot";
 import WalletHistory from "./userpanel/wallet/History";
 import TransferHistory from "./userpanel/wallet/TransferHistory";
 import SupportCenter from "./support/SupportCenter";
+import ChangeEmail from "./support/ChangeEmail";
+import ResetVerifiction from "./support/ResetVerification";
+import UnlockAccount from "./support/UnlockAccount";
+import Pad from "./launch/Pad";
+import ViewAllLPD from "./launch/ViewAllLPD";
+import Subscription from "./launch/Subscription";
 export {Login,Register,Forgot,Verification,Kyc,Home,
 
     Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P,MyAds,MyOrders,Express,UserCenter
-    ,PostAds,BuyUSDT,BuyBTC,BuyBNB,BuyETH,SaleUSDT,SaleBTC,SaleBNB,SaleETH,Withdrawal,Overview,Funding,Spot,WalletHistory,TransferHistory,SupportCenter};
+    ,PostAds,BuyUSDT,BuyBTC,BuyBNB,BuyETH,SaleUSDT,SaleBTC,SaleBNB,SaleETH,Withdrawal,Overview,Funding,Spot,WalletHistory,TransferHistory,SupportCenter,ChangeEmail,ResetVerifiction,UnlockAccount,Pad,ViewAllLPD,Subscription};
 

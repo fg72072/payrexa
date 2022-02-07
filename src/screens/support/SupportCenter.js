@@ -44,16 +44,16 @@ function SupportCenter(props){
                     <h4>Self-Service</h4>
                     <ul className="self-service-ul">
                         <li>
-                            <Link to={'#'}><div><img src={ResetImage}/><span>Reset Password</span></div><i class="fa-solid fa-chevron-right"></i></Link>
+                            <Link to={'/forgot-password'}><div><img src={ResetImage}/><span>Reset Password</span></div><i class="fa-solid fa-chevron-right"></i></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><div><img src={UnlockImage}/><span>Unlock Account</span></div><i class="fa-solid fa-chevron-right"></i></Link>
+                            <Link to={'/unlock/account'}><div><img src={UnlockImage}/><span>Unlock Account</span></div><i class="fa-solid fa-chevron-right"></i></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><div><img src={PhoneImage}/><span>Reset Phone Security Verification</span></div><i class="fa-solid fa-chevron-right"></i></Link>
+                            <Link to={'/reset/verification'}><div><img src={PhoneImage}/><span>Reset Phone Security Verification</span></div><i class="fa-solid fa-chevron-right"></i></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><div><img src={EmailImage}/><span>Change Email Address</span></div><i class="fa-solid fa-chevron-right"></i></Link>
+                            <Link to={'/change/email'}><div><img src={EmailImage}/><span>Change Email Address</span></div><i class="fa-solid fa-chevron-right"></i></Link>
                         </li>
                     </ul>
                     </div>
