@@ -58,7 +58,21 @@ function Header(){
                     <span>Place limit, market orders and more</span>
                     </div>
                       </Link></li>
-                     
+                      <div className="dropdown-heading">
+                       <span >Orders</span>
+                       </div>
+                      <li><Link to={'/fiat-orders'}><img src={LiIcon} />
+                          <div>
+                        <p>P2P Orders</p>
+                        <span>Place limit, market orders and more</span>
+                        </div>
+                           </Link></li>
+                          <li><Link to={'#'}><img src={LiIcon} /> 
+                          <div>
+                        <p>Spot Orders</p>
+                        <span>Place limit, market orders and more</span>
+                        </div>
+                          </Link></li>
                        </Col>
                        <Col lg={6}>
                        <div className="dropdown-heading">
@@ -76,6 +90,9 @@ function Header(){
                     <span>Place limit, market orders and more</span>
                     </div>
                       </Link></li>
+                      <div className="dropdown-heading">
+                       <span >Wallets</span>
+                       </div>
                       <li><Link to={'/wallet/spot'}><img src={LiIcon} />
                         <div>
                         <p>Spot Wallet</p>
@@ -110,23 +127,17 @@ function Header(){
                   <li className="nav-item dropdown">
 
                       <Link to={"#"} className="custom-link nav-link dropdown-toggle" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        Orders
+                        Earn
                       </Link>
 
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                          <li><Link to={'/fiat-orders'}><img src={LiIcon} />
+                          <li><Link to={'/launch/pad'}><img src={LiIcon} />
                           <div>
-                        <p>P2P Orders</p>
+                        <p>Launchpad</p>
                         <span>Place limit, market orders and more</span>
                         </div>
                            </Link></li>
-                          <li><Link to={'#'}><img src={LiIcon} /> 
-                          <div>
-                        <p>Spot Orders</p>
-                        <span>Place limit, market orders and more</span>
-                        </div>
-                          </Link></li>
                       
 
                       </ul>

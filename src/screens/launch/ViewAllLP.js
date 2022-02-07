@@ -87,7 +87,7 @@ function ViewAllLP(props){
                     <img src={Logo} width={70}/>
                     </div>
                     <div className="mt-4">
-                    <button className="custom-btn primary-btn m-0">Submit</button>
+                    <Link to={'/launchpool/ANC_BUSD'} className="custom-btn primary-btn m-0">Stake</Link>
                     </div>
                     <div>
                     <div className="pad-flex">
@@ -115,7 +115,8 @@ function ViewAllLP(props){
                     <img src={Logo} width={70}/>
                     </div>
                     <div className="mt-4">
-                    <button className="custom-btn primary-btn m-0">Submit</button>
+                    <Link to={'/launchpool/ANC_BUSD'} className="custom-btn primary-btn m-0">Stake</Link>
+
                     </div>
                     <div>
                     <div className="pad-flex">
@@ -186,7 +187,7 @@ function ViewAllLP(props){
                     <img src={Logo} width={70}/>
                     </div>
                     <div className="mt-4">
-                    <button className="custom-btn primary-btn m-0">Submit</button>
+                    <Link to={'/launchpool/ANC_BUSD'} className="custom-btn primary-btn m-0">Stake</Link>
                     </div>
                     <div>
                     <div className="pad-flex">
@@ -214,7 +215,7 @@ function ViewAllLP(props){
                     <img src={Logo} width={70}/>
                     </div>
                     <div className="mt-4">
-                    <button className="custom-btn primary-btn m-0">Submit</button>
+                    <Link to={'/launchpool/ANC_BNB'} className="custom-btn primary-btn m-0">Stake</Link>
                     </div>
                     <div>
                     <div className="pad-flex">
