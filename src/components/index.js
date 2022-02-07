@@ -5,6 +5,7 @@ import UserPanelHeader from './userpanel/header';
 import SideBar from './userpanel/SideBar';
 import SwapModal from './userpanel/swapmodal';
 import WalletSideBar from './wallet/SideBar';
+import FaqSideBar from './faq/FaqSideBar';
 
 
-export {Header,Footer,UserPanelHeader,SwapModal,FormTopBar,SideBar,WalletSideBar};
+export {Header,Footer,UserPanelHeader,SwapModal,FormTopBar,SideBar,WalletSideBar,FaqSideBar};

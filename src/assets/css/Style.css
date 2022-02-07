@@ -917,10 +917,9 @@ h1 {
 }
 .accordion-button:not(.collapsed)::after {
   background-image: none !important;
-  content: "\f078";
+  content: "\f078" !important;
   font-weight: 900;
   font: normal normal normal 14px/1 FontAwesome;
-  transform: rotate(0) !important;
   color: #212529 !important;
   font-size: 20px;
 }
@@ -1367,17 +1366,6 @@ color: var(--text-green);
   margin: 3rem auto;
 }
 
-.search-coins input {
-  padding-left: 40px;
-}
-
-.search-coins i {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(15px, -100%);
-  color: var(--text-disable);
-}
 
 .grey-bg {
   background: var(--light-bg);
@@ -2733,4 +2721,157 @@ margin-left: 1.5rem;
 }
 .token-sale-section div:nth-child(1){
   text-align: right;
+}
+
+
+
+
+.faq-sidebar .accordion-header i{
+
+font-size: 10px !important;
+background-color: var(--primary);
+color: var(--text-white);
+width: 20px;
+height: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.faq-sidebar .accordion-button{
+
+  font-size: 14px !important;
+  height: auto;
+  padding: 10px 20px;
+  color: var(--text-black) !important;
+  font-weight:normal;
+
+}
+
+.faq-sidebar .accordion-button:hover{
+
+  background-color: var(--light-bg);
+  color: var(--primary) !important;
+ 
+}
+
+.faq-sidebar .accordion-button::after{
+
+  font-size: 10px !important;
+
+}
+
+.faq-sidebar .accordion-body{
+  
+  padding: 0;
+
+  }
+
+  .faq-sidebar .accordion-body ul{
+
+    margin-bottom: 0;
+
+  }
+  
+.faq-sidebar .accordion-body ul li{
+
+  padding:1rem 1rem 1rem 3rem;
+
+}
+.faq-sidebar .accordion-body ul li:hover {
+
+  background-color: var(--light-bg);
+  
+}
+
+.faq-sidebar .accordion-body ul li a  {
+
+  
+  font-size: 14px ;
+
+}
+
+.big-faq{
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.big-faq div{
+
+  flex-basis: 50%;
+
+}
+
+
+.faq-categories{
+
+  background-color: var(--light-bg);
+  padding: 2rem;
+}
+
+
+.faq-categories a{
+
+  text-decoration: none;
+  color: var(--text-black);
+  font-size: 20px;
+  
+}
+
+.faq-categories:hover a{
+
+  color: var(--primary);
+  cursor: pointer;
+
+}
+
+.faq-categories:hover{
+
+  color: var(--primary);
+  cursor: pointer;
+
+}
+
+.faq-list{
+
+  list-style: none;
+  padding: 0;
+  column-count: 2;
+
+}
+
+
+.faq-list li{
+
+ padding: 15px 0;
+  
+}
+
+.faq-list a{
+
+color: var(--gray);
+font-size: 18px;
+text-decoration: none;
+
+}
+
+.faq-dropdown{
+
+  list-style: none;
+
+}
+
+.faq-dropdown li a{
+
+  padding-left: 10px !important;
+  box-sizing: border-box !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  word-break: break-word !important;
+
 }
