@@ -3,6 +3,12 @@ import { Container,Row,Col,Form,Dropdown,Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import LeagueImage from "../../assets/images/league.png";
 import Logo from "../../assets/images/logo.png"
+import LaunchProjectIcon from "../../assets/images/launch_project.png"
+import ExposureIcon from "../../assets/images/exposure_icon.png"
+import FutureIcon from "../../assets/images/future_icon.png"
+import DestributionIcon from "../../assets/images/destirbution_icon.png"
+import LiquidityIcon from "../../assets/images/liquidity_icon.png"
+
 
 
 
@@ -147,7 +153,7 @@ function Pad(props){
                     <img src={Logo} width={70}/>
                     </div>
                     <div className="mt-4">
-                    <button className="custom-btn primary-btn m-0">Submit</button>
+                    <Link to={'/launchpool/HIGH_BUSD'} className="custom-btn primary-btn m-0">Stake</Link>
                     </div>
                     <div>
                     <div className="pad-flex">
@@ -175,7 +181,7 @@ function Pad(props){
                     <img src={Logo} width={70}/>
                     </div>
                     <div className="mt-4">
-                    <button className="custom-btn primary-btn m-0">Submit</button>
+                    <Link to={'/launchpool/HIGH_BNB'} className="custom-btn primary-btn m-0">Stake</Link>
                     </div>
                     <div>
                     <div className="pad-flex">
@@ -194,7 +200,7 @@ function Pad(props){
                 </Row>
                 </div>
                     <div className="text-center mt-3">
-                    <Link to={'#'} className="anchor text-center">View More</Link>
+                    <Link to={'/viewall/lp'} className="anchor text-center">View More</Link>
                     </div>
                 </div>
                 <div className="dashboard-margin">
@@ -211,30 +217,39 @@ function Pad(props){
                                 <button className="custom-btn primary-btn">Apply to Launch</button>
                             </div>
                         </Col>
+                        <Col lg={7}>
+                        <div className="apply_flex">
+                        <img src={LaunchProjectIcon} className="apply_img"/>
+                        </div>
+                        </Col>
                     </Row>
                 </div>
                 <div className="dashboard-margin">
                     <h3>Why choose us?</h3>
                     <Row>
                         <Col lg={3}>
+                            <img src={ExposureIcon} className="choose_icon"/>
                             <h4>Exposure</h4>
                             <span>
                             Get exposure to the millions of Binance users around the world.
                             </span>
                         </Col>
                         <Col lg={3}>
+                            <img src={LiquidityIcon} className="choose_icon"/>
                             <h4>Liquidity</h4>
                             <span>
                             Projects that are launched on Launchpad or Launchpool will be listed and have world-class liquidity in multiple trading pairs.
                             </span>
                         </Col>
                         <Col lg={3}>
+                            <img src={DestributionIcon} className="choose_icon"/>
                             <h4>Token Distribution</h4>
                             <span>
                             Your token will immediately be distributed to a large user base that hold your token.
                             </span>
                         </Col>
                         <Col lg={3}>
+                            <img src={FutureIcon} className="choose_icon"/>
                             <h4>Future Synergy</h4>
                             <span>
                             Project will receive extensive support and advice even after listing, having access to all areas of the Binance ecosystem.

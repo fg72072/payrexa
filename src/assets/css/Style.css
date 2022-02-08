@@ -2722,8 +2722,19 @@ margin-left: 1.5rem;
 .token-sale-section div:nth-child(1){
   text-align: right;
 }
+.choose_icon{
+  width: 100px;
+  margin-top: 1rem;
+  margin-bottom: 00.5em;
+}
+.apply_img{
+  width: 400px;
+}
+.apply_flex{
+  display: flex;
+  justify-content: end;
 
-
+}
 
 
 .faq-sidebar .accordion-header i{
@@ -2874,4 +2885,14 @@ text-decoration: none;
   line-height: 20px !important;
   word-break: break-word !important;
 
+}
+.text-red{
+  color: var(--text-red);
+}
+.flex-ul li{
+  display: flex !important;
+  align-items: center !important;
+}
+.flex-ul li img{
+  margin: 0;
 }

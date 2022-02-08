@@ -69,7 +69,7 @@ function Funding(props){
                     <i class="fa-solid fa-ellipsis"></i>
                     </Link>
 
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu flex-ul" aria-labelledby="navbarDropdown">
 
                         <li><img src={DepositIcon}/><Link to={'/wallet/deposit'}> Deposit</Link></li>
                         <li><img src={WithdrawIcon}/><Link to={'/wallet/withdrawal'}>Withdraw</Link></li>
@@ -92,7 +92,7 @@ function Funding(props){
                     <i class="fa-solid fa-ellipsis"></i>
                     </Link>
 
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu flex-ul" aria-labelledby="navbarDropdown">
 
                         <li><img src={DepositIcon}/><Link to={'/wallet/deposit'}> Deposit</Link></li>
                         <li><img src={WithdrawIcon}/><Link to={'/wallet/withdrawal'}>Withdraw</Link></li>
@@ -115,7 +115,7 @@ function Funding(props){
                     <i class="fa-solid fa-ellipsis"></i>
                     </Link>
 
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu flex-ul" aria-labelledby="navbarDropdown">
 
                         <li><img src={DepositIcon}/><Link to={'/wallet/deposit'}> Deposit</Link></li>
                         <li><img src={WithdrawIcon}/><Link to={'/wallet/withdrawal'}>Withdraw</Link></li>

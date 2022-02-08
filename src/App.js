@@ -3,8 +3,8 @@ import './assets/css/Style.css'
 import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
-import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar, FaqSideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter, ChangeEmail, ResetVerifiction, UnlockAccount, Pad, ViewAllLPD, Subscription, ViewAllLP, LaunchPool,Faq} from './screens';
+import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar, FaqSideBar,OrderSideBar} from './components';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter, ChangeEmail, ResetVerifiction, UnlockAccount, Pad, ViewAllLPD, Subscription, ViewAllLP, LaunchPool,Faq, OpenOrder, TradeOrder} from './screens';
 import {Accountlogon} from './screens';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { useState } from 'react';
@@ -75,6 +75,10 @@ function App() {
         {/* FAQ */}
 
         <Route path="/faq" element={<Faq header={<Header/>} footer={<Footer/>} sidebar={<FaqSideBar/>} />} />
+        {/* orders  */}
+        <Route path="/spot/open-order" element={<OpenOrder header={<Header/>} footer={<Footer/>} sidebar={<OrderSideBar/>} />} />
+        <Route path="/spot/trade-order" element={<TradeOrder header={<Header/>} footer={<Footer/>} sidebar={<OrderSideBar/>} />} />
+
 
         </Routes>
     </Router>

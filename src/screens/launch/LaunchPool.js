@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import LeagueImage from "../../assets/images/league.png";
 import VoxiesImage from "../../assets/images/voxies.jpg";
 import Logo from "../../assets/images/logo.png"
+import HighSecurityIcon from "../../assets/images/high-security-icon.png"
 
 
 
@@ -41,8 +42,8 @@ function LaunchPool(props){
                             <Col lg={12}>
                             <div className="detail-flex-top">
                                 <div>
-                                <h4>League of Kindoms</h4>
-                                <p>A Blockchain MMO Strategy Game.</p>
+                                <h4>Anchor Protocol</h4>
+                                <p>Anchor protocol, a savings protocol offering low-volatile yields on Terra stablecoin deposits.</p>
                                 </div>
                                 <div className="flex-direction-colum">
                                 <span>Time Left Until subscription start</span>
@@ -64,7 +65,7 @@ function LaunchPool(props){
                                 <button className="custom-btn primary-btn">Website</button>
                                 <button className="custom-btn primary-btn">Whitepaper</button>
                                 <button className="custom-btn primary-btn">View detailed rules</button>
-                                <button className="custom-btn primary-btn">LOKA Research Report</button>
+                                <button className="custom-btn primary-btn">ANC Research Report</button>
                                 <button className="custom-btn primary-btn">FAQ</button>
 
                             </div>
@@ -77,41 +78,50 @@ function LaunchPool(props){
                         </Row>
                     </Col>
                     <Col lg={12}>
-                    <div className="dashboard-margin mt-5">
+                    <div className="dashboard-margin mt-5 mb-5">
                    <div className="d-flex justify-content-between align-items-center">
                     <div>
-                       <Link to={'#'} className="">Launchpad History</Link>
+                       <Link to={'/launchpool/ANC_BNB'} className="custom-btn secondary-btn">BNB Pool</Link>
+                       <Link to={'/launchpool/ANC_LUNA'} className="custom-btn secondary-btn">LUNA Pool</Link>
+                       <Link to={'/launchpool/ANC_BUSD'} className="custom-btn secondary-btn">BUSD Pool</Link>
                     </div>
                    <div>
                    <Link to={'#'} className="anchor">Launchpad History</Link>
                    </div>
                    </div>
                    
-               </div>
+                    </div>
                     </Col>
                     <Col lg={12}>
                     <div className="pad-detail-flex">
                         <div className="div">
-                            <span>Type</span>
-                            <span className="f-bold">Subscription</span>
+                            <span>Total BUSD Pool Rewards</span>
+                            <span className="f-bold">200,000.0000 ANC</span>
                         </div>
                         <div className="div">
-                            <span>Sale Price</span>
-                            <span className="f-bold">1 LOKA = 0.00033971 BNB</span>
+                            <span>Staking Token</span>
+                            <span className="f-bold">BUSD</span>
                         </div>
                         <div className="div">
-                            <span>Tokens Offered</span>
-                            <span className="f-bold">25,000,000.0000 LOKA</span>
+                            <span>Farming Period</span>
+                            <span className="f-bold">30 Days</span>
                         </div>
                         <div className="div">
-                            <span>Single Initial Investment</span>
-                            <span className="f-bold">Single Initial Investment</span>
+                            <span>Today’s ANC Pool Rewards</span>
+                            <span className="f-bold">6,666.6700 ANC</span>
                         </div>
                         <div className="div">
-                            <span>Hard cap per user</span>
-                            <span className="f-bold">93750 LOKA = 31.8478 BNB (≈ 12036 USD)</span>
+                            <span>Total BUSD Staked</span>
+                            <span className="f-bold">768,755,089.3328 BUSD</span>
                         </div>
                     </div>
+                    </Col>
+                    <Col lg={3}>
+                        <div className="mt-5">
+                        <img src={HighSecurityIcon}/>
+                        <h3>You have not completed identity verification</h3>
+                        <Link to={'/kyc'} className="custom-btn primary-btn mt-1">Verify Now</Link>
+                        </div>
                     </Col>
                  
                 </Row>
