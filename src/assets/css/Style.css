@@ -2886,3 +2886,13 @@ text-decoration: none;
   word-break: break-word !important;
 
 }
+.text-red{
+  color: var(--text-red);
+}
+.flex-ul li{
+  display: flex !important;
+  align-items: center !important;
+}
+.flex-ul li img{
+  margin: 0;
+}
