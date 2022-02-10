@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container,Row,Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import LiIcon from '../assets/images/b-trade.png'
+import MobileHeader from "../components/MobileHeader"
 
 function Header(){
   let [ isHidden, setIsHidden ] = useState(true)
@@ -209,85 +210,6 @@ function Header(){
                   <Link to={"/register"} className="custom-btn primary-btn" onClick={()=>setIsHidden(true)}>Register</Link>
 
                   </li>
-{/* 
-
-                
-                    
-                    <li className="nav-item dropdown">
-
-                      <Link to={"#"} className="custom-link nav-link" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-regular fa-circle-user"></i>
-                      </Link>
-
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-
-                          <li><Link to={'/dashboard'}><i class="fa-regular fa-circle-user"></i>Dashboard</Link></li>
-                          <li><Link to={'/security'}><i class="fa-solid fa-shield"></i>Security</Link></li>
-                          <li><Link to={'/kyc'}><i class="fa-solid fa-pen-to-square"></i>Personal Info</Link></li>
-                          <li><Link to={'/payment'}><i class="fa-brands fa-bitcoin"></i>Payment</Link></li>
-                          <li><Link to={'/setting'}><i class="fa-solid fa-gear"></i>Settings</Link></li>
-
-                        </ul>
-
-                    </li>
-
-
-                    <li className="nav-item dropdown">
-
-                      <Link to={"#"} className="custom-link nav-link" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false"> 
-                        <i class="fa-regular fa-bell"></i>
-                      </Link>
-
-                      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg" aria-labelledby="navbarDropdown">
-
-                        <li className="notification-dropdown">
-
-                          <Link to={'#'}>
-                            <p>View All <i class="fa-solid fa-arrow-right-long"></i></p>
-                          </Link>
-
-                          </li>
-
-                        <li className="notification-dropdown">
-
-                        <Link to={'#'} className="unread">
-
-                            <p className="f-bold">It's time to buy your first crypto </p>
-                            <p>Here are easy steps asdas as asd asjd asijd iqw ads asc aos</p>
-
-                        </Link>
-
-                        </li>
-
-
-                        <li className="notification-dropdown">
-
-                          <Link to={'#'} className="unread">
-
-                              <p className="f-bold">It's time to buy your first crypto </p>
-                              <p>Here are easy steps asdas as asd asjd asijd iqw ads asc aos</p>
-
-                          </Link>
-
-                        </li>
-
-
-
-                        <li className="notification-dropdown">
-
-                          <Link to={'#'} className="">
-
-                              <p className="f-bold">It's time to buy your first crypto </p>
-                              <p>Here are easy steps asdas as asd asjd asijd iqw ads asc aos</p>
-
-                          </Link>
-
-                        </li>
-                        
-
-                      </ul>
-
-                    </li> */}
 
 
 
@@ -302,6 +224,9 @@ function Header(){
         </Container>
 
         </div>
+
+        <MobileHeader/>
+
         </>
     )
 }
