@@ -51,8 +51,18 @@ import LaunchPool from "./launch/LaunchPool";
 import Faq from "./faq/Faq";
 import OpenOrder from "./orders/OpenOrder";
 import TradeOrder from "./orders/TradeOrder";
+import UserTradeHistory from "./orders/UserTradeHistory";
+import FaqMain from "./faq/FaqMain";
+import Announcement from "./announcement/Announcement";
+import AnnouncementDetail from "./announcement/Detail";
+import Search from "./support/Search";
+import LaunchPoolHistory from "./history/Launchpool";
+import FlashSaleHistory from "./history/FlashSale";
+import LotteryHistory from "./history/Lottery";
+import SubscriptionHistory from "./history/Subscription";
 export {Login,Register,Forgot,Verification,Kyc,Home,
     Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P,MyAds,MyOrders,Express,UserCenter
     ,PostAds,BuyUSDT,BuyBTC,BuyBNB,BuyETH,SaleUSDT,SaleBTC,SaleBNB,SaleETH,Withdrawal,Overview,Funding,Spot,WalletHistory,TransferHistory,SupportCenter,ChangeEmail,ResetVerifiction,UnlockAccount,Pad
-    ,ViewAllLPD,Subscription,ViewAllLP,LaunchPool,Faq,OpenOrder,TradeOrder};
+    ,ViewAllLPD,Subscription,ViewAllLP,LaunchPool,Faq,OpenOrder,TradeOrder,UserTradeHistory,FaqMain,Announcement,AnnouncementDetail,Search
+    ,LaunchPoolHistory,FlashSaleHistory,LotteryHistory,SubscriptionHistory};
 

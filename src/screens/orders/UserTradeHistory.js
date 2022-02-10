@@ -2,7 +2,7 @@ import {Form, Row,Col,Table} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
-function TradeOrder(props){
+function UserTradeHistory(props){
 
     return(
 
@@ -18,7 +18,7 @@ function TradeOrder(props){
 
                 <div className="normal-box big-bg ">
                     <span>Spot</span>
-                    <h3>Order History</h3>
+                    <h3>Trade History</h3>
                 </div>
                 <div className="dashboard-margin">
                 <div className="history-filter">
@@ -69,57 +69,24 @@ function TradeOrder(props){
                         <tr>
                             <th>Date</th>
                             <th>Pair</th>
-                            <th>Type</th>
                             <th>Side</th>
-                            <th>Average</th>
                             <th>Price</th>
-                            <th>Executed</th>
-                            <th>Amount</th>
+                            <th>Filled</th>
+                            <th>Fee</th>
                             <th>Total</th>
-                            <th>Trigger Conditions</th>
-                            <th>Status</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>2022-1-1 12:12:12</td>
                             <td>LUNA/USDT</td>
-                            <td>Limit</td>
                             <td><span className="text-red">Sell</span></td>
                             <td>84.15</td>
-                            <td>84.15</td>
                             <td>0.99</td>
-                            <td>0.99</td>
+                            <td>0.99 USDT</td>
                             <td>84.15 USDT</td>
-                            <td>----------</td>
-                            <td>status</td>
                         </tr>
-                        <tr>
-                            <td>2022-1-1 12:12:12</td>
-                            <td>LUNA/USDT</td>
-                            <td>Limit</td>
-                            <td><span className="text-red">Sell</span></td>
-                            <td>84.15</td>
-                            <td>84.15</td>
-                            <td>0.99</td>
-                            <td>0.99</td>
-                            <td>84.15 USDT</td>
-                            <td>----------</td>
-                            <td>status</td>
-                        </tr>
-                        <tr>
-                            <td>2022-1-1 12:12:12</td>
-                            <td>LUNA/USDT</td>
-                            <td>Limit</td>
-                            <td><span className="text-red">Sell</span></td>
-                            <td>84.15</td>
-                            <td>84.15</td>
-                            <td>0.99</td>
-                            <td>0.99</td>
-                            <td>84.15 USDT</td>
-                            <td>----------</td>
-                            <td>status</td>
-                        </tr>
+              
                         </tbody>
                     </Table>
                 </div>
@@ -136,4 +103,4 @@ function TradeOrder(props){
 
 }
 
-export default TradeOrder
+export default UserTradeHistory

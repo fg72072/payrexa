@@ -106,7 +106,7 @@ function Subscription(props){
                <div className="dashboard-margin mt-5">
                    <div className="d-flex justify-content-between align-items-center">
                    <h3>Subscription Timeline</h3>
-                   <Link to={'#'} className="anchor">Launchpad History</Link>
+                   <Link to={'/history/subscription'} className="anchor">Launchpad History</Link>
                    </div>
                    <ul className="time-line-ul">
                        <li>

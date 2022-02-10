@@ -33,7 +33,8 @@ function Faq(props){
                                 
                                     <div className="position-relative search">
                                     <Form.Control type="text" placeholder="Search"/>
-                                    <button className="form-search-btn custom-btn-sm">Search</button>
+                                    <Link to={"/support/search"} className="form-search-btn custom-btn-sm">Search</Link>
+
                                     </div>
 
                             </Form.Group>

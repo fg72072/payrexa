@@ -21,6 +21,7 @@ function OpenOrder(props){
                 <div className="dashboard-main">
 
                 <div className="normal-box big-bg ">
+                    <span>Spot</span>
                     <h3>Open Orders</h3>
                 </div>
                 <div className="dashboard-margin">

@@ -15,16 +15,19 @@ function OrderSideBar(){
                             <Link to={"/spot/open-order"}>Open Orders</Link>
                         </li>
                         <li>
-                            <Link to={"/spot/open-order"}>Order History</Link>
+                            <Link to={"/spot/trade-order"}>Order History</Link>
                         </li>
                         <li>
-                            <Link to={"/spot/open-order"}>Trade History</Link>
+                            <Link to={"/spot/user-trade"}>Trade History</Link>
                         </li>
                       
                     </ul>
                 </Accordion.Body>
                 
             </Accordion.Item>
+                <ul className="li-flex">
+                    <li><Link to={'/fiat-orders'} target="_blank"><div><i class="fa-solid fa-user-group first-icon"></i><span>P2P Order</span></div><i class="second-icon fa-solid fa-up-right-from-square"></i></Link></li>
+                </ul>
         </Accordion>
                 
 

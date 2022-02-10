@@ -3,8 +3,8 @@ import './assets/css/Style.css'
 import './assets/css/responsive.css';
 import './assets/css/dashboard.css'
 import './assets/css/flagicon.css'
-import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar, FaqSideBar,OrderSideBar} from './components';
-import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter, ChangeEmail, ResetVerifiction, UnlockAccount, Pad, ViewAllLPD, Subscription, ViewAllLP, LaunchPool,Faq, OpenOrder, TradeOrder} from './screens';
+import {Header,Footer,UserPanelHeader,FormTopBar, SideBar, WalletSideBar, FaqSideBar,OrderSideBar, AnnouncementSideBar, LaunchPoolSideBar} from './components';
+import {Login,Register,Forgot,Verification,Home,Dashboard,Swap,Wallet,History, Kyc, Security, Payment,Setting,Welcome_DashB,Market, Disableaccount,Accountactivity,AddPayment, EmailVerification,Deposit, P2P, MyAds, MyOrders, Express, UserCenter, PostAds, BuyUSDT, BuyBTC, BuyBNB, BuyETH, SaleUSDT, SaleBTC, SaleBNB, SaleETH, Withdrawal, Overview, Funding, Spot, WalletHistory, TransferHistory, SupportCenter, ChangeEmail, ResetVerifiction, UnlockAccount, Pad, ViewAllLPD, Subscription, ViewAllLP, LaunchPool,Faq, OpenOrder, TradeOrder, UserTradeHistory, FaqMain, Announcement, AnnouncementDetail, Search, LaunchPoolHistory, DistributionHistory, LotteryHistory, FlashSaleHistory, SubscriptionHistory} from './screens';
 import {Accountlogon} from './screens';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import { useState } from 'react';
@@ -74,12 +74,19 @@ function App() {
         
         {/* FAQ */}
 
-        <Route path="/faq" element={<Faq header={<Header/>} footer={<Footer/>} sidebar={<FaqSideBar/>} />} />
+        <Route path="/faq/:id" element={<Faq header={<Header/>} footer={<Footer/>} sidebar={<FaqSideBar/>} />} />
+        <Route path="/faq" element={<FaqMain header={<Header/>} footer={<Footer/>} />} />
+        <Route path="/announcement" element={<Announcement header={<Header/>} footer={<Footer/>} />} />
+        <Route path="/support/search" element={<Search header={<Header/>} footer={<Footer/>} />} />
+        <Route path="/announcement/:id" element={<AnnouncementDetail header={<Header/>} footer={<Footer/>} sidebar={<AnnouncementSideBar/>}/>} />
         {/* orders  */}
         <Route path="/spot/open-order" element={<OpenOrder header={<Header/>} footer={<Footer/>} sidebar={<OrderSideBar/>} />} />
         <Route path="/spot/trade-order" element={<TradeOrder header={<Header/>} footer={<Footer/>} sidebar={<OrderSideBar/>} />} />
-
-
+        <Route path="/spot/user-trade" element={<UserTradeHistory header={<Header/>} footer={<Footer/>} sidebar={<OrderSideBar/>} />} />
+        <Route path="/history/launchpool/:id" element={<LaunchPoolHistory header={<Header/>} footer={<Footer/>} sidebar={<LaunchPoolSideBar/>} />} />
+        <Route path="/history/lottery/:id" element={<LotteryHistory header={<Header/>} footer={<Footer/>} sidebar={<LaunchPoolSideBar/>} />} />
+        <Route path="/history/flashSale" element={<FlashSaleHistory header={<Header/>} footer={<Footer/>} sidebar={<LaunchPoolSideBar/>} />} />
+        <Route path="/history/subscription" element={<SubscriptionHistory header={<Header/>} footer={<Footer/>} sidebar={<LaunchPoolSideBar/>} />} />
         </Routes>
     </Router>
     </>

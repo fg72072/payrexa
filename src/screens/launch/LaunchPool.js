@@ -86,7 +86,7 @@ function LaunchPool(props){
                        <Link to={'/launchpool/ANC_BUSD'} className="custom-btn secondary-btn">BUSD Pool</Link>
                     </div>
                    <div>
-                   <Link to={'#'} className="anchor">Launchpad History</Link>
+                   <Link to={'/history/launchpool/rewards'} className="anchor">Launchpad History</Link>
                    </div>
                    </div>
                    
