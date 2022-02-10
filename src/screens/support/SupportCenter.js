@@ -34,7 +34,7 @@ function SupportCenter(props){
                         <Form.Label><h4>Search our FAQ</h4></Form.Label>
                         <div className="position-relative">
                         <Form.Control type="text" placeholder="Search help articles" />
-                        <button className="form-search-btn custom-btn-sm">Search</button>
+                        <Link to={"/support/search"} className="form-search-btn custom-btn-sm">Search</Link>
                         </div>
                     </Form.Group>
                     </div>
@@ -60,31 +60,31 @@ function SupportCenter(props){
                     </Col>
                     <Col lg={12}>
                     <div className="mt-5">
-                    <h4>FAQ</h4>
+                    <h4><Link to={'/faq'} className="custom-anchor">FAQ</Link></h4>
                     <ul className="self-faq-ul">
                         <li>
-                            <Link to={'#'}><span>Account Functions</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-solid fa-user"></i><span>Account Functions</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Tutorial</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-solid fa-graduation-cap"></i><span>Tutorial</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>PayRexa Fan Token</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-solid fa-coins"></i><span>PayRexa Fan Token</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Other Topics</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-regular fa-heart"></i><span>Other Topics</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Crypto Deposit/Withdrawal</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-solid fa-rotate"></i><span>Crypto Deposit/Withdrawal</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Buy Crypto (P2P)</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-solid fa-circle-dollar-to-slot"></i><span>Buy Crypto (P2P)</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Spot Trading</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-solid fa-wallet"></i><span>Spot Trading</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Security</span></Link>
+                            <Link to={'/faq/23'}><i class="fa-solid fa-user-shield"></i><span>Security</span></Link>
                         </li>
                   
                   
@@ -93,16 +93,16 @@ function SupportCenter(props){
                     </Col>
                     <Col lg={12}>
                     <div className="mt-5">
-                    <h4>Announcement</h4>
+                    <h4><Link to={'/announcement'} className="custom-anchor">Announcement</Link></h4>
                     <ul className="self-faq-ul">
                         <li>
-                            <Link to={'#'}><span>New Cryptocurrency Listing</span></Link>
+                            <Link to={'/announcement/2'}><i class="fa-brands fa-bitcoin first-icon"></i><span>New Cryptocurrency Listing</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Latest PayRexa News</span></Link>
+                            <Link to={'/announcement/2'}><i class="fa-solid fa-bell first-icon"></i><span>Latest PayRexa News</span></Link>
                         </li>
                         <li>
-                            <Link to={'#'}><span>Latest Activities</span></Link>
+                            <Link to={'/announcement/2'}><i class="fa-solid fa-gift first-icon"></i><span>Latest Activities</span></Link>
                         </li>
                     </ul>
                     </div>
@@ -112,19 +112,19 @@ function SupportCenter(props){
                     <h4>Latest Articles</h4>
                     <ul className="self-aticle-ul">
                         <li>
-                            <Link to={'#'}>Every Wednesday Is WinBUSDday - Trade BUSD-Margined Futures to Win BUSD</Link><span className="span">2022-01-09</span>
+                            <Link to={'/announcement/2'}>Every Wednesday Is WinBUSDday - Trade BUSD-Margined Futures to Win BUSD</Link><span className="span">2022-01-09</span>
                         </li>
                         <li>
-                            <Link to={'#'}>PayRexa Will List Alchemy Pay (ACH) and Immutable X (I MX)</Link><span className="span">2022-01-09</span>
+                            <Link to={'/announcement/2'}>PayRexa Will List Alchemy Pay (ACH) and Immutable X (I MX)</Link><span className="span">2022-01-09</span>
                         </li>
                         <li>
-                            <Link to={'#'}>PayRexa Adds CTXC, DUSK, GXS, HOT, LINA, SFP on Cross Margin and AUTO, CTXC, CVP, CVX, LSK, VIDT on Isolated Margin</Link><span className="span">2022-01-09</span>
+                            <Link to={'/announcement/2'}>PayRexa Adds CTXC, DUSK, GXS, HOT, LINA, SFP on Cross Margin and AUTO, CTXC, CVP, CVX, LSK, VIDT on Isolated Margin</Link><span className="span">2022-01-09</span>
                         </li>
                         <li>
-                            <Link to={'#'}>PayRexa Loans Adds Collateral Assets AVAX & SOL, Launches Tiered Interest Rates</Link><span className="span">2022-01-09</span>
+                            <Link to={'/announcement/2'}>PayRexa Loans Adds Collateral Assets AVAX & SOL, Launches Tiered Interest Rates</Link><span className="span">2022-01-09</span>
                         </li>
                         <li>
-                            <Link to={'#'}>Wallet Maintenance for Multiple Networks</Link><span className="span">2022-01-09</span>
+                            <Link to={'/announcement/2'}>Wallet Maintenance for Multiple Networks</Link><span className="span">2022-01-09</span>
                         </li>
                     </ul>
                     </div>
@@ -134,19 +134,19 @@ function SupportCenter(props){
                     <h4>Top Articles</h4>
                     <ul className="self-aticle-ul">
                         <li>
-                            <Link to={'#'}>Get Started on Binance Lite to Buy and Sell Your Crypto </Link>
+                            <Link to={'/announcement/2'}>Get Started on Binance Lite to Buy and Sell Your Crypto </Link>
                         </li>
                         <li>
-                            <Link to={'#'}>Important Changes About Binance Identity Verification</Link>
+                            <Link to={'/announcement/2'}>Important Changes About Binance Identity Verification</Link>
                         </li>
                         <li>
-                            <Link to={'#'}>How to Complete Identity Verification </Link>
+                            <Link to={'/announcement/2'}>How to Complete Identity Verification </Link>
                         </li>
                         <li>
-                            <Link to={'#'}>Upcoming Qtum (QTUM) Network Upgrade Supported on Binance</Link>
+                            <Link to={'/announcement/2'}>Upcoming Qtum (QTUM) Network Upgrade Supported on Binance</Link>
                         </li>
                         <li>
-                            <Link to={'#'}> How to Deposit and Withdraw Cryptocurrency on PayRexa</Link>
+                            <Link to={'/announcement/2'}> How to Deposit and Withdraw Cryptocurrency on PayRexa</Link>
                         </li>
                     </ul>
                     </div>

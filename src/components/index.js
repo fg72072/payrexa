@@ -7,6 +7,7 @@ import SwapModal from './userpanel/swapmodal';
 import WalletSideBar from './wallet/SideBar';
 import FaqSideBar from './faq/FaqSideBar';
 import OrderSideBar from './order/Order';
+import AnnouncementSideBar from './announcement/SideBar';
+import LaunchPoolSideBar from './history/Launchpool';
 
-
-export {Header,Footer,UserPanelHeader,SwapModal,FormTopBar,SideBar,WalletSideBar,FaqSideBar,OrderSideBar};
+export {Header,Footer,UserPanelHeader,SwapModal,FormTopBar,SideBar,WalletSideBar,FaqSideBar,OrderSideBar,AnnouncementSideBar,LaunchPoolSideBar};

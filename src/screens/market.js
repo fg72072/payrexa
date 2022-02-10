@@ -12,7 +12,7 @@ function Market(props){
 
         <Container >
 
-            <div className="banner-section big-bg py-5">
+            <div className="banner-section  py-5">
 
                 <div className="heading-border text-center">
                     <h1 className="dual-heading">Markets</h1>
