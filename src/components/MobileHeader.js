@@ -24,24 +24,24 @@ function MobileHeader(){
         <ul class="menu-list">
 
             <li>
-                <a href="#" class="menu-link">About us</a>
+                <a href="#" class="menu-link">Products</a>
             </li>
 
             <li>
 
-                <a href="#" class="menu-link">Our Team</a>
-
-            </li>
-
-            <li>
-
-                <a href="#" class="menu-link">Services</a>
+                <a href="#" class="menu-link">Market</a>
 
             </li>
 
             <li>
 
-                <a href="#" class="menu-link">Pateint Portal</a>
+                <a href="#" class="menu-link">Earn</a>
+
+            </li>
+
+            <li>
+
+                <a href="#" class="menu-link">Company</a>
 
             </li>
 
