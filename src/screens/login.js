@@ -55,6 +55,7 @@ function Login(props){
       }
     const SignIn = (e)=>{
         e.preventDefault();
+        localStorage.setItem("testtoken", 'testing');
         navigate('/')
     }
     return (

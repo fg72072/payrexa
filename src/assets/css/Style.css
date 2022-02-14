@@ -3028,3 +3028,24 @@ text-decoration: none;
 .right-side-bar-faq .ul li:hover a{
   color: var(--text-white) !important;
 }
+.no-icon-margin li a{
+  align-items: center;
+}
+.upload-box{
+  border: 2px solid var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-top: 2rem;
+}
+.upload-box i{
+  font-size: 40px;
+}
+.image-upload-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.image-upload-flex .upload-box{
+  width: 49%;
+}

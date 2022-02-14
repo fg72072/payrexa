@@ -1,9 +1,21 @@
+import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-
-
+import KYCModal from "../../components/modals/KYC";
+import KYCLevel2Modal from "../../components/modals/KYCLevel2";
+import KYCLevel3Modal from "../../components/modals/KYCLevel3";
 function Kyc(props){
 
+    const [kycshow, setKycShow] = useState(false);
+    const kyc_close = () => setKycShow(false);
+    const kyc_show = () => setKycShow(true);
 
+    const [kyclevel2show, setKyclevel2Show] = useState(false);
+    const kyclevel2_close = () => setKyclevel2Show(false);
+    const kyclevel2_show = () => setKyclevel2Show(true);
+
+    const [kyclevel3show, setKyclevel3Show] = useState(false);
+    const kyclevel3_close = () => setKyclevel3Show(false);
+    const kyclevel3_show = () => setKyclevel3Show(true);
     return(
 
         <>
@@ -56,7 +68,7 @@ function Kyc(props){
                             <p>DEPOSIT AND TRANSACTIONS OF {">"}= 1000 USDT</p>
                         </div>
 
-                        <button className="custom-icon-btn primary-btn w-100">Start Now</button>
+                        <button className="custom-icon-btn primary-btn w-100" onClick={kyc_show}>Start Now</button>
 
                     </div>
 
@@ -89,7 +101,7 @@ function Kyc(props){
                             <p>DEPOSIT AND TRANSACTIONS OF {">"}= 1000 USDT</p>
                         </div>
 
-                        <button className="custom-icon-btn primary-btn w-100" disabled>Start Now</button>
+                        <button className="custom-icon-btn primary-btn w-100" onClick={kyclevel2_show}>Start Now</button>
 
                     </div>
 
@@ -121,7 +133,7 @@ function Kyc(props){
                             <p>DEPOSIT AND TRANSACTIONS OF {">"}= 1000 USDT</p>
                         </div>
 
-                        <button className="custom-icon-btn primary-btn w-100" disabled>Start Now</button>
+                        <button className="custom-icon-btn primary-btn w-100" onClick={kyclevel3_show}>Start Now</button>
 
                     </div>
 
@@ -131,7 +143,9 @@ function Kyc(props){
             </Row>
 
         </Container>
-
+        <KYCModal kyc_close={kyc_close} show={kycshow}/>
+        <KYCLevel2Modal kyclevel2_close={kyclevel2_close} kyclevel2show={kyclevel2show}/>
+        <KYCLevel3Modal kyclevel3_close={kyclevel3_close} kyclevel3show={kyclevel3show}/>
         {props.footer}
         </>
 

@@ -9,6 +9,7 @@ function EmailVerification(props){
  
     const Verify = (e)=>{
         e.preventDefault();
+        localStorage.setItem("testtoken", 'testing');
         navigate('/welcome')
     }
     return (

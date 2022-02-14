@@ -1,10 +1,57 @@
 import { Col, Container, Form, Row, Table,Tab,Tabs } from "react-bootstrap";
 import { Link } from "react-router-dom"
-
+import CanvasJSReact from "../assets/canvasjs.react";
 
 function Market(props){
-
-
+    var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+    const generateDataPoints = (noOfDps) => {
+		var xVal = 1, yVal = 60;
+		var dps = [];
+		for(var i = 0; i < noOfDps; i++) {
+			yVal = yVal +  Math.round(5 + Math.random() *(-5-5));
+			dps.push({x: xVal,y: yVal});	
+			xVal++;
+		}
+		return dps;
+	}
+    const options = {
+        theme: "light2", // "light1", "dark1", "dark2"
+        animationEnabled: true,
+        zoomEnabled: false,
+        height:250,
+        width:380,
+        title: {
+            text: ""
+        },
+        data: [{
+            type: "area",
+            dataPoints: generateDataPoints(100)
+        }]
+    }
+    const options2 = {
+        animationEnabled: true,
+        exportEnabled: true,
+        theme: "light2", //"light1", "dark1", "dark2"
+        width:600,
+        title:{
+            text: ""
+        },
+        axisY: {
+            includeZero: true
+        },
+        data: [{
+            type: "column", //change type to bar, line, area, pie, etc
+            //indexLabel: "{y}", //Shows y value on all Data Points
+            indexLabelFontColor: "#5A5757",
+            indexLabelPlacement: "outside",
+            dataPoints: [
+                { x: 10, y: 71 },
+                { x: 40, y: 65 },
+                { x: 80, y: 92, indexLabel: "Highest" },
+               
+            ]
+        }]
+    }
     return(
 
         <>
@@ -551,7 +598,7 @@ function Market(props){
 
                                 </div>
 
-                                <img src={require("../assets/images/graph.png").default} style={{width:"100%"}}/>
+                                <CanvasJSChart options = {options} />
 
                             </div>
 
@@ -571,7 +618,8 @@ function Market(props){
 
                                 </div>
 
-                                <img src={require("../assets/images/graph.png").default} style={{width:"100%"}}/>
+                                <CanvasJSChart options = {options} />
+
 
                             </div>
 
@@ -591,7 +639,8 @@ function Market(props){
 
                                 </div>
 
-                                <img src={require("../assets/images/graph.png").default} style={{width:"100%"}}/>
+                                <CanvasJSChart options = {options} />
+
 
                             </div>
 
@@ -866,59 +915,8 @@ function Market(props){
 
                         <p className="p-3 m-0 f-bold b-bottom">Price Change Distribution</p>
 
-                            <div className="price-change-chart">
+                        <CanvasJSChart options = {options2} />
 
-                                <div className="chart-data">
-                                    <p>21</p>
-                                    <div className="chart-green" style={{height:"20px"}}></div>
-                                </div>
-
-                                <div className="chart-data">
-                                    <p>21</p>
-                                    <div className="chart-green" style={{height:"40px"}}></div>
-                                </div>
-
-                                <div className="chart-data">
-                                    <p>21</p>
-                                    <div className="chart-green" style={{height:"200px"}}></div>
-                                </div>
-
-                                <div className="chart-data">
-                                    <p>21</p>
-                                    <div className="chart-red" style={{height:"200px"}}></div>
-                                </div>
-
-                                <div className="chart-data">
-                                    <p>21</p>
-                                    <div className="chart-red" style={{height:"40px"}}></div>
-                                </div>
-
-                                <div className="chart-data">
-                                    <p>21</p>
-                                    <div className="chart-red" style={{height:"20px"}}></div>
-                                </div>
-                                
-
-                            </div>
-
-
-                            <div className="chart-price">
-
-                                    <span className="price-up">
-
-                                        <p>Price Up 3022</p>
-                                        <div className="price-up-bar"></div>
-
-                                    </span>
-
-                                    <span className="price-down">
-
-                                        <p>Price Up 3022</p>
-                                        <div className="price-down-bar"></div>
-
-                                    </span>
-
-                            </div>
                             
                         </div>
         

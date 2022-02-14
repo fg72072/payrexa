@@ -1,9 +1,32 @@
 import { useState } from "react"
 import { Row,Col, Tab, Tabs, Table,Modal,Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
-
+import CanvasJSReact from "../../assets/canvasjs.react";
 function Dashboard(props){
-
+    var CanvasJS = CanvasJSReact.CanvasJS;
+    var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+    const options = {
+        animationEnabled: true,
+        height: 100,
+        title: {
+            text: ""
+        },
+        subtitles: [{
+            text: "",
+            verticalAlign: "center",
+            fontSize: 24,
+            dockInsidePlotArea: true
+        }],
+        data: [{
+            type: "doughnut",
+            showInLegend: true,
+            yValueFormatString: "#,###'%'",
+            dataPoints: [
+                { name: "Euro", y: 5 },
+                { name: "USDT", y: 31 }
+            ]
+        }]
+    }
     const [show, setShow] = useState(true);
 
     const handleClose = () => setShow(false);
@@ -145,16 +168,9 @@ function Dashboard(props){
                             <div className="total-balance text-center">
                                 <h2>0.00</h2><span>BTC</span>
                             </div>
-                            <div className="bar-section">
-                                <div>
-                                    <h6>Estimate Value</h6>
-                                    <h2>$ 0.00</h2>
-                                </div>
-                                <div>
-                                    <h6>Estimate Value</h6>
-                                    <h2>$ 0.00</h2>
-                                </div>
-                                <div>
+                            <CanvasJSChart options = {options}/>
+                            <div className="bar-section ">
+                                <div className="text-center w-100">
                                     <h6>Estimate Value</h6>
                                     <h2>$ 0.00</h2>
                                 </div>
