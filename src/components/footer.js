@@ -11,8 +11,8 @@ function Footer(){
    
       <footer class="py-5">
         <Row>
-          <Col lg={4} className="footer-first">
-            <img width="100" src={require("../assets/images/footer_logo.png").default} className="mb-3"/>
+          <Col sm="12" lg="4">
+            <img width="100" src={require("../assets/images/footer_logo.png").default}/>
             <p className="text-white footer-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -26,7 +26,7 @@ function Footer(){
           </ul>
           </Col>
 
-          <Col lg={4} md={6}  className="footer-second col-6">
+          <Col sm="12" lg="4" md={6}>
             <h2 className="text-white">Quick Links</h2>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
@@ -37,7 +37,7 @@ function Footer(){
             </ul>
           </Col>
 
-          <Col lg={4} md={6}  className="footer-third col-6">
+          <Col sm="12" lg="4" md={6}>
           <h2 className="text-white">Contact Us</h2>
           <p className="text-white footer-text">
                 <b>ABC,Your Address, NYC, <br/> USA</b>

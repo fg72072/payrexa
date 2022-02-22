@@ -17,7 +17,36 @@ import DownMobile from '../assets/images/down-mobile.png';
 
 function Home(props){
 
-  
+    var carouselsettings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows:true,
+        responsive: [
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+                    }
+                },
+
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+
+            }
+
+            ]
+      };
 
       var market = {
         infinite: true,
@@ -27,7 +56,27 @@ function Home(props){
         slidesToScroll: 1,
         arrows:false,
         vertical:true,
-      
+        responsive: [
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            
+                    }
+                },
+
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                   
+                }
+
+            }
+
+            ]
       };
 
       var news_slider = {
@@ -70,21 +119,21 @@ function Home(props){
         <section className="banner-section">
         <Container className="">
             <Row className="banner-row ">
-                <Col lg="6" sm={12} className="order-md-2">
+                <Col lg="6" sm={12}>
                 <div className=" banner-text">
 
-                    <h1 className="dual-heading">Swap, Invest, and Earn <br/> Interest on your Crypto </h1>
-                    <p className="banner-p">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit ut aliquam, purus sit 
-                        amet luctus venenatis</p>
-                    <div>
-                    <div className="btn-box">
-                    <Link to={'/register'} className="custom-btn primary-btn">Register</Link>
-                    </div>
-                    </div>
+                <h1 className="dual-heading">Swap, Invest, and Earn <br/> Interest on your Crypto </h1>
+                <p className="banner-p">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit ut aliquam, purus sit 
+                    amet luctus venenatis</p>
+                <div>
+                <div className="btn-box">
+                <Link to={'/register'} className="custom-btn primary-btn">Register</Link>
+                </div>
+                </div>
                 </div>
                 </Col>
-                <Col lg="6" sm={12} className=" d-flex order-md-1">
+                <Col lg="6" sm={12} className=" d-flex ">
 
                     
 
@@ -93,9 +142,9 @@ function Home(props){
                     
 
                 </Col>
-                <Col lg={12} sm={12} md={12} className="order-md-3">
+                <Col lg={12} sm={12} md={12}>
                     <Row>
-                        <Col lg={4} sm={12} md={6} >
+                        <Col lg={4} sm={12} md={6}>
                             <div className="banner-box-custom">
                                 <h4>Download the App</h4>
                                 <span className="banner-span">Get from apple or<br/> play store</span>
@@ -142,7 +191,7 @@ function Home(props){
 
         <Col lg={12}>
             <Row>
-            <Col lg={3} md={3} className="col-6 market-box">
+            <Col lg={3} sm={12} className="market-box">
 
             <div className="">
 
@@ -162,29 +211,7 @@ function Home(props){
 
 
             </Col>
-
-            <Col lg={3} md={3} className="col-6 market-box">
-
-                <div className="">
-
-
-                    <div className="market-data">
-
-                        <p>SHIB/BUSD</p>
-                        <p>+3.06%</p>
-
-                    </div>
-                    <div className="innner">
-                        <p>0.0000298</p>
-                        <span>$0.00002</span>
-                    </div>
-
-                </div>
-
-
-            </Col>
-
-            <Col lg={3} md={3} className="col-6 market-box">
+            <Col lg={3} sm={12} className="market-box">
 
                 <div className="">
 
@@ -203,9 +230,8 @@ function Home(props){
                 </div>
 
 
-            </Col>
-
-            <Col lg={3} md={3} className="col-6 market-box">
+                </Col>
+                <Col lg={3} sm={12} className="market-box">
 
                 <div className="">
 
@@ -224,13 +250,32 @@ function Home(props){
                 </div>
 
 
-            </Col>
+                </Col>
+                <Col lg={3} sm={12} className="market-box">
+
+                <div className="">
+
+
+                    <div className="market-data">
+
+                        <p>SHIB/BUSD</p>
+                        <p>+3.06%</p>
+
+                    </div>
+                    <div className="innner">
+                        <p>0.0000298</p>
+                        <span>$0.00002</span>
+                    </div>
+
+                </div>
+
+
+                </Col>
             </Row>
         </Col>
-
         <Col lg={12}>
             <Row>
-            <Col lg={3} md={3} className="col-6 market-box">
+            <Col lg={3} sm={12} className="market-box">
 
             <div className="">
 
@@ -250,7 +295,7 @@ function Home(props){
 
 
             </Col>
-            <Col lg={3} md={3} className="col-6 market-box">
+            <Col lg={3} sm={12} className="market-box">
 
                 <div className="">
 
@@ -270,7 +315,7 @@ function Home(props){
 
 
                 </Col>
-                <Col lg={3} md={3} className="col-6 market-box">
+                <Col lg={3} sm={12} className="market-box">
 
                 <div className="">
 
@@ -290,7 +335,7 @@ function Home(props){
 
 
                 </Col>
-                <Col lg={3} md={3} className="col-6 market-box">
+                <Col lg={3} sm={12} className="market-box">
 
                 <div className="">
 
@@ -606,42 +651,42 @@ function Home(props){
             <h2 className="text-center ">Trending Crypto with PayRexa</h2>
 
                 <Row className="home-trade-section">
-                    <Col lg={4} md={6}>
+                    <Col lg={4}>
                         <div className="home-trading-box">
                             <img src={FastIcon}/>
                             <h4>Fast Trading</h4>
                             <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
                         </div>
                     </Col>
-                    <Col lg={4} md={6}>
+                    <Col lg={4}>
                         <div className="home-trading-box">
                             <img src={PayIcon}/>
                             <h4>Quick Payment</h4>
                             <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
                         </div>
                     </Col>
-                    <Col lg={4} md={6}>
+                    <Col lg={4}>
                         <div className="home-trading-box">
                             <img src={CustomerIcon}/>
                             <h4>Customer Support</h4>
                             <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
                         </div>
                     </Col>
-                    <Col lg={4} md={6}>
+                    <Col lg={4}>
                         <div className="home-trading-box">
                             <img src={ChartIcon}/>
                             <h4>Live Charts</h4>
                             <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
                         </div>
                     </Col>
-                    <Col lg={4} md={6}>
+                    <Col lg={4}>
                         <div className="home-trading-box">
                             <img src={CommissionIcon}/>
                             <h4>Commissions</h4>
                             <p>Dedicated support via email, phone, and live chat around the clock to answer your questions at any time</p>
                         </div>
                     </Col>
-                    <Col lg={4} md={6}>
+                    <Col lg={4}>
                         <div className="home-trading-box">
                             <img src={SecurityIcon}/>
                             <h4>High Security</h4>
@@ -661,12 +706,12 @@ function Home(props){
             <Container>
                 <section className="section">
                     <Row className="align-items-center">
-                        <Col lg={6} md={4}>
+                        <Col lg={6}>
                         <div class="section-text">
                         <h1>About Us</h1>
                         </div>
                         </Col>
-                        <Col lg={6} md={8}>
+                        <Col lg={6}>
                         <div className="home-about-flex">
                             <div className="inner-box">
                                 <img src={Star}/>
@@ -776,12 +821,12 @@ function Home(props){
             </section>
             <section className="section">
                 <Row className="down-section">
-                    <Col lg={8} md={6}>
+                    <Col lg={6}>
                         <h2>Download PayRexa <br/>Mobile App</h2>
                         <p>Lorem ipsum dolor sit amet, adipiscing elit ut aliquam, amet luctus venenatis</p>
                         <div class="btn-box"><a href="#" class="custom-icon-btn primary-btn"><i class="fa-brands fa-apple"></i><span class="d-column">Download From <b>App Store</b></span></a><a href="#" class="custom-icon-btn secondary-btn"><i class="fa-brands fa-google-play"></i><span class="d-column">Download From <b>App Store</b></span></a></div>
                     </Col>
-                    <Col lg={4} md={6} className="text-center">
+                    <Col lg={6}>
                         <img src={DownMobile}/>
                     </Col>
                 </Row>

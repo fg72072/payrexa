@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Container,Row,Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import LiIcon from '../assets/images/b-trade.png'
-import MobileHeader from "../components/MobileHeader"
 
 function Header(){
   let [ isHidden, setIsHidden ] = useState(true)
@@ -220,7 +219,6 @@ function Header(){
                       <>
                       <li className="nav-item dropdown ">
 
-
                         <Link to={"#"} className="custom-link nav-link" onClick={()=>setIsHidden(true)} id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                           <i class="fa-regular fa-circle-user"></i>
                         </Link>
@@ -303,9 +301,6 @@ function Header(){
                     
                     
 
-                  </li>
-
-
 
 
                   </ul>
@@ -319,9 +314,6 @@ function Header(){
         </Container>
 
         </div>
-
-        <MobileHeader/>
-
         </>
     )
 }
