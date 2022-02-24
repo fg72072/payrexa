@@ -8,11 +8,11 @@ function BlackHeader(){
                 <Link to={'/buy/usdt'}>P2P Trade</Link>
             </div>
             <div className="d-flex">
-                <Link to={'/fiat-orders'}>Orders</Link>
-                <Link to={'/user-center'}>P2P User Center</Link>
+                <Link to={'/fiat-orders'} className="black-header-anchor"><i class="fa-solid fa-file-lines"></i><span>Orders</span></Link>
+                <Link to={'/user-center'} className="black-header-anchor"><i class="fa-solid fa-users"></i><span>P2P User Center</span></Link>
                 <li className="dropdown more-list">
-                    <Link to={"#"} className=" dropdown-toggle"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    More
+                    <Link to={"#"} className="black-header-anchor black-header-anchor-dropdown dropdown-toggle"  id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i><span>More</span>
                     </Link>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -10,15 +10,19 @@ function TradeOrder(props){
         
             {props.header}
 
-            <div className="dashboard-section">
+            <div className="dashboard-section order-body-width">
 
                 {props.sidebar}
 
-                <div className="dashboard-main">
+                <div className="dashboard-main ">
 
-                <div className="normal-box big-bg ">
-                    <span>Spot</span>
+                <div className="normal-box big-bg order-head-mobile">
+                   <div>
+                   <span>Spot</span>
                     <h3>Order History</h3>
+                   </div>
+                    <i class="fa-solid fa-angle-right open-order-sidebar"></i>
+
                 </div>
                 <div className="dashboard-margin">
                 <div className="history-filter">
@@ -57,14 +61,14 @@ function TradeOrder(props){
                 <option value="3">Sell</option>
                  </Form.Select>
                  </Form.Group >
-                 <div className="mt-5 div">
+                 <div className="mt-5 div margin-between-btn">
                      <button className="custom-btn primary-btn">Search</button>
-                     <button className="custom-btn secondary-btn">Reset</button>
+                     <button className="custom-btn secondary-btn ">Reset</button>
                  </div>
                 </div>
                 </div>
-                <div className="mt-3">
-                <Table responsive="sm">
+                <div className="mt-3 table-responsive">
+                <Table>
                         <thead>
                         <tr>
                             <th>Date</th>

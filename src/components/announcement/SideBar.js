@@ -3,7 +3,7 @@ import {Accordion } from "react-bootstrap";
 function AnnouncementSideBar(){
     return(
         <>
-        <div className="sidebar faq-sidebar">
+        <div className="sidebar faq-sidebar close-order-sidebar">
 
                
                 <ul className="li-flex">

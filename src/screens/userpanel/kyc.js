@@ -42,7 +42,7 @@ function Kyc(props){
 
             </div>
 
-            <Row>
+            <Row className="gy-5">
 
                 <Col lg={4}>
 

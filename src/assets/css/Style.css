@@ -31,11 +31,12 @@ background-color: var(--background) !important;
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--text-disable);
+  /* background: var(--text-disable); */
 }
 
 /* Handle */
@@ -121,8 +122,24 @@ button:disabled:hover {
   padding: 0;
 }
 
-.sidenav .menu-list li {
+.sidenav .menu-list .li {
   padding: 0.7rem 8px 0.7rem 3rem;
+}
+.sidenav .inner-ul{
+  padding-left: 15px;
+  list-style: none;
+}
+.sidenav .inner-ul li{
+  padding-top: 7px;
+}
+.sidenav .inner-ul li a{
+  font-size: 15px !important;
+}
+.hide-dropdown{
+  display: block;
+}
+.hide-dropdown{
+  display: none;
 }
 
 .sidenav .menu-list a {
@@ -2737,10 +2754,23 @@ margin-left: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .pad-detail-flex .div{
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
+}
+.subscription-btn-group{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.subscription-btn-group .custom-btn{
+  margin-top: 1rem;
+}
+.flex-colum-responsive{
+  align-items: center;
 }
 .detail-flex-top{
   display: flex;
@@ -3161,4 +3191,275 @@ text-decoration: none;
 }
 .image-upload-flex .upload-box{
   width: 49%;
+}
+.spot-trade-top{
+  padding-top: 1rem;
+}
+.spot-trade-top ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.spot-trade-top ul li:not(:first-child){
+  margin-left: 1.5rem;
+}
+.spot-trade-top ul li a{
+  text-decoration: none;
+  color: var(--primary);
+}
+.spot-trade-top-second{
+  display: flex;
+}
+.spot-trade-top-second{
+  padding: 1rem 0;
+}
+.spot-trade-top-second .first{
+  margin-right: 1.5rem;
+  padding-right: 1.5rem;
+  border-right: 1px solid #252930;
+}
+.spot-trade-top-second div:not(:first-child){
+  margin-left: 2rem;
+}
+.spot-left-bar .top-second{
+  display: flex;
+  justify-content: space-between;
+}
+.order-body div{
+  display: flex;
+  justify-content: space-between;
+}
+.order-body .sell span:nth-child(1){
+color: var(--text-red);
+}
+.order-body .buy span:nth-child(1){
+  color: var(--text-green);
+  }
+.bottom-calc{
+  display: flex;
+  margin-top: 1rem;
+}
+.bottom-calc span{
+  margin-left: 1rem;
+}
+.buy-sell-section .top{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buy-sell-section .form-top{
+  display: flex;
+}
+.buy-sell-section .form-top span{
+  cursor: pointer;
+  font-size: 14px;
+}
+.buy-sell-section .form-top span:hover{
+  color: var(--primary);
+}
+.buy-sell-section .form-top span:not(:first-child){
+  margin-left: 1rem;
+}
+.green-btn{
+  background-color: var(--text-green);
+  color: var(--text-white);
+  border-color: var(--text-green);
+}
+.red-btn{
+  background: var(--text-red);
+  color: var(--text-white);
+  border-color: var(--text-red);
+
+}
+.buy-sell-section .custom-group-margin{
+  margin-top: 0.5rem;
+}
+.all-coin-list{
+  margin-top: 1rem;
+}
+.all-coin-list .ul{
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  overflow: auto;
+}
+.all-coin-list .ul .li{
+  /* position: relative; */
+}
+.all-coin-list .ul .li:not(:first-child){
+  margin-left: 1rem;
+}
+.all-coin-list .ul .li .a{
+  color: var(--text-black);
+  text-decoration: none;
+}
+.all-coin-list .ul .li .a i{
+  margin-left: 0.3rem;
+}
+.all-coin-list ul li a:hover{
+color: var(--primary);
+}
+.all-coin-list .ul .li ul{
+  padding-left: 0;
+  column-count: 4;
+  list-style: none;
+  position: absolute;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+.all-coin-list .ul .li ul li{
+  margin-bottom: 0.5rem;
+}
+.all-coin-list .ul .li ul li a{
+  text-decoration: none;
+  color: var(--text-white);
+}
+.spot-right-bar .top-second{
+  display: flex;
+  justify-content: space-between;
+}
+.swap-pair{
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.right-order-one{
+  height: 273px;
+  overflow: auto;
+}
+.right-second-section .top-tabs{
+display: flex;
+padding: 1rem 0;
+}
+.right-second-section .top-tabs span{
+  cursor: pointer;
+}
+.right-second-section .top-tabs span:hover{
+  color: var(--primary);
+}
+.right-second-section .top-tabs span:not(:first-child){
+  margin-left: 1rem;
+}
+
+.market-activities h5{
+  padding: 1rem 0;
+}
+.m-a-ul{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  padding-left: 0;
+  height: 100px;
+  overflow: auto;
+}
+.m-a-ul li a{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--text-black);
+  align-items: center;
+}
+.m-a-ul li a:hover{
+  color: var(--text-black) !important;
+}
+.m-a-ul li a p{
+  margin-bottom: 0;
+}
+.spot-filter{
+  display: flex;
+  align-items: center;
+}
+.order-header ul{
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.order-header ul li:not(:first-child){
+  margin-left: 1rem;
+}
+.order-header ul li a{
+  text-decoration: none;
+  color: var(--text-black);
+}
+.custom-btn-x-sm-sec{
+  border: 1px solid;
+  text-decoration: none;
+  display: inline;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+}
+.custom-btn-x-sm-sec:not(:first-child){
+  margin-left: 1rem;
+}
+.from-to{
+  display: flex;
+}
+.from-to div{
+  margin-left: 1rem;
+}
+.trade-rule-main .trade-rule{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+.buy-sell-tabs{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.buy-sell-tabs div a{
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--text-white);
+  text-align: center;
+  padding: 0 1.5rem;
+}
+.buy-sell-tabs div a:hover{
+  color: var(--text-white) !important;
+}
+.order-icon-flex{
+  display: flex;
+  margin-bottom: 1rem;
+}
+.order-icon-flex div:not(:first-child){
+  margin-left: 1rem;
+}
+.order-icon-flex div img{
+  width: 30px;
+  cursor: pointer;
+}
+.launch-img{
+  width: 100%;
+}
+.mobile-drop{
+  list-style: none;
+}
+.mobile-drop .nav-link{
+  padding: 0rem 1rem !important;
+}
+.mobile-drop .nav-link i{
+  font-size: 20px;
+}
+.order-head-mobile .open-order-sidebar{
+ display: none;
+}
+.black-header-anchor i{
+  display: none;
+}
+.resp-d-flex{
+  display: flex;
+  align-items: center;
+}
+.tradingview-main-responsive{
+  display: flex;
+}
+.custom-col-tradeview{
+  padding: 0 0.5rem;
+}
+.faq-resp-flex a i{
+  display: none;
+}
+.form-section-margin{
+  margin: 2rem 0;
 }

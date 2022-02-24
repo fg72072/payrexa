@@ -34,10 +34,10 @@ function LaunchPool(props){
                 <Row>
                     <Col lg={12}>
                    <Row>
-                        <Col lg={2}>
+                        <Col lg={2} md={3}>
                     <img src={LeagueImage} className="pad-img"/>
                     </Col>
-                    <Col lg={10}>
+                    <Col lg={10} md={9}>
                         <Row>
                             <Col lg={12}>
                             <div className="detail-flex-top">
@@ -61,7 +61,7 @@ function LaunchPool(props){
                                 </div>
                                 </div>
                             </div>
-                            <div className="mt-3">
+                            <div className="mt-3 subscription-btn-group">
                                 <button className="custom-btn primary-btn">Website</button>
                                 <button className="custom-btn primary-btn">Whitepaper</button>
                                 <button className="custom-btn primary-btn">View detailed rules</button>
@@ -79,8 +79,8 @@ function LaunchPool(props){
                     </Col>
                     <Col lg={12}>
                     <div className="dashboard-margin mt-5 mb-5">
-                   <div className="d-flex justify-content-between align-items-center">
-                    <div>
+                   <div className="flex-colum-responsive d-flex justify-content-between">
+                    <div className="btn-group-flex">
                        <Link to={'/launchpool/ANC_BNB'} className="custom-btn secondary-btn">BNB Pool</Link>
                        <Link to={'/launchpool/ANC_LUNA'} className="custom-btn secondary-btn">LUNA Pool</Link>
                        <Link to={'/launchpool/ANC_BUSD'} className="custom-btn secondary-btn">BUSD Pool</Link>

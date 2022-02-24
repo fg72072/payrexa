@@ -146,7 +146,7 @@ function Dashboard(props){
                 </div>
 
                 <div className="dashboard-margin">
-                <Row>
+                <Row className="gy-5">
                     <Col lg={7}>
                     <div className="normal-box">
                     <div className="box-top">
@@ -293,7 +293,7 @@ function Dashboard(props){
                 </div>
                 </div>
                 <div className="dashboard-margin">
-                <Row>
+                <Row className="gy-5">
                     <Col lg={5}>
                     <div class="normal-box">
                         <h4>Increase your account security</h4>

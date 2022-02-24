@@ -25,7 +25,7 @@ function PostStep2(){
             </Col>
         </Row>
         <hr/>
-        <Row>
+        <Row className="gy-3">
             <Col lg={6}>
                 <h4>Payment Method</h4>
                 <div className="mt-3 payment-btn-group">

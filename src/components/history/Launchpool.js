@@ -3,7 +3,7 @@ import {Accordion } from "react-bootstrap";
 function LaunchPoolSideBar(){
     return(
         <>
-        <div className="sidebar faq-sidebar">
+        <div className="sidebar faq-sidebar mobile-side">
               
                 <ul className="li-flex">
                     <li><Link to={'/history/lottery/PROCESSING'}><div><span>Lottery</span></div></Link></li>

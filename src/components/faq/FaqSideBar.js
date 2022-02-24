@@ -3,7 +3,7 @@ import {Accordion } from "react-bootstrap";
 function FaqSideBar(){
     return(
         <>
-        <div className="sidebar faq-sidebar">
+        <div className="sidebar faq-sidebar close-order-sidebar">
               
         <Accordion defaultActiveKey={['0']} alwaysOpen >
 

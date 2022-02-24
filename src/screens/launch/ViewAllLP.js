@@ -36,7 +36,7 @@ function ViewAllLP(props){
                 </div>
                 <div className="launchpad-section">
                 <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="custom-box">
                     <div className="farming">
                         <i class="fa-solid fa-clock-rotate-left"></i>
@@ -75,7 +75,7 @@ function ViewAllLP(props){
                         </div>
                     </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="pool-box">
                     <div className="d-flex align-items-center justify-content-center mt-4">
                         <img src={Logo} width={50}/>
@@ -103,7 +103,7 @@ function ViewAllLP(props){
                     
                     </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="pool-box">
                     <div className="d-flex align-items-center justify-content-center mt-4">
                         <img src={Logo} width={50}/>
@@ -136,7 +136,7 @@ function ViewAllLP(props){
                 </div>
                 <div className="launchpad-section">
                 <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="custom-box">
                     <div className="farming">
                         <i class="fa-solid fa-clock-rotate-left"></i>
@@ -175,7 +175,7 @@ function ViewAllLP(props){
                         </div>
                     </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="pool-box">
                     <div className="d-flex align-items-center justify-content-center mt-4">
                         <img src={Logo} width={50}/>
@@ -203,7 +203,7 @@ function ViewAllLP(props){
                     
                     </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="pool-box">
                     <div className="d-flex align-items-center justify-content-center mt-4">
                         <img src={Logo} width={50}/>

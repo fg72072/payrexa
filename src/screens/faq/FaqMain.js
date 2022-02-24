@@ -17,9 +17,8 @@ function FaqMain(props){
     return (
         <>
         {props.header}
-
             {props.sidebar}
-            <div className="dashboard-main">
+            <div className="dashboard-main ">
                 <div className="normal-box big-bg">
                     <h3 className="">FAQ</h3>
                 </div>
@@ -43,7 +42,7 @@ function FaqMain(props){
                     <div className="mt-5">
                     <h4>Popular Topics</h4>
                         <Row className="mt-3">
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                                 <Link to={'/faq/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Getting Started</h4>
@@ -51,7 +50,7 @@ function FaqMain(props){
                                 </div>
                                 </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/faq/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Account Functions</h4>
@@ -59,7 +58,7 @@ function FaqMain(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/faq/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Buy and Sell</h4>
@@ -67,7 +66,7 @@ function FaqMain(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/faq/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Trade</h4>
@@ -75,7 +74,7 @@ function FaqMain(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/faq/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Binance Earn</h4>
@@ -83,7 +82,7 @@ function FaqMain(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/faq/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Security Tips</h4>

@@ -44,7 +44,7 @@ function Announcement(props){
                     <div className="mt-5">
                     <h4>All Topics</h4>
                         <Row className="mt-3">
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                                 <Link to={'/announcement/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>New Cryptocurrency Listing</h4>
@@ -52,7 +52,7 @@ function Announcement(props){
                                 </div>
                                 </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/announcement/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Latest Binance News</h4>
@@ -60,7 +60,7 @@ function Announcement(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/announcement/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Latest Activities</h4>
@@ -68,7 +68,7 @@ function Announcement(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/announcement/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>New Fiat Listings</h4>
@@ -76,7 +76,7 @@ function Announcement(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/announcement/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>API Updates</h4>
@@ -84,7 +84,7 @@ function Announcement(props){
                                 </div>
                             </Link>
                             </Col>
-                            <Col lg={4}>
+                            <Col lg={4} md={4}>
                             <Link to={'/announcement/23'} className="normal-anchor">
                                 <div className="topic-box">
                                     <h4>Crypto Airdrop</h4>

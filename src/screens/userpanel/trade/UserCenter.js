@@ -35,7 +35,7 @@ function UserCenter(props){
          <div className="user-email-section">
           <h2>example@demo.com</h2> <span >Regular User</span>
           </div>
-          <div className="d-flex align-items-center">
+          <div className="resp-d-flex">
               <div >
               <h4>P2P Estimated Value (BTC)    <i class="ml-1 fa-regular fa-eye-slash"></i></h4>
               <h4>0.0000000000000 BTC = $0.00000000 </h4>

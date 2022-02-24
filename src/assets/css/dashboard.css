@@ -18,7 +18,7 @@
 .sidebar {
   box-shadow: var(--shadow);
   width: 300px;
-  height: calc(100vh - 77.66px) !important;
+  height: calc(100vh - 77.66px);
   position: sticky;
   top: 78px;
   width: 17%;

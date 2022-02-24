@@ -1,0 +1,268 @@
+.black{
+    background: rgb(22, 26, 30) !important;
+    color: var(--text-white) !important;
+}
+.black .sticky-nav,.black .footer-section{
+    background: rgb(22, 26, 30) !important;
+}
+.black .hr{
+    color: var(--text-white) !important;
+}
+.black .custom-link.nav-link{
+    color: var(--text-white) !important;
+}
+.black .spot-trade-top ul li a{
+    color: var(--text-white) !important;
+}
+.black .spot-trade-top{
+    background-color: rgb(30, 32, 38);
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+.black .spot-trade-top-second div h4,.spot-trade-top-second div h5{
+    color: var(--gray);
+}
+.black .all-coin-list .ul .li .a{
+    color: var(--text-white);
+}
+.black .all-coin-list .ul .li ul{
+    display: none;
+    background-color: rgb(43, 49, 57) !important;
+}
+.li:hover>ul{
+    display: block !important;
+}
+.black input,.black select{
+color: var(--text-white) !important;
+background-color: rgb(43, 49, 57) !important;
+border-color: rgb(43, 49, 57) !important;
+border: 1px solid rgb(43, 49, 57) !important;
+border-radius: 5px;
+padding: 0.2rem 0.5rem;
+}
+.dark-trade select{
+    color: var(--text-white) !important;
+    background-color: rgb(43, 49, 57) !important;
+    border-color: rgb(43, 49, 57) !important;
+}
+.black .order-header ul li a{
+    color: var(--text-white);
+}
+.black .table th,.table td{
+color: rgb(132, 142, 156) !important;
+}
+.black .market-activities h5{
+    color: var(--text-white);
+}
+.black .m-a-ul li a p{
+    color: var(--text-white);
+}
+.black .m-a-ul li a span{
+color: rgb(132, 142, 156) !important;
+
+}
+.black h5,.black h4{
+    color: var(--text-white);
+}
+.black .form-label{
+    font-size: 12px;
+}
+.black ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    color: var(--text-white) !important;
+    display: block !important;
+    border-radius: 4px;
+}
+.black ::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>') !important;
+}
+.black .dropdown-menu{
+    background-color: rgb(22, 26, 30) !important;
+    color: var(--text-white) !important;
+}
+.black .dropdown-menu li a{
+    color: var(--text-white);
+}
+.black .dropdown-heading{
+    color: var(--text-white);
+}
+.form-top .active{
+    color: var(--primary) !important;
+}
+.trade-rule-main .trade-rule span:nth-child(1){
+    color: var(--gray);
+}
+.trade-rule-main .trade-rule span:nth-child(2){
+    color: var(--text-white);
+}
+.trade-rule-modal .modal-content,.dark-trade .modal-content{
+    background-color: rgb(22, 26, 30) !important;
+}
+.trade-rule-modal h3,.dark-trade h3{
+    color: var(--text-white) !important;
+}
+.dark-trade .modal-title{
+    color: var(--text-white) !important;
+}
+.dark-trade .form-label{
+    color: var(--gray) !important;
+}
+.dark-trade .form-control{
+color: var(--text-white) !important;
+background-color: rgb(43, 49, 57) !important;
+border-color: rgb(43, 49, 57) !important;
+border: 1px solid rgb(43, 49, 57) !important;
+}
+.black .buy-sell-section .form-control{
+height: 40px !important;
+}
+.black .text-ab {
+    top: 38px !important;
+}
+.dropdown-custom{
+    position: relative;
+    width: 10px;
+    cursor: pointer;
+}
+.dropdown-custom ul{
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding-left: 0;
+    background-color: rgb(43, 49, 57) !important;
+    border-radius: 5px;
+    width: 150px;
+    right: 0;
+}
+.dropdown-custom ul li{
+    margin: 0.5rem 1rem;
+}
+.dropdown-custom ul li a{
+    text-decoration: none;
+    color: var(--text-white);
+}
+.dropdown-custom ul li a:hover{
+    color: var(--primary);
+}
+.dropdown-custom:hover>.dropdown-custom ul{
+    display: block;
+}
+.order-body .sell{
+    cursor: pointer;
+}
+.order-body .sell:hover{
+        border-top: 1px dashed rgb(132, 142, 156);
+        border-right-color: rgb(132, 142, 156);
+        border-bottom-color: rgb(132, 142, 156);
+        border-left-color: rgb(132, 142, 156);
+        background-color: rgb(43, 49, 57);
+}
+.sell:hover ~ .sell{
+    background-color: rgb(43, 49, 57) !important;
+}
+.order-body .buy:hover{
+    border-top: 1px dashed rgb(132, 142, 156);
+    border-top-color: rgb(132, 142, 156);
+    border-right-color: rgb(132, 142, 156);
+    border-left-color: rgb(132, 142, 156);
+    background-color: rgb(43, 49, 57) !important;
+
+}
+.buy:hover ~ .buy{
+    background-color: rgb(43, 49, 57) !important;
+}
+.black .buy-sell-tabs{
+    background-color: rgb(43, 49, 57) !important;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.buy-tab-active-green{
+    background-color: var(--text-green) !important;
+    border-radius: 5px;
+}
+.buy-tab-active-red{
+    background-color: var(--text-red) !important;
+    border-radius: 5px;
+}
+.black .spot-trade-top-second{
+    border-top: 1px solid #252930;
+    border-bottom: 1px solid #252930;
+}
+.black .order-border{
+    border: 1px solid #252930;
+    /* border-right: 1px solid #252930; */
+}
+.black .buy-sell-border{
+    border: 1px solid #252930;
+    border-left: none;
+}
+.black .chart-border{
+    border: 1px solid #252930;
+    border-right: none;
+}
+.custom-btn-x-sm{
+    box-sizing: border-box;
+    margin: 0px 8px 0px 0px;
+    min-width: 0px;
+    flex: 1 1 0%;
+    padding: 5px;
+    color: rgb(234, 236, 239);
+    line-height: 16px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(71, 77, 87);
+    border-radius: 2px;
+    cursor: pointer;
+}
+.dropdown-coins{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.dropdown-coins i{
+    margin-left: 0.5rem;
+}
+.all-coin-list{
+    position: absolute;
+    top: 0;
+    background-color: #252930;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 400px;
+    z-index: 1000000;
+    display: none;
+}
+.dropdown-coins:hover>.all-coin-list{
+    display: block;
+}
+.all-coin-list .li a{
+    display: flex;
+    align-items: center;
+}
+.all-coin-list .top-second{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px !important;
+
+}
+.all-coin-list .order-body{
+    margin-left: 0px !important;
+}
+.all-coin-list .order-body div{
+    display: flex !important;
+    justify-content: space-between !important;
+    margin: 0px !important;
+}
+.black .c-tab-active{
+    color: var(--primary) !important;
+}
+.black .top-second{
+    font-size: 13px;
+}
+.black .order-body div span{
+    font-size: 12px;
+}

@@ -280,7 +280,7 @@ function P2P(props){
             <Tabs defaultActiveKey="buy" id="uncontrolled-tab-example" className="mb-3">
             <Tab eventKey="buy" title="Buy Crypto">
             <Row>
-                <Col lg={4}>
+                <Col lg={4} md={6}>
                 <div className="buy-trade-box text-center">
                 <img src={Icon1}/>
                 <div className="text-center">
@@ -289,7 +289,7 @@ function P2P(props){
                 </div>
                 </div>
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6}>
                 <div className="buy-trade-box text-center">
                 <img src={Icon2}/>
                 <div className="text-center">
@@ -298,7 +298,7 @@ function P2P(props){
                 </div>
                 </div>
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6}>
                 <div className="buy-trade-box text-center">
                 <img src={Icon3}/>
                 <div className="text-center">
@@ -311,7 +311,7 @@ function P2P(props){
             </Tab>
             <Tab eventKey="sell" title="Sell Crypto">
             <Row>
-                <Col lg={4}>
+                <Col lg={4} md={6}>
                 <div className="buy-trade-box text-center">
                 <img src={Icon1}/>
                 <div className="text-center">
@@ -320,7 +320,7 @@ function P2P(props){
                 </div>
                 </div>
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6}>
                 <div className="buy-trade-box text-center">
                 <img src={Icon2}/>
                 <div className="text-center">
@@ -329,7 +329,7 @@ function P2P(props){
                 </div>
                 </div>
                 </Col>
-                <Col lg={4}>
+                <Col lg={4} md={6}>
                 <div className="buy-trade-box text-center">
                 <img src={Icon3}/>
                 <div className="text-center">
@@ -353,13 +353,13 @@ function P2P(props){
                 <ul className="custom-accordion">
 
                     <Row>
-                        <Col lg={6}>
+                        <Col lg={6} md={6}>
                     <Accordion heading={'Will my license be automatically renewed?'} content={'Non odit magnam dolorum. Et odio et maxime consequuntur provident. Error eaque est dolor et qui. Ex odit doloremque consequatur quis. Eaque et pariatur dolores. Magni in quasi dolor repudiandae explicabo.'}/>
                     <Accordion heading={'Will my license be automatically renewed?'} content={'Non odit magnam dolorum. Et odio et maxime consequuntur provident. Error eaque est dolor et qui. Ex odit doloremque consequatur quis. Eaque et pariatur dolores. Magni in quasi dolor repudiandae explicabo.'}/>
                     <Accordion heading={'Will my license be automatically renewed?'} content={'Non odit magnam dolorum. Et odio et maxime consequuntur provident. Error eaque est dolor et qui. Ex odit doloremque consequatur quis. Eaque et pariatur dolores. Magni in quasi dolor repudiandae explicabo.'}/>
                     <Accordion heading={'Will my license be automatically renewed?'} content={'Non odit magnam dolorum. Et odio et maxime consequuntur provident. Error eaque est dolor et qui. Ex odit doloremque consequatur quis. Eaque et pariatur dolores. Magni in quasi dolor repudiandae explicabo.'}/>
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={6} md={6}>
                     <Accordion heading={'Will my license be automatically renewed?'} content={'Non odit magnam dolorum. Et odio et maxime consequuntur provident. Error eaque est dolor et qui. Ex odit doloremque consequatur quis. Eaque et pariatur dolores. Magni in quasi dolor repudiandae explicabo.'}/>
                     <Accordion heading={'Will my license be automatically renewed?'} content={'Non odit magnam dolorum. Et odio et maxime consequuntur provident. Error eaque est dolor et qui. Ex odit doloremque consequatur quis. Eaque et pariatur dolores. Magni in quasi dolor repudiandae explicabo.'}/>
                     <Accordion heading={'Will my license be automatically renewed?'} content={'Non odit magnam dolorum. Et odio et maxime consequuntur provident. Error eaque est dolor et qui. Ex odit doloremque consequatur quis. Eaque et pariatur dolores. Magni in quasi dolor repudiandae explicabo.'}/>

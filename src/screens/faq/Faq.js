@@ -14,16 +14,19 @@ function Faq(props){
 
            
 
-            <div className="dashboard-section">
+            <div className="dashboard-section order-body-width">
 
                 {props.sidebar}
 
                 <div className="dashboard-main">
 
-                <div className="normal-box big-bg big-faq">
+                <div className="normal-box big-bg big-faq faq-resp-flex">
 
                     <div>
-                        <h1>FAQ</h1>
+                        <Link to={"/faq"} className="normal-anchor">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <h3>FAQ</h3>
+                        </Link>
                     </div>
 
                     <div>

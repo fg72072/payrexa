@@ -22,13 +22,13 @@ function Disableaccount(props){
 
                 <Row className="align-items-center">
 
-                    <Col lg={3}>
+                    <Col lg={3} md={4}>
 
                                 <img src={require("../../assets/images/delete-user.png").default} style={{width:"100%"}}/>
 
                     </Col>
 
-                    <Col lg={9} className="disable-warnings">
+                    <Col lg={9} md={8} className="disable-warnings">
 
                         
                         <h3>Disable Your Account</h3>

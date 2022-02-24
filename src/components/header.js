@@ -54,7 +54,7 @@ function Header(){
                     <span>Place limit, market orders and more</span>
                     </div>
                       </Link></li>
-                      <li><Link to={'#'}><img src={LiIcon} />
+                      <li><Link to={'/spot/trade'}><img src={LiIcon} />
                       <div>
                     <p>Spot Trade</p>
                     <span>Place limit, market orders and more</span>
@@ -197,9 +197,6 @@ function Header(){
                 
 
                 <div className="d-flex">
-                  {
-                    console.log('token>>>>>>>>'+token)
-                  }
                   <ul className="navbar-nav">
                     {
                       token == 'null' || token == null ?
@@ -303,7 +300,6 @@ function Header(){
                     
                     
 
-                  </li>
 
 
 

@@ -5,7 +5,7 @@ import FundingIcon from '../../assets/images/funding-icon.png'
 function WalletSideBar(){
     return(
         <>
-        <div className="sidebar">
+        <div className="sidebar mobile-side">
                 <div className="container-fluid">
                 <ul className="mt-3">
                     

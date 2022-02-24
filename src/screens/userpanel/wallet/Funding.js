@@ -162,7 +162,7 @@ function Funding(props){
                 </div>
                 </div>
 
-                <div className="dashboard-margin">
+                <div className="dashboard-margin table-responsive">
                 <MDBDataTableV5
                 hover
                 entriesOptions={[5, 20, 25]}

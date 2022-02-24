@@ -60,9 +60,10 @@ import LaunchPoolHistory from "./history/Launchpool";
 import FlashSaleHistory from "./history/FlashSale";
 import LotteryHistory from "./history/Lottery";
 import SubscriptionHistory from "./history/Subscription";
+import SpotTrade from "./spot/Trade";
 export {Login,Register,Forgot,Verification,Kyc,Home,
     Welcome_DashB,Dashboard,Swap,Wallet,History,Security,Payment,Setting,Market,Disableaccount,Accountactivity,Accountlogon,AddPayment,EmailVerification,Deposit,P2P,MyAds,MyOrders,Express,UserCenter
     ,PostAds,BuyUSDT,BuyBTC,BuyBNB,BuyETH,SaleUSDT,SaleBTC,SaleBNB,SaleETH,Withdrawal,Overview,Funding,Spot,WalletHistory,TransferHistory,SupportCenter,ChangeEmail,ResetVerifiction,UnlockAccount,Pad
     ,ViewAllLPD,Subscription,ViewAllLP,LaunchPool,Faq,OpenOrder,TradeOrder,UserTradeHistory,FaqMain,Announcement,AnnouncementDetail,Search
-    ,LaunchPoolHistory,FlashSaleHistory,LotteryHistory,SubscriptionHistory};
+    ,LaunchPoolHistory,FlashSaleHistory,LotteryHistory,SubscriptionHistory,SpotTrade};
 

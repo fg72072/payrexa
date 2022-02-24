@@ -33,14 +33,14 @@ function ViewAllLPD(props){
             <div className=" dashboard-main support-padding">
                <div className="dashboard-margin">
                <h3>PayRexa Launchpad</h3>
-                <Row>
+                <Row className="gy-4">
                     <Col lg={12}>
                    <Link to={'/subscription/league'} className="normal-anchor">
                    <Row>
-                        <Col lg={4}>
+                        <Col lg={4} md={4}>
                     <img src={LeagueImage} className="pad-img"/>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={8}>
                         <Row>
                             <Col lg={6}>
                             <h4>League of Kindoms</h4>
@@ -80,10 +80,10 @@ function ViewAllLPD(props){
                     <Col lg={12}>
                    <Link to={'/subscription/voxies'} className="normal-anchor">
                    <Row>
-                        <Col lg={4}>
+                        <Col lg={4} md={4}>
                     <img src={VoxiesImage} className="pad-img"/>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={8}>
                         <Row>
                             <Col lg={6}>
                             <h4>Voxies</h4>

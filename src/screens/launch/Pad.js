@@ -25,20 +25,20 @@ function Pad(props){
                 <div class="back-link  align-items-center">
                     <h3>PayRexa Token Launch Platform</h3>
                     <h5>Buy or earn new tokens directly on PayRexa</h5>
-                    <Row className="pt-2">
-                        <Col lg={3}>
+                    <Row className="launchpool-head-resposive pt-2 gy-2">
+                        <Col lg={3} md={6} className="col-6">
                             <h4>$ 5,014,859,453,343</h4>
                             <h6>Current Funds Locked</h6>
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6} className="col-6">
                             <h4>$ 5,014,859,453</h4>
                             <h6>Total Funds Raised</h6>
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6} className="col-6">
                             <h4>6</h4>
                             <h6>Projects Launchpad</h6>
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6} className="col-6">
                             <h4>$ 5,014,859,453,343</h4>
                             <h6>All-time Unique Participants</h6>
                         </Col>
@@ -52,10 +52,10 @@ function Pad(props){
                <h3>Launchpad</h3>
                 <Link to={"/subscription/league"} className="normal-anchor">
                 <Row>
-                    <Col lg={4}>
-                    <img src={LeagueImage}/>
+                    <Col lg={4} md={4}>
+                    <img src={LeagueImage} className="launch-img"/>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={8}>
                         <Row>
                             <Col lg={6}>
                             <h4>League of Kindoms</h4>
@@ -102,7 +102,7 @@ function Pad(props){
                 </div>
                 <div className="launchpad-section">
                 <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="custom-box">
                     <div className="farming">
                         <i class="fa-solid fa-clock-rotate-left"></i>
@@ -141,7 +141,7 @@ function Pad(props){
                         </div>
                     </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="pool-box">
                     <div className="d-flex align-items-center justify-content-center mt-4">
                         <img src={Logo} width={50}/>
@@ -169,7 +169,7 @@ function Pad(props){
                     
                     </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                     <div className="pool-box">
                     <div className="d-flex align-items-center justify-content-center mt-4">
                         <img src={Logo} width={50}/>
@@ -226,29 +226,29 @@ function Pad(props){
                 </div>
                 <div className="dashboard-margin">
                     <h3>Why choose us?</h3>
-                    <Row>
-                        <Col lg={3}>
+                    <Row className="gy-3">
+                        <Col lg={3} md={6}>
                             <img src={ExposureIcon} className="choose_icon"/>
                             <h4>Exposure</h4>
                             <span>
                             Get exposure to the millions of Binance users around the world.
                             </span>
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6}>
                             <img src={LiquidityIcon} className="choose_icon"/>
                             <h4>Liquidity</h4>
                             <span>
                             Projects that are launched on Launchpad or Launchpool will be listed and have world-class liquidity in multiple trading pairs.
                             </span>
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6}>
                             <img src={DestributionIcon} className="choose_icon"/>
                             <h4>Token Distribution</h4>
                             <span>
                             Your token will immediately be distributed to a large user base that hold your token.
                             </span>
                         </Col>
-                        <Col lg={3}>
+                        <Col lg={3} md={6}>
                             <img src={FutureIcon} className="choose_icon"/>
                             <h4>Future Synergy</h4>
                             <span>

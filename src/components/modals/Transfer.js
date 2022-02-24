@@ -10,9 +10,9 @@ function TransferModal(props){
     const [max,setMax] = useState('')
 
     return (<>
-         <Modal show={props.transfershow} onHide={props.transfer_close} centered className="security-verify-modal">
+         <Modal show={props.transfershow} onHide={props.transfer_close} centered className={props.class == "black" ?"dark-trade security-verify-modal":"security-verify-modal"}>
                     
-                    <Modal.Body className="box-bg">
+                    <Modal.Body className={props.class == "black" ? "" : "box-bg"}>
 
                     <i class="fa-solid fa-xmark" onClick={props.transfer_close}></i>
 

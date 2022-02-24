@@ -14,16 +14,19 @@ function AnnouncementDetail(props){
 
            
 
-            <div className="dashboard-section">
+            <div className="dashboard-section order-body-width">
 
                 {props.sidebar}
 
                 <div className="dashboard-main">
 
-                <div className="normal-box big-bg big-faq">
+                <div className="normal-box big-bg big-faq faq-resp-flex">
 
                     <div>
-                        <h1>Announcement</h1>
+                    <Link to={"/announcement"} className="normal-anchor">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <h3>Announcement</h3>
+                        </Link>
                     </div>
 
                     <div>

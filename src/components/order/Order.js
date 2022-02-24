@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import {Accordion } from "react-bootstrap";
 function OrderSideBar(){
+
     return(
         <>
-        <div className="sidebar faq-sidebar">
+        <div className="sidebar mobile-left-side-bar close-order-sidebar faq-sidebar">
               
         <Accordion defaultActiveKey={['0']} alwaysOpen >
 

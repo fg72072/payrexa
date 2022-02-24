@@ -33,16 +33,16 @@ function Subscription(props){
                 <Row>
                     <Col lg={12}>
                    <Row>
-                        <Col lg={2}>
+                    <Col lg={2} md={3}>
                     <img src={LeagueImage} className="pad-img"/>
                     </Col>
-                    <Col lg={10}>
+                    <Col lg={10} md={9}>
                         <Row>
                             <Col lg={12}>
                             <div className="detail-flex-top">
                                 <div>
                                 <h4>League of Kindoms</h4>
-                                <p>A Blockchain MMO Strategy Game.</p>
+                                <p className="m-0">A Blockchain MMO Strategy Game.</p>
                                 </div>
                                 <div className="flex-direction-colum">
                                 <span>Time Left Until subscription start</span>
@@ -60,7 +60,7 @@ function Subscription(props){
                                 </div>
                                 </div>
                             </div>
-                            <div className="mt-3">
+                            <div className="mt-3 subscription-btn-group">
                                 <button className="custom-btn primary-btn">Website</button>
                                 <button className="custom-btn primary-btn">Whitepaper</button>
                                 <button className="custom-btn primary-btn">View detailed rules</button>
@@ -104,7 +104,7 @@ function Subscription(props){
                 </Row>
                </div>
                <div className="dashboard-margin mt-5">
-                   <div className="d-flex justify-content-between align-items-center">
+                   <div className="flex-colum-responsive d-flex justify-content-between ">
                    <h3>Subscription Timeline</h3>
                    <Link to={'/history/subscription'} className="anchor">Launchpad History</Link>
                    </div>

@@ -19,7 +19,7 @@ function Market(props){
         animationEnabled: true,
         zoomEnabled: false,
         height:250,
-        width:380,
+        width:'380',
         title: {
             text: ""
         },
@@ -93,9 +93,9 @@ function Market(props){
         <Container>
 
 
-            <Row>
+            <Row className="gy-3">
 
-                <Col lg={3}>
+                <Col lg={3} md={6}>
 
                     <div className="market-box-two">
 
@@ -129,9 +129,9 @@ function Market(props){
                         </div>
 
 
-                        <a href="">
+                        <Link to={"/spot/trade"}>
                             <i class="fa-solid fa-angle-right"></i>
-                        </a>
+                        </Link>
 
                         
 
@@ -142,7 +142,7 @@ function Market(props){
                 </Col>
 
 
-                <Col lg={3}>
+                <Col lg={3} md={6}>
 
                     <div className="market-box-two">
 
@@ -176,9 +176,9 @@ function Market(props){
                         </div>
 
 
-                        <a href="">
+                        <Link to={"/spot/trade"}>
                             <i class="fa-solid fa-angle-right"></i>
-                        </a>
+                        </Link>
 
                         
 
@@ -189,7 +189,7 @@ function Market(props){
                     </Col>
 
 
-                    <Col lg={3}>
+                    <Col lg={3} md={6}>
 
                     <div className="market-box-two">
 
@@ -223,9 +223,9 @@ function Market(props){
                         </div>
 
 
-                        <a href="">
+                        <Link to={"/spot/trade"}>
                             <i class="fa-solid fa-angle-right"></i>
-                        </a>
+                        </Link>
 
                         
 
@@ -236,7 +236,7 @@ function Market(props){
                 </Col>
 
 
-                <Col lg={3}>
+                <Col lg={3} md={6}>
 
                     <div className="market-box-two">
 
@@ -270,9 +270,9 @@ function Market(props){
                         </div>
 
 
-                        <a href="">
+                        <Link to={"/spot/trade"}>
                             <i class="fa-solid fa-angle-right"></i>
-                        </a>
+                        </Link>
 
                         
 
@@ -584,7 +584,7 @@ function Market(props){
 
                    <Row className="mt-5 gy-5">
 
-                        <Col lg={4}>
+                        <Col lg={4} md={6}>
 
                             <div className="market-overview-box">
                                 
@@ -604,7 +604,7 @@ function Market(props){
 
                         </Col>
 
-                        <Col lg={4}>
+                        <Col lg={4} md={6}>
 
                             <div className="market-overview-box">
                                 
@@ -625,7 +625,7 @@ function Market(props){
 
                         </Col>
 
-                        <Col lg={4}>
+                        <Col lg={4} md={6}>
 
                             <div className="market-overview-box">
                                 

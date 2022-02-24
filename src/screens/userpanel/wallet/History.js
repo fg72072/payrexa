@@ -72,7 +72,7 @@ function WalletHistory(props){
                   <Form.Control type="text" placeholder="Enter TxID" />
                 </Form.Group>
                 </div>
-                <div className="dashboard-margin">
+                <div className="dashboard-margin table-responsive">
                 <Table responsive="sm">
             <thead>
               <tr>
